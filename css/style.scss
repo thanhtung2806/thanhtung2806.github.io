@@ -213,8 +213,11 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 
 .main-footer { background: #1e1e1e; color: #bbb; padding: 4rem 4rem 2rem 4rem;
   .logo-footer { padding: 3.5rem 0 2rem; }
-  h4 { line-height: 1.4; }
+  h4 { line-height: 1.4; margin-top:0; }
   hr { margin: 3rem 0; }
+  ul { font-size: 1.8rem;
+    li { margin-bottom: 0.7rem; }
+  }
 }
 
 //loading

@@ -355,9 +355,14 @@ a {
   .main-footer .logo-footer {
     padding: 3.5rem 0 2rem; }
   .main-footer h4 {
-    line-height: 1.4; }
+    line-height: 1.4;
+    margin-top: 0; }
   .main-footer hr {
     margin: 3rem 0; }
+  .main-footer ul {
+    font-size: 1.8rem; }
+    .main-footer ul li {
+      margin-bottom: 0.7rem; }
 
 .load-holder {
   width: 100%;
