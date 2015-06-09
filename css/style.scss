@@ -67,6 +67,7 @@ body { background: #f6f6f6 url(../img/home/line-vertical.png) repeat-y center ce
 .h5,h5 { font-size: 14px; font-size: 1.4rem; }
 .h6,h6 { font-size: 12px; font-size: 1.2rem; }
 .orange { color: $main-color; }
+.white { color: $white-color; }
 .mb15 { margin-bottom: 15px; }
 .mt10 { margin-top: 10px; } .mt15 { margin-top: 15px; }
 a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s ease;-o-transition:All .3s ease;-ms-transition:All .3s ease;
@@ -203,6 +204,17 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 
 .process-sorter { background: #6d6e70 url(../img/home/conveyorBeltBlack.png) repeat-y center center; min-height: 1000px; color: $white-color;
   .item { padding: 7rem 0; }
+}
+
+.email-footer { background: $main-color; padding: 3rem; color: $white-color;
+  p{ margin:0; font-size: 3rem;}
+}
+
+
+.main-footer { background: #1e1e1e; color: #bbb; padding: 4rem 4rem 2rem 4rem;
+  .logo-footer { padding: 3.5rem 0 2rem; }
+  h4 { line-height: 1.4; }
+  hr { margin: 3rem 0; }
 }
 
 //loading

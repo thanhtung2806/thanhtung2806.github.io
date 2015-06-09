@@ -49,6 +49,9 @@ body {
 .orange {
   color: #f8971c; }
 
+.white {
+  color: white; }
+
 .mb15 {
   margin-bottom: 15px; }
 
@@ -336,6 +339,25 @@ a {
   color: white; }
   .process-sorter .item {
     padding: 7rem 0; }
+
+.email-footer {
+  background: #f8971c;
+  padding: 3rem;
+  color: white; }
+  .email-footer p {
+    margin: 0;
+    font-size: 3rem; }
+
+.main-footer {
+  background: #1e1e1e;
+  color: #bbb;
+  padding: 4rem 4rem 2rem 4rem; }
+  .main-footer .logo-footer {
+    padding: 3.5rem 0 2rem; }
+  .main-footer h4 {
+    line-height: 1.4; }
+  .main-footer hr {
+    margin: 3rem 0; }
 
 .load-holder {
   width: 100%;
