@@ -138,6 +138,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .clearfix { width: 100%; background: $white-color; position: relative; }
   img.img-door { background: #f6f6f6; left: -10px; position: relative;}
   img.img-computer { position: absolute; bottom: -35%; left: 50%; margin-left: 244px;  }
+  img.bulter { position: fixed; left: 50%; top: 20%; margin-left: -63px; z-index:1; }
 }
 
 //walking
@@ -161,6 +162,8 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 
 .analysis { position: relative; padding: 10rem 0 40rem;
   .infos { left: 55%; top: 20%; position: absolute; }
+  img { z-index: 2; position: relative; }
+  .img-monitor { position: fixed; z-index: 3; left: 50%; margin-left: -24px; top: 180px; }
 }
 
 .stock { padding: 20rem 0 30rem;
@@ -180,10 +183,10 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 
 .charging {
   .second-charge { padding-top: 30rem;
-    .line-horizontal { width: 322px; margin-left: 215px; }
+    .line-horizontal { width: 100%; margin-left: 50%; }
   }
   .state { position: relative;
-    img { position: absolute; top: -250px; }
+    img { position: absolute; top: -250px; left: 50%; margin-left: -92px; }
   }
 }
 .line-horizontal {

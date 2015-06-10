@@ -228,6 +228,12 @@ a {
     bottom: -35%;
     left: 50%;
     margin-left: 244px; }
+  .door img.bulter {
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    margin-left: -63px;
+    z-index: 1; }
 
 .walking {
   padding: 30rem 0 15rem; }
@@ -259,6 +265,15 @@ a {
     left: 55%;
     top: 20%;
     position: absolute; }
+  .analysis img {
+    z-index: 2;
+    position: relative; }
+  .analysis .img-monitor {
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    margin-left: -24px;
+    top: 180px; }
 
 .stock {
   padding: 20rem 0 30rem; }
@@ -285,13 +300,15 @@ a {
 .charging .second-charge {
   padding-top: 30rem; }
   .charging .second-charge .line-horizontal {
-    width: 322px;
-    margin-left: 215px; }
+    width: 100%;
+    margin-left: 50%; }
 .charging .state {
   position: relative; }
   .charging .state img {
     position: absolute;
-    top: -250px; }
+    top: -250px;
+    left: 50%;
+    margin-left: -92px; }
 
 .line-horizontal {
   background-image: url("../img/home/line-horizontal.png");

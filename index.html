@@ -109,6 +109,7 @@
     <div class="clearfix">
       <img src="img/home/door.png" alt="" class="center-block img-door img-responsive">
       <img src="img/home/computer.png" alt="" class="img-computer img-responsive hidden-xs">
+      <img src="img/home/bulter.png" alt="" class="bulter" data-0="display: none;" data-1380="display: block;">
     </div>
   </section>
 
@@ -150,6 +151,7 @@
   <section class="analysis">
     <div class="clearfix">
       <img src="img/home/monitor.png" alt="" class="img-responsive center-block">
+      <img src="img/home/monitorBox.png" alt="" class="img-monitor" data-0="display: none;" data-4400="display: block;" data-4920="display: none;">
     </div>
     <div class="col-md-3 col-sm-4 infos">
       <h2 class="orange">
@@ -365,25 +367,9 @@
 
 
   <!-- footer -->
-<!--
 
-
-
-
-
-LATEST BLOGS
-
-
-
-
-
-
-
-
- -->
-
-  <!-- loading
-  <div class="load-holder" id="div-loading">
+   <!-- loading -->
+  <!-- <div class="load-holder" id="div-loading">
     <div class="load-block">
       <div class="blockcont">
         <div class="block-item"></div>
@@ -398,14 +384,16 @@ LATEST BLOGS
       </div>
       <div class="text-center">Loading...</div>
     </div>
-  </div>-->
+  </div> -->
 </body>
  <!-- disable -->
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/skrollr.min.js"></script>
 <script>
-// $(document).ready(function(){
-//   $('#div-loading').fadeOut(2000);
-// });
+$(document).ready(function(){
+  // $('#div-loading').fadeOut(2000);
+  var s = skrollr.init();
+});
 </script>
 </html>
