@@ -186,6 +186,9 @@ a {
   background: #f8971c;
   border-color: #f8971c; }
 
+.homepage h2 {
+  font-weight: 600; }
+
 .intro-butler {
   padding: 17rem 0;
   background: white; }
@@ -249,7 +252,7 @@ a {
     .walking .hero-rack .shadow {
       position: absolute;
       bottom: 0;
-      left: 5px; }
+      left: 2px; }
     .walking .hero-rack .box {
       position: absolute;
       top: 27px;
@@ -288,7 +291,7 @@ a {
     z-index: 3;
     left: 50%;
     margin-left: -24px;
-    top: 230px; }
+    top: 490px; }
 
 .stock {
   padding: 20rem 0 30rem; }
@@ -334,9 +337,9 @@ a {
     margin-left: -63px; }
 
 .charging .second-charge {
-  padding-top: 30rem; }
+  padding-top: 20rem; }
   .charging .second-charge .line-horizontal {
-    width: 100%;
+    width: 70%;
     margin-left: 50%; }
 .charging .state {
   position: relative; }
@@ -348,6 +351,34 @@ a {
   .charging .state .img-charger {
     top: -50px;
     margin-left: -52px; }
+.charging .hero-holder {
+  position: relative; }
+.charging .hero-rack {
+  position: absolute;
+  top: -370px;
+  left: 50%;
+  margin-left: -85px; }
+  .charging .hero-rack .shadow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -87px;
+    z-index: 2; }
+  .charging .hero-rack .box {
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    margin-left: -48px;
+    z-index: 3; }
+  .charging .hero-rack .bulter {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    margin-left: -63px;
+    z-index: 1; }
+  .charging .hero-rack .rack {
+    position: relative;
+    z-index: 2; }
 
 .line-horizontal {
   background-image: url("../img/home/line-horizontal.png");
@@ -358,13 +389,24 @@ a {
 
 .space-hack {
   background: #f6f6f6;
-  padding: 15rem 0; }
+  padding: 5rem 0; }
+
+.motor {
+  position: absolute;
+  left: 50%;
+  margin-left: -120px; }
+
+.motor-bot {
+  bottom: 0; }
+
+.motor-top {
+  top: 0; }
 
 .intro-sorter {
   background: #f6f6f6 url(../img/home/conveyorBeltBlack.png) repeat-y center center; }
   .intro-sorter .infos {
     position: relative;
-    padding: 24rem 0 10rem;
+    padding: 30rem 0 15rem;
     z-index: 2; }
     .intro-sorter .infos:after {
       content: "";
@@ -388,18 +430,74 @@ a {
     font-size: 7rem;
     font-weight: 100;
     text-transform: uppercase; }
+  .intro-sorter .box {
+    position: fixed;
+    bottom: -10rem;
+    width: 100%;
+    left: 0;
+    z-index: 1; }
+    .intro-sorter .box img {
+      display: block;
+      margin-top: 14rem; }
 
 .process-sorter {
   background: #6d6e70 url(../img/home/conveyorBeltBlack.png) repeat-y center center;
   min-height: 1000px;
   color: white; }
   .process-sorter .item {
-    padding: 7rem 0; }
+    padding: 7rem 0;
+    position: relative; }
+  .process-sorter .blueLight {
+    position: absolute;
+    left: 50%;
+    margin-left: -151px;
+    z-index: 3;
+    opacity: 0.5;
+    margin-top: -0px; }
+  .process-sorter .wHScan {
+    position: absolute;
+    left: 50%;
+    margin-left: -131px;
+    z-index: 3;
+    margin-top: -155px; }
+  .process-sorter .dimension-item {
+    padding: 20rem 0 14rem; }
+  .process-sorter .faster-item {
+    background: url(../img/home/conveyorBeltWhite.png) repeat-y center center;
+    padding: 15rem 0; }
+    .process-sorter .faster-item .scan2 {
+      position: absolute;
+      left: 50%;
+      margin-left: -160px;
+      z-index: 3;
+      margin-top: -80px; }
+    .process-sorter .faster-item .motor-bot {
+      bottom: -41px; }
+    .process-sorter .faster-item .motor-top {
+      top: -20px; }
+  .process-sorter .modular-item {
+    padding-bottom: 85rem; }
+    .process-sorter .modular-item .armRight {
+      position: absolute;
+      right: 50%;
+      top: 65%;
+      margin-right: -408px; }
+  .process-sorter .try-item {
+    padding: 30rem 0 25rem; }
+    .process-sorter .try-item .armLeft {
+      top: 18%; }
+  .process-sorter .armLeft {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -408px; }
 
 .email-footer {
   background: #f8971c;
   padding: 3rem;
-  color: white; }
+  color: white;
+  z-index: 4;
+  position: relative; }
   .email-footer p {
     margin: 0;
     font-size: 3rem; }
@@ -407,7 +505,9 @@ a {
 .main-footer {
   background: #1e1e1e;
   color: #bbb;
-  padding: 4rem 4rem 2rem 4rem; }
+  padding: 4rem 4rem 2rem 4rem;
+  z-index: 4;
+  position: relative; }
   .main-footer .logo-footer {
     padding: 3.5rem 0 2rem; }
   .main-footer h4 {

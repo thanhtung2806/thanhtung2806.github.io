@@ -80,6 +80,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 .checkbox, .radio {margin-bottom: 15px;}
 .no-gutter > [class*='col-'] { padding-right:0; padding-left:0; }
 
+
 // header
 .navbar-go{background-color: $white-color; border: none;
   .dropdown-menu { background: #716f70; text-align: right; border: none;
@@ -120,7 +121,9 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .carousel-indicators li { background: $white-color; }
   .carousel-indicators .active { background: $main-color; border-color: $main-color; }
 }
-
+.homepage {
+  h2 { font-weight: 600; }
+}
 // intro butler
 .intro-butler { padding: 17rem 0; background: $white-color;
   @include mobile { padding: 7rem 0;; }
@@ -147,7 +150,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .infos { padding-top: 25rem; }
   .hero-holder { z-index: 2; }
   .hero-rack { position: relative; top: 150px; left: -100px; z-index: 3;
-    .shadow { position: absolute; bottom:0; left: 5px; }
+    .shadow { position: absolute; bottom:0; left: 2px; }
     .box { position: absolute; top: 27px; left: 40px; }
   }
 }
@@ -168,7 +171,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 .analysis { position: relative; padding: 10rem 0 40rem;
   .infos { left: 55%; top: 20%; position: absolute; }
   img { z-index: 2; position: relative; }
-  .img-monitor { position: fixed; z-index: 3; left: 50%; margin-left: -24px; top: 230px; }
+  .img-monitor { position: fixed; z-index: 3; left: 50%; margin-left: -24px; top: 490px; }
 }
 
 .stock { padding: 20rem 0 30rem;
@@ -194,12 +197,19 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 }
 
 .charging {
-  .second-charge { padding-top: 30rem;
-    .line-horizontal { width: 100%; margin-left: 50%; }
+  .second-charge { padding-top: 20rem;
+    .line-horizontal { width: 70%; margin-left: 50%; }
   }
   .state { position: relative;
     img { position: absolute; top: -250px; left: 50%; margin-left: -62px; }
     .img-charger { top: -50px; margin-left: -52px; }
+  }
+  .hero-holder { position: relative; }
+  .hero-rack { position: absolute; top: -370px; left: 50%; margin-left: -85px;
+    .shadow { position: absolute; bottom:0; left: 50%; margin-left: -87px; z-index: 2;}
+    .box { position: absolute; top: 27px; left: 50%; margin-left: -48px; z-index: 3;}
+    .bulter { position: absolute; bottom: -35px; left: 50%; margin-left: -63px; z-index:1;}
+    .rack { position: relative; z-index: 2; }
   }
 
 }
@@ -210,25 +220,48 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   display: block;
   height: 3px;
 }
-.space-hack { background: #f6f6f6; padding: 15rem 0; }
+.space-hack { background: #f6f6f6; padding: 5rem 0; }
+.motor { position: absolute; left: 50%; margin-left: -120px; }
+.motor-bot { bottom: 0; }
+.motor-top { top: 0; }
 .intro-sorter { background: #f6f6f6 url(../img/home/conveyorBeltBlack.png) repeat-y center center;
-  .infos { position: relative; padding: 24rem 0 10rem; z-index:2;
+  .infos { position: relative; padding: 30rem 0 15rem; z-index:2;
     &:after{content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:100%;pointer-events:none;background-color:transparent;background-image:-webkit-linear-gradient(transparent,#fff);background-image:linear-gradient(transparent,#fff);opacity:.9;z-index:1;background-blend-mode:multiply}
   }
   .holder { z-index:2; }
   h1 { font-family: 'SohoGothicPro'; font-size: 7rem; font-weight: 100; text-transform: uppercase; }
+  .box { position: fixed; bottom: -10rem; width: 100%; left:0; z-index:1;
+    img { display: block; margin-top: 14rem;}
+  }
+
 }
 
 .process-sorter { background: #6d6e70 url(../img/home/conveyorBeltBlack.png) repeat-y center center; min-height: 1000px; color: $white-color;
-  .item { padding: 7rem 0; }
+  .item { padding: 7rem 0; position: relative; }
+  .blueLight { position: absolute; left: 50%; margin-left: -151px;  z-index:3; opacity: 0.5; margin-top: -0px;}
+  .wHScan { position: absolute; left: 50%; margin-left: -131px;  z-index:3; margin-top: -155px;}
+  .dimension-item { padding: 20rem 0 14rem; }
+  .faster-item { background: url(../img/home/conveyorBeltWhite.png) repeat-y center center; padding: 15rem 0;
+    .scan2 { position: absolute; left: 50%; margin-left: -160px;  z-index:3; margin-top: -80px; }
+    .motor-bot { bottom: -41px; }
+    .motor-top { top: -20px; }
+  }
+  .modular-item { padding-bottom: 85rem;
+
+    .armRight { position: absolute; right: 50%; top: 65%; margin-right: -408px;}
+  }
+  .try-item { padding: 30rem 0 25rem;
+    .armLeft { top: 18%; }
+  }
+  .armLeft { position: absolute; left: 50%; top: 10%; margin-left: -408px;}
 }
 
-.email-footer { background: $main-color; padding: 3rem; color: $white-color;
-  p{ margin:0; font-size: 3rem;}
+.email-footer { background: $main-color; padding: 3rem; color: $white-color; z-index:4; position: relative;
+  p { margin:0; font-size: 3rem;}
 }
 
 
-.main-footer { background: #1e1e1e; color: #bbb; padding: 4rem 4rem 2rem 4rem;
+.main-footer { background: #1e1e1e; color: #bbb; padding: 4rem 4rem 2rem 4rem; z-index:4; position: relative;
   .logo-footer { padding: 3.5rem 0 2rem; }
   h4 { line-height: 1.4; margin-top:0; }
   hr { margin: 3rem 0; }
