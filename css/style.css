@@ -282,7 +282,8 @@ a {
   .analysis .infos {
     left: 55%;
     top: 20%;
-    position: absolute; }
+    position: absolute;
+    z-index: 3; }
   .analysis img {
     z-index: 2;
     position: relative; }
@@ -504,6 +505,11 @@ a {
       left: 50%;
       top: 66%;
       margin-left: -48px; }
+    .process-sorter .modular-item .delivery {
+      position: absolute;
+      right: 50%;
+      top: 57.5%;
+      margin-right: -390px; }
   .process-sorter .try-item {
     padding: 30rem 0 25rem; }
     .process-sorter .try-item .armLeft {

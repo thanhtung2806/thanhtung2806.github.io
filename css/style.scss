@@ -169,7 +169,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 }
 
 .analysis { position: relative; padding: 10rem 0 40rem;
-  .infos { left: 55%; top: 20%; position: absolute; }
+  .infos { left: 55%; top: 20%; position: absolute; z-index: 3;}
   img { z-index: 2; position: relative; }
   .img-monitor { position: fixed; z-index: 3; left: 50%; margin-left: -24px; top: 490px; }
 }
@@ -252,6 +252,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
     .boxBeige { position: absolute; left: 50%; top: 14%; margin-left: -47px; }
     .armSingleRight {position: absolute; right: 50%; top: 64%; margin-right: -143px; z-index: 5;}
     .boxOrange { position: absolute; left: 50%; top: 66%; margin-left: -48px; }
+    .delivery { position: absolute; right: 50%; top: 57.5%; margin-right: -390px; }
   }
   .try-item { padding: 30rem 0 25rem;
     .armLeft { top: 18%; }
