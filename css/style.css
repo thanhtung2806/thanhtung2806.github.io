@@ -477,15 +477,48 @@ a {
       top: -20px; }
   .process-sorter .modular-item {
     padding-bottom: 85rem; }
+    .process-sorter .modular-item .armSingleLeft {
+      position: absolute;
+      left: 50%;
+      top: 8.4%;
+      margin-left: -143px;
+      z-index: 5; }
     .process-sorter .modular-item .armRight {
       position: absolute;
       right: 50%;
       top: 65%;
       margin-right: -408px; }
+    .process-sorter .modular-item .boxBeige {
+      position: absolute;
+      left: 50%;
+      top: 14%;
+      margin-left: -47px; }
+    .process-sorter .modular-item .armSingleRight {
+      position: absolute;
+      right: 50%;
+      top: 64%;
+      margin-right: -143px;
+      z-index: 5; }
+    .process-sorter .modular-item .boxOrange {
+      position: absolute;
+      left: 50%;
+      top: 66%;
+      margin-left: -48px; }
   .process-sorter .try-item {
     padding: 30rem 0 25rem; }
     .process-sorter .try-item .armLeft {
       top: 18%; }
+    .process-sorter .try-item .armSingleLeft {
+      position: absolute;
+      left: 50%;
+      top: 16.4%;
+      margin-left: -143px;
+      z-index: 5; }
+    .process-sorter .try-item .boxGrey {
+      position: absolute;
+      left: 50%;
+      top: 22%;
+      margin-left: -38px; }
   .process-sorter .armLeft {
     position: absolute;
     left: 50%;
