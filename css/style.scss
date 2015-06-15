@@ -82,17 +82,18 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 
 
 // header
-.navbar-go{background-color: $white-color; border: none;
+.navbar-go { background-color: $white-color; border: none; min-height: 67px;
   .dropdown-menu { background: #716f70; text-align: right; border: none;
     a { color: $white-color; font-size: 2rem;
       &:hover { color: $white-color; background: none; }
     }
   }
+  // .navbar-right { margin-top: 7px; }
 }
-// .navbar-go .navbar-brand{color: $black-color; }
+.navbar-go .navbar-brand{  height: 67px; padding: 21px 15px; }
 // .navbar-go .navbar-brand:focus,.navbar-go .navbar-brand:hover{color:#5e5e5e;background-color:transparent}
 .navbar-go .navbar-text{color: $black-color; }
-.navbar-go .navbar-nav>li>a{color: $black-color; font-size: 2rem; text-transform: uppercase; font-family: 'SohoGothicPro';}
+.navbar-go .navbar-nav>li>a{color: $black-color; font-size: 2rem; text-transform: uppercase; font-family: 'SohoGothicPro'; padding: 20px 15px 27px 15px;}
 .navbar-go .navbar-nav>li>a:focus,.navbar-go .navbar-nav>li>a:hover{color:#333;background-color:transparent}
 .navbar-go .navbar-nav>.active>a,.navbar-go .navbar-nav>.active>a:focus,.navbar-go .navbar-nav>.active>a:hover{color:#555;background-color:#e7e7e7}
 .navbar-go .navbar-nav>.disabled>a,.navbar-go .navbar-nav>.disabled>a:focus,.navbar-go .navbar-nav>.disabled>a:hover{color:#ccc;background-color:transparent}
@@ -104,10 +105,11 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 
 //slider
 .home-slide {
-  .img-holder { background-size: cover; width: 100%; padding-bottom: 40%; height: 1%;
-    @include mobile { padding-bottom: 80%; }
-    @include lmobile { padding-bottom: 50%; }
-    @include tablet { padding-bottom: 40%; }
+  .img-holder { background-size: cover; width: 100%; height: 512px;
+    @include mobile { height: 312px; }
+    @include lmobile { height: 360px; }
+    @include tablet { height: 400px; }
+    @include desktop { height: 512px; }
   }
   .carousel-caption { background: rgba(248,151,28,0.9); bottom: 50%; margin-bottom: -100px;
     @include mobile { right: 5%; left: 5%; padding-left: 10px; padding-right: 10px;}
@@ -137,27 +139,33 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 }
 
 //door
-.door {  background: #f6f6f6;
+.door { background: #f6f6f6;
   .clearfix { width: 100%; background: $white-color; position: relative; }
-  img.img-door { background: #f6f6f6; left: -10px; position: relative;}
-  img.img-computer { position: absolute; bottom: -35%; left: 50%; margin-left: 244px;  }
-  img.bulter { position: fixed; left: 50%; top: 60%; margin-left: -63px; z-index:1; }
+  img.img-door { left: -10px; position: relative; z-index: 2;}
+  .door-holder { background: #f6f6f6; }
+  img.img-computer { position: absolute; bottom: -35%; left: 50%; margin-left: 244px; z-index: 3; }
+  img.bulter { position: fixed; left: 50%; top: 469px; margin-left: -63px; z-index: 1; }
 }
 
 //walking
-.walking { padding: 30rem 0 15rem;
-  img {  }
+.walking { padding: 30rem 0 150rem;
+  .img-walking { position: relative; }
+  .img-walking-pof { position: fixed; top: 233px; left: 146px; }
   .infos { padding-top: 25rem; }
   .hero-holder { z-index: 2; }
-  .hero-rack { position: relative; top: 150px; left: -100px; z-index: 3;
+  .bulter { position: absolute; bottom: -5px; left: 50%; margin-left: -66px; z-index:1;}
+  .hero-rack { position: relative; top: 150px; left: -100px; z-index: 3; width: 176px;
     .shadow { position: absolute; bottom:0; left: 2px; }
-    .box { position: absolute; top: 27px; left: 40px; }
+    .box { position: absolute; top: 27px; left: 40px; z-index: 3;}
+    .rack { z-index: 3; position: relative; }
   }
+  .infos-holder-pof { width: 290px; position: fixed; top: 356px; left: 868px; }
+  .infos-holder { position: relative; }
 }
 
 .picking { padding: 20rem 0 40rem;
   .first-intro {
-    .infos { padding-top: 20rem; }
+    .infos { padding-top: 10rem; }
     .img-holder { background: #eff4f4; padding-bottom: 15rem; padding-right:0;
       img { margin-top: -17rem; display: inline-block; }
     }
@@ -185,7 +193,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .img-monitor { position: absolute; top: 223px; z-index:-1;}
   .img-monitor-1 { left:360px; }
   .img-monitor-2 { left:168px; }
-  .img-monitor-3 { left:155px; }
+  .img-monitor-3 { right:322px; }
 }
 
 .growth { padding: 30rem 0 40rem;
@@ -198,7 +206,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 
 .charging {
   .second-charge { padding-top: 20rem;
-    .line-horizontal { width: 70%; margin-left: 50%; }
+    .line-horizontal { width: 60%; margin-left: 50%; }
   }
   .state { position: relative;
     img { position: absolute; top: -250px; left: 50%; margin-left: -62px; }
@@ -231,9 +239,9 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .holder { z-index:2; }
   h1 { font-family: 'SohoGothicPro'; font-size: 7rem; font-weight: 100; text-transform: uppercase; }
   .box { position: fixed; bottom: -10rem; width: 100%; left:0; z-index:1;
-    img { display: block; margin-top: 14rem;}
+    img { display: block; margin-top: 10rem;}
   }
-
+  .motor { margin-left: -122px; margin-top: -10px; }
 }
 
 .process-sorter { background: #6d6e70 url(../img/home/conveyorBeltBlack.png) repeat-y center center; min-height: 1000px; color: $white-color;
@@ -247,16 +255,16 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
     .motor-top { top: -20px; }
   }
   .modular-item { padding-bottom: 85rem;
-    .armSingleLeft { position: absolute; left: 50%; top: 8.4%; margin-left: -143px; z-index: 5;}
+    .armSingleLeft { position: absolute; left: 50%; top: 11.2%; margin-left: -143px; z-index: 5;}
     .armRight { position: absolute; right: 50%; top: 65%; margin-right: -408px;}
     .boxBeige { position: absolute; left: 50%; top: 14%; margin-left: -47px; }
-    .armSingleRight {position: absolute; right: 50%; top: 64%; margin-right: -143px; z-index: 5;}
+    .armSingleRight {position: absolute; right: 50%; top: 66%; margin-right: -143px; z-index: 5;}
     .boxOrange { position: absolute; left: 50%; top: 66%; margin-left: -48px; }
     .delivery { position: absolute; right: 50%; top: 57.5%; margin-right: -390px; }
   }
   .try-item { padding: 30rem 0 25rem;
     .armLeft { top: 18%; }
-    .armSingleLeft { position: absolute; left: 50%; top: 16.4%; margin-left: -143px; z-index: 5;}
+    .armSingleLeft { position: absolute; left: 50%; top: 20%; margin-left: -143px; z-index: 5;}
     .boxGrey { position: absolute; left: 50%; top: 22%; margin-left: -38px; }
   }
   .armLeft { position: absolute; left: 50%; top: 10%; margin-left: -408px;}
@@ -267,8 +275,9 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 }
 
 
-.main-footer { background: #1e1e1e; color: #bbb; padding: 4rem 4rem 2rem 4rem; z-index:4; position: relative;
+.main-footer { background: #1e1e1e; color: #bbb; padding: 4rem 8rem 3rem 8rem; z-index:4; position: relative;
   .logo-footer { padding: 3.5rem 0 2rem; }
+  h3 { color: #bbb; font-weight: 600; }
   h4 { line-height: 1.4; margin-top:0; }
   hr { margin: 3rem 0; }
   ul { font-size: 1.8rem;

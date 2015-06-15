@@ -90,7 +90,8 @@ a {
 
 .navbar-go {
   background-color: white;
-  border: none; }
+  border: none;
+  min-height: 67px; }
   .navbar-go .dropdown-menu {
     background: #716f70;
     text-align: right;
@@ -102,6 +103,10 @@ a {
         color: white;
         background: none; }
 
+.navbar-go .navbar-brand {
+  height: 67px;
+  padding: 21px 15px; }
+
 .navbar-go .navbar-text {
   color: #231f20; }
 
@@ -109,7 +114,8 @@ a {
   color: #231f20;
   font-size: 2rem;
   text-transform: uppercase;
-  font-family: 'SohoGothicPro'; }
+  font-family: 'SohoGothicPro';
+  padding: 20px 15px 27px 15px; }
 
 .navbar-go .navbar-nav > li > a:focus, .navbar-go .navbar-nav > li > a:hover {
   color: #333;
@@ -141,17 +147,19 @@ a {
 .home-slide .img-holder {
   background-size: cover;
   width: 100%;
-  padding-bottom: 40%;
-  height: 1%; }
+  height: 512px; }
   @media (min-width: 320px) {
     .home-slide .img-holder {
-      padding-bottom: 80%; } }
+      height: 312px; } }
   @media (min-width: 480px) {
     .home-slide .img-holder {
-      padding-bottom: 50%; } }
+      height: 360px; } }
   @media (min-width: 768px) {
     .home-slide .img-holder {
-      padding-bottom: 40%; } }
+      height: 400px; } }
+  @media (min-width: 992px) {
+    .home-slide .img-holder {
+      height: 512px; } }
 .home-slide .carousel-caption {
   background: rgba(248, 151, 28, 0.9);
   bottom: 50%;
@@ -223,32 +231,48 @@ a {
     background: white;
     position: relative; }
   .door img.img-door {
-    background: #f6f6f6;
     left: -10px;
-    position: relative; }
+    position: relative;
+    z-index: 2; }
+  .door .door-holder {
+    background: #f6f6f6; }
   .door img.img-computer {
     position: absolute;
     bottom: -35%;
     left: 50%;
-    margin-left: 244px; }
+    margin-left: 244px;
+    z-index: 3; }
   .door img.bulter {
     position: fixed;
     left: 50%;
-    top: 60%;
+    top: 469px;
     margin-left: -63px;
     z-index: 1; }
 
 .walking {
-  padding: 30rem 0 15rem; }
+  padding: 30rem 0 150rem; }
+  .walking .img-walking {
+    position: relative; }
+  .walking .img-walking-pof {
+    position: fixed;
+    top: 233px;
+    left: 146px; }
   .walking .infos {
     padding-top: 25rem; }
   .walking .hero-holder {
     z-index: 2; }
+  .walking .bulter {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -66px;
+    z-index: 1; }
   .walking .hero-rack {
     position: relative;
     top: 150px;
     left: -100px;
-    z-index: 3; }
+    z-index: 3;
+    width: 176px; }
     .walking .hero-rack .shadow {
       position: absolute;
       bottom: 0;
@@ -256,12 +280,23 @@ a {
     .walking .hero-rack .box {
       position: absolute;
       top: 27px;
-      left: 40px; }
+      left: 40px;
+      z-index: 3; }
+    .walking .hero-rack .rack {
+      z-index: 3;
+      position: relative; }
+  .walking .infos-holder-pof {
+    width: 290px;
+    position: fixed;
+    top: 356px;
+    left: 868px; }
+  .walking .infos-holder {
+    position: relative; }
 
 .picking {
   padding: 20rem 0 40rem; }
   .picking .first-intro .infos {
-    padding-top: 20rem; }
+    padding-top: 10rem; }
   .picking .first-intro .img-holder {
     background: #eff4f4;
     padding-bottom: 15rem;
@@ -316,7 +351,7 @@ a {
 .space .img-monitor-2 {
   left: 168px; }
 .space .img-monitor-3 {
-  left: 155px; }
+  right: 322px; }
 
 .growth {
   padding: 30rem 0 40rem; }
@@ -340,7 +375,7 @@ a {
 .charging .second-charge {
   padding-top: 20rem; }
   .charging .second-charge .line-horizontal {
-    width: 70%;
+    width: 60%;
     margin-left: 50%; }
 .charging .state {
   position: relative; }
@@ -439,7 +474,10 @@ a {
     z-index: 1; }
     .intro-sorter .box img {
       display: block;
-      margin-top: 14rem; }
+      margin-top: 10rem; }
+  .intro-sorter .motor {
+    margin-left: -122px;
+    margin-top: -10px; }
 
 .process-sorter {
   background: #6d6e70 url(../img/home/conveyorBeltBlack.png) repeat-y center center;
@@ -481,7 +519,7 @@ a {
     .process-sorter .modular-item .armSingleLeft {
       position: absolute;
       left: 50%;
-      top: 8.4%;
+      top: 11.2%;
       margin-left: -143px;
       z-index: 5; }
     .process-sorter .modular-item .armRight {
@@ -497,7 +535,7 @@ a {
     .process-sorter .modular-item .armSingleRight {
       position: absolute;
       right: 50%;
-      top: 64%;
+      top: 66%;
       margin-right: -143px;
       z-index: 5; }
     .process-sorter .modular-item .boxOrange {
@@ -517,7 +555,7 @@ a {
     .process-sorter .try-item .armSingleLeft {
       position: absolute;
       left: 50%;
-      top: 16.4%;
+      top: 20%;
       margin-left: -143px;
       z-index: 5; }
     .process-sorter .try-item .boxGrey {
@@ -544,11 +582,14 @@ a {
 .main-footer {
   background: #1e1e1e;
   color: #bbb;
-  padding: 4rem 4rem 2rem 4rem;
+  padding: 4rem 8rem 3rem 8rem;
   z-index: 4;
   position: relative; }
   .main-footer .logo-footer {
     padding: 3.5rem 0 2rem; }
+  .main-footer h3 {
+    color: #bbb;
+    font-weight: 600; }
   .main-footer h4 {
     line-height: 1.4;
     margin-top: 0; }
