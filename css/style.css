@@ -23,8 +23,8 @@ body {
   margin-bottom: 1rem; }
 
 .h1, h1 {
-  font-size: 36px;
-  font-size: 3.6rem; }
+  font-size: 38px;
+  font-size: 3.8rem; }
 
 .h2, h2 {
   font-size: 30px;
@@ -144,6 +144,16 @@ a {
 .navbar-go .navbar-nav > .open > a, .navbar-go .navbar-nav > .open > a:focus, .navbar-go .navbar-nav > .open > a:hover {
   background-color: #f0f1f1; }
 
+.homepage h2 {
+  font-family: 'SohoGothicPro-Medium';
+  font-weight: 400; }
+.homepage p {
+  font-size: 2rem; }
+.homepage .clearfix {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .home-slide .img-holder {
   background-size: cover;
   width: 100%;
@@ -161,9 +171,10 @@ a {
     .home-slide .img-holder {
       height: 512px; } }
 .home-slide .carousel-caption {
-  background: rgba(248, 151, 28, 0.9);
-  bottom: 50%;
-  margin-bottom: -100px; }
+  background: rgba(248, 151, 28, 0.94);
+  bottom: 35%;
+  margin-bottom: -100px;
+  text-shadow: none; }
   @media (min-width: 320px) {
     .home-slide .carousel-caption {
       right: 5%;
@@ -176,30 +187,38 @@ a {
       left: 30%;
       padding-left: 20px;
       padding-right: 20px; } }
-  @media (min-width: 992px) {
-    .home-slide .carousel-caption {
-      right: 35%;
-      left: 35%; } }
   .home-slide .carousel-caption h3 {
-    margin-top: 0; }
+    margin-top: 0;
+    font-family: 'SohoGothicPro-Medium';
+    font-weight: 400; }
     @media (min-width: 320px) {
       .home-slide .carousel-caption h3 {
         margin-top: 0; } }
     @media (min-width: 768px) {
       .home-slide .carousel-caption h3 {
         margin-top: 2rem; } }
+  .home-slide .carousel-caption p {
+    font-size: 2rem; }
+@media (min-width: 768px) {
+  .home-slide .carousel-indicators {
+    bottom: 10px; } }
 .home-slide .carousel-indicators li {
-  background: white; }
+  background: white;
+  margin: 1px 10px;
+  width: 13px;
+  height: 13px;
+  border-radius: 13px; }
 .home-slide .carousel-indicators .active {
   background: #f8971c;
-  border-color: #f8971c; }
-
-.homepage h2 {
-  font-weight: 600; }
+  border-color: #f8971c;
+  margin: 0px 10px;
+  width: 15px;
+  height: 15px; }
 
 .intro-butler {
   padding: 17rem 0;
-  background: white; }
+  background: white;
+  position: relative; }
   @media (min-width: 320px) {
     .intro-butler {
       padding: 7rem 0; } }
@@ -223,11 +242,15 @@ a {
     margin-bottom: 1rem; }
   .intro-butler img {
     margin-top: 2rem; }
+  .intro-butler .scroll {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    margin-left: -24px; }
 
 .door {
   background: #f6f6f6; }
-  .door .clearfix {
-    width: 100%;
+  .door .door-holders {
     background: white;
     position: relative; }
   .door img.img-door {
@@ -250,7 +273,7 @@ a {
     z-index: 1; }
 
 .walking {
-  padding: 30rem 0 150rem; }
+  padding: 30rem 0 20rem; }
   .walking .img-walking {
     position: relative; }
   .walking .img-walking-pof {
@@ -270,7 +293,7 @@ a {
   .walking .hero-rack {
     position: relative;
     top: 150px;
-    left: -100px;
+    left: -105px;
     z-index: 3;
     width: 176px; }
     .walking .hero-rack .shadow {
@@ -314,9 +337,11 @@ a {
 .analysis {
   position: relative;
   padding: 10rem 0 40rem; }
+  .analysis .clearfix {
+    position: relative; }
   .analysis .infos {
-    left: 55%;
-    top: 20%;
+    left: 57%;
+    top: 17%;
     position: absolute;
     z-index: 3; }
   .analysis img {
@@ -328,6 +353,14 @@ a {
     left: 50%;
     margin-left: -24px;
     top: 490px; }
+  .analysis .img-monitor2 {
+    position: absolute;
+    top: 399px;
+    left: 735px; }
+  .analysis .img-monitor3 {
+    position: absolute;
+    top: 399px;
+    left: 309px; }
 
 .stock {
   padding: 20rem 0 30rem; }
@@ -354,7 +387,7 @@ a {
   right: 322px; }
 
 .growth {
-  padding: 30rem 0 40rem; }
+  padding: 30rem 0 50rem; }
   .growth .item {
     background: #f6f6f6 url(../img/home/line-vertical.png) repeat-y center center;
     padding-top: 30rem;
@@ -372,6 +405,8 @@ a {
     left: 50%;
     margin-left: -63px; }
 
+.charging .first-intro .infos {
+  padding-top: 8rem; }
 .charging .second-charge {
   padding-top: 20rem; }
   .charging .second-charge .line-horizontal {
@@ -453,9 +488,9 @@ a {
       width: 100%;
       height: 100%;
       pointer-events: none;
-      background-color: transparent;
-      background-image: -webkit-linear-gradient(transparent, white);
-      background-image: linear-gradient(transparent, white);
+      background-color: rgba(255, 255, 255, 0.15);
+      background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.25), white);
+      background-image: linear-gradient(rgba(255, 255, 255, 0.25), white);
       opacity: .9;
       z-index: 1;
       background-blend-mode: multiply; }
@@ -468,7 +503,7 @@ a {
     text-transform: uppercase; }
   .intro-sorter .box {
     position: fixed;
-    bottom: -10rem;
+    top: 22.5rem;
     width: 100%;
     left: 0;
     z-index: 1; }
@@ -577,7 +612,7 @@ a {
   position: relative; }
   .email-footer p {
     margin: 0;
-    font-size: 3rem; }
+    font-size: 2.5rem; }
 
 .main-footer {
   background: #1e1e1e;
@@ -599,6 +634,20 @@ a {
     font-size: 1.8rem; }
     .main-footer ul li {
       margin-bottom: 0.7rem; }
+  .main-footer p {
+    font-size: 1.5rem; }
+
+#mobile-ver {
+  width: 100%;
+  position: fixed;
+  z-index: 1200;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background: #fff;
+  padding: 15rem 0; }
 
 .load-holder {
   width: 100%;

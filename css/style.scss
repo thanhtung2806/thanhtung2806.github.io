@@ -60,7 +60,7 @@ html {  font-size: 62.5%;
 }
 body { background: #f6f6f6 url(../img/home/line-vertical.png) repeat-y center center; font-family: 'ProximaNova'; color: $black-color; font-size: 16px; font-size: 1.6rem; line-height: 1.525; min-height: 3000px;}
 .h1, .h2, .h3, h1, h2, h3 { margin-bottom: 1rem }
-.h1,h1 { font-size: 36px; font-size: 3.6rem; }
+.h1,h1 { font-size: 38px; font-size: 3.8rem; }
 .h2,h2 { font-size: 30px; font-size: 3rem; }
 .h3,h3 { font-size: 24px; font-size: 2.4rem; }
 .h4,h4 { font-size: 18px; font-size: 1.8rem; }
@@ -103,6 +103,12 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 .navbar-go .navbar-collapse,.navbar-go .navbar-form{border-color:#e7e7e7}
 .navbar-go .navbar-nav>.open>a,.navbar-go .navbar-nav>.open>a:focus,.navbar-go .navbar-nav>.open>a:hover{background-color:#f0f1f1}
 
+.homepage {
+  h2 { font-family: 'SohoGothicPro-Medium'; font-weight: 400; }
+  p { font-size: 2rem; }
+  .clearfix { max-width: 1280px; margin-left: auto; margin-right: auto; }
+}
+
 //slider
 .home-slide {
   .img-holder { background-size: cover; width: 100%; height: 512px;
@@ -111,23 +117,25 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
     @include tablet { height: 400px; }
     @include desktop { height: 512px; }
   }
-  .carousel-caption { background: rgba(248,151,28,0.9); bottom: 50%; margin-bottom: -100px;
+  .carousel-caption { background: rgba(248,151,28,0.94); bottom: 35%; margin-bottom: -100px; text-shadow: none;
     @include mobile { right: 5%; left: 5%; padding-left: 10px; padding-right: 10px;}
     @include tablet { right: 30%; left: 30%; padding-left: 20px; padding-right: 20px;}
-    @include desktop { right: 35%; left: 35%; }
-    h3 { margin-top: 0;
+    // @include desktop { right: 35%; left: 35%; }
+    h3 { margin-top: 0; font-family: 'SohoGothicPro-Medium'; font-weight: 400;
       @include mobile { margin-top:0; }
       @include tablet { margin-top:2rem;}
     }
+    p { font-size: 2rem; }
   }
-  .carousel-indicators li { background: $white-color; }
-  .carousel-indicators .active { background: $main-color; border-color: $main-color; }
+  .carousel-indicators {
+    @include tablet { bottom: 10px; }
+  }
+  .carousel-indicators li { background: $white-color; margin: 1px 10px; width: 13px; height: 13px; border-radius: 13px; }
+  .carousel-indicators .active { background: $main-color; border-color: $main-color;margin: 0px 10px; width: 15px; height: 15px; }
 }
-.homepage {
-  h2 { font-weight: 600; }
-}
+
 // intro butler
-.intro-butler { padding: 17rem 0; background: $white-color;
+.intro-butler { padding: 17rem 0; background: $white-color; position: relative;
   @include mobile { padding: 7rem 0;; }
   @include tablet { padding: 17rem 0;; }
   h1 { font-family: 'SohoGothicPro'; font-weight: 100; font-size: 7rem; color: $main-color; margin-bottom: 3rem;
@@ -136,11 +144,14 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   }
   p { font-size: 2rem; margin-bottom: 1rem; }
   img { margin-top: 2rem; }
+  .scroll { position: absolute; left: 50%; top: 5%; margin-left: -24px;  }
 }
 
 //door
-.door { background: #f6f6f6;
-  .clearfix { width: 100%; background: $white-color; position: relative; }
+.door {
+  background: #f6f6f6;
+  .door-holders { background: $white-color; position: relative; }
+  // .clearfix { max-width: none; background: $white-color; position: relative; }
   img.img-door { left: -10px; position: relative; z-index: 2;}
   .door-holder { background: #f6f6f6; }
   img.img-computer { position: absolute; bottom: -35%; left: 50%; margin-left: 244px; z-index: 3; }
@@ -148,13 +159,13 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 }
 
 //walking
-.walking { padding: 30rem 0 150rem;
+.walking { padding: 30rem 0 20rem;
   .img-walking { position: relative; }
   .img-walking-pof { position: fixed; top: 233px; left: 146px; }
   .infos { padding-top: 25rem; }
   .hero-holder { z-index: 2; }
   .bulter { position: absolute; bottom: -5px; left: 50%; margin-left: -66px; z-index:1;}
-  .hero-rack { position: relative; top: 150px; left: -100px; z-index: 3; width: 176px;
+  .hero-rack { position: relative; top: 150px; left: -105px; z-index: 3; width: 176px;
     .shadow { position: absolute; bottom:0; left: 2px; }
     .box { position: absolute; top: 27px; left: 40px; z-index: 3;}
     .rack { z-index: 3; position: relative; }
@@ -177,9 +188,12 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 }
 
 .analysis { position: relative; padding: 10rem 0 40rem;
-  .infos { left: 55%; top: 20%; position: absolute; z-index: 3;}
+  .clearfix { position: relative; }
+  .infos { left: 57%; top: 17%; position: absolute; z-index: 3;}
   img { z-index: 2; position: relative; }
   .img-monitor { position: fixed; z-index: 3; left: 50%; margin-left: -24px; top: 490px; }
+  .img-monitor2 { position: absolute; top: 399px; left: 735px; }
+  .img-monitor3 { position: absolute; top: 399px; left: 309px; }
 }
 
 .stock { padding: 20rem 0 30rem;
@@ -196,7 +210,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .img-monitor-3 { right:322px; }
 }
 
-.growth { padding: 30rem 0 40rem;
+.growth { padding: 30rem 0 50rem;
   .item { background: #f6f6f6 url(../img/home/line-vertical.png) repeat-y center center; padding-top: 30rem; position: relative; }
   .img-holder { padding-top: 20rem; position: relative;
     img.center-block { z-index: 2;position: relative; }
@@ -205,6 +219,9 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 }
 
 .charging {
+  .first-intro {
+    .infos { padding-top: 8rem; }
+  }
   .second-charge { padding-top: 20rem;
     .line-horizontal { width: 60%; margin-left: 50%; }
   }
@@ -234,11 +251,11 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 .motor-top { top: 0; }
 .intro-sorter { background: #f6f6f6 url(../img/home/conveyorBeltBlack.png) repeat-y center center;
   .infos { position: relative; padding: 30rem 0 15rem; z-index:2;
-    &:after{content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:100%;pointer-events:none;background-color:transparent;background-image:-webkit-linear-gradient(transparent,#fff);background-image:linear-gradient(transparent,#fff);opacity:.9;z-index:1;background-blend-mode:multiply}
+    &:after{content:"";display:block;position:absolute;bottom:0;left:0;width:100%;height:100%;pointer-events:none;background-color:rgba(255,255,255,0.15) ;background-image:-webkit-linear-gradient(rgba(255,255,255,0.25),#fff);background-image:linear-gradient(rgba(255,255,255,0.25),#fff);opacity:.9;z-index:1;background-blend-mode:multiply}
   }
   .holder { z-index:2; }
   h1 { font-family: 'SohoGothicPro'; font-size: 7rem; font-weight: 100; text-transform: uppercase; }
-  .box { position: fixed; bottom: -10rem; width: 100%; left:0; z-index:1;
+  .box { position: fixed; top: 22.5rem; width: 100%; left:0; z-index:1;
     img { display: block; margin-top: 10rem;}
   }
   .motor { margin-left: -122px; margin-top: -10px; }
@@ -271,7 +288,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 }
 
 .email-footer { background: $main-color; padding: 3rem; color: $white-color; z-index:4; position: relative;
-  p { margin:0; font-size: 3rem;}
+  p { margin: 0; font-size: 2.5rem;}
 }
 
 
@@ -283,7 +300,10 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   ul { font-size: 1.8rem;
     li { margin-bottom: 0.7rem; }
   }
+  p { font-size: 1.5rem; }
 }
+
+#mobile-ver { width: 100%; position: fixed; z-index: 1200; left: 0; top:0;padding:0;margin:0;height:100%; background: #fff; padding: 15rem 0;}
 
 //loading
 .load-holder { width: 100%; position: fixed; z-index: 1300; left: 0; top:0;padding:0;margin:0;height:100%;
