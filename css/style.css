@@ -245,8 +245,10 @@ a {
   .intro-butler .scroll {
     position: absolute;
     left: 50%;
-    top: 5%;
-    margin-left: -24px; }
+    top: 7%;
+    margin-left: -24px;
+    animation-duration: 3s;
+    animation-delay: 1s; }
 
 .door {
   background: #f6f6f6; }
@@ -317,9 +319,11 @@ a {
     position: relative; }
 
 .picking {
-  padding: 20rem 0 40rem; }
+  padding: 20rem 0 20rem; }
   .picking .first-intro .infos {
-    padding-top: 10rem; }
+    padding-top: 0rem;
+    margin-top: -5rem;
+    position: relative; }
   .picking .first-intro .img-holder {
     background: #eff4f4;
     padding-bottom: 15rem;
@@ -336,7 +340,7 @@ a {
 
 .analysis {
   position: relative;
-  padding: 10rem 0 40rem; }
+  padding: 10rem 0 10rem; }
   .analysis .clearfix {
     position: relative; }
   .analysis .infos {
@@ -363,7 +367,7 @@ a {
     left: 309px; }
 
 .stock {
-  padding: 20rem 0 30rem; }
+  padding: 20rem 0 20rem; }
   .stock .infos {
     padding-top: 20rem; }
 
@@ -387,7 +391,7 @@ a {
   right: 322px; }
 
 .growth {
-  padding: 30rem 0 50rem; }
+  padding: 20rem 0 20rem; }
   .growth .item {
     background: #f6f6f6 url(../img/home/line-vertical.png) repeat-y center center;
     padding-top: 30rem;
@@ -406,9 +410,9 @@ a {
     margin-left: -63px; }
 
 .charging .first-intro .infos {
-  padding-top: 8rem; }
+  padding-top: 4rem; }
 .charging .second-charge {
-  padding-top: 20rem; }
+  padding-top: 15rem; }
   .charging .second-charge .line-horizontal {
     width: 60%;
     margin-left: 50%; }
@@ -489,8 +493,9 @@ a {
       height: 100%;
       pointer-events: none;
       background-color: rgba(255, 255, 255, 0.15);
-      background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.25), white);
-      background-image: linear-gradient(rgba(255, 255, 255, 0.25), white);
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.71) 51%, white 100%);
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.71) 51%, white 100%);
+      background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.71) 51%, white 100%);
       opacity: .9;
       z-index: 1;
       background-blend-mode: multiply; }
@@ -570,7 +575,7 @@ a {
     .process-sorter .modular-item .armSingleRight {
       position: absolute;
       right: 50%;
-      top: 66%;
+      top: 67%;
       margin-right: -143px;
       z-index: 5; }
     .process-sorter .modular-item .boxOrange {
