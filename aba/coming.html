@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' id='bootstrap3-css'  href='css/bootstrap-3.3.4.min.css?ver=3.3.4' media='all' />
+  <link rel='stylesheet' id='main-css'  href='css/style.css?ver=1.0.0' media='all' />
+
+</head>
+<body>
+
+  <!-- Static navbar -->
+    <nav class="navbar navbar-aba navbar-fixed-top" data-spy="affix" data-offset-top="10">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="img/logo.png" height="39" width="157" alt=""></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Process</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+  <!-- coming -->
+  <section class="coming">
+    <img src="img/coming-bg.jpg" height="681" width="1920" alt="" class="img-responsive">
+    <div class="coming-intro text-center">
+      <h1>Coming soon</h1>
+      <p>As the web design and technology continues to improve</p>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="main-footer clearfix">
+    <img src="img/footer-bg.jpg" alt="" class="img-responsive hidden-sm hidden-xs">
+    <div class="footer-infos">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-1 col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
+            <img src="img/footer-man.png" height="430" width="416" alt="" class="img-responsive img-man">
+          </div>
+          <div class="col-md-6">
+            <h2>cONTACT US</h2>
+            <p class="phone">
+              <img src="img/icon-phone.png" height="auto" width="62" alt="" class="icon-phone">
+              (+84) 08 3756789
+              <a href="#"><img src="img/icon-fb.png" height="auto" width="60" alt="" class="fb"></a>
+            </p>
+            <p>
+              Please input your mail in the below,
+              <br>
+              We will contact with you.
+            </p>
+            <textarea name="" id="" cols="30" rows="6" class="form-control"></textarea>
+            <a href="#" class="btn btn-lg btn-blue">Send</a>
+            <p class="location">
+              ERA Town, 15B Nguyen Luong Bang St,
+              <br>
+              Phu My Ward, District 7
+              <br>
+              HCM city, VIETNAM
+              <img src="img/icon-location.png" height="auto" width="45" alt="" class="hidden-xs">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- loading -->
+  <div class="load-holder" id="div-loading">
+    <div class="load-block">
+      <div class="blockcont">
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+      </div>
+      <div class="text-center">Loading...</div>
+    </div>
+  </div>
+</body>
+ <!-- disable -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(window).load(function(){
+  $('#div-loading').fadeOut(1000);
+});
+</script>
+<script type="text/javascript" src="http://localhost:48626/takana.js"></script>
+<script type="text/javascript">
+ takanaClient.run({host: 'localhost:48626'});
+</script>
+</html>
