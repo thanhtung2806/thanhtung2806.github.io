@@ -293,12 +293,14 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .armLeft { position: absolute; left: 50%; top: 10%; margin-left: -408px;}
 }
 
-.email-footer { background: $main-color; padding: 1rem; color: $white-color; z-index:4; position: relative;
-  p { margin: 0; font-size: 2.5rem; padding: 2rem 0;}
+.email-footer { background: $main-color; padding: 1rem 0 3rem 0; color: $white-color; z-index:4; position: relative;
+  p { margin: 0; font-size: 2.5rem; padding: 2rem 0;
+    &.thanks { padding-bottom:0; }
+  }
   .blinking-cursor { top: 0.1rem; position: relative;}
-  .input-group { margin-bottom: 2rem; }
+  // .input-group { margin-bottom: 2rem; }
   .form-control { background: #fff; font-size: 2.2rem; color: #000; border: none; outline: 0; border-radius: 0;}
-  .btn-link { color: #fff; font-size: 2.6rem; padding-top:6px ; padding-bottom: 6px ;}
+  .btn-link { color: #fff; font-size: 2.5rem; padding-top:6px ; padding-bottom: 6px ; border: solid 1px #fff; border-radius: 0;height: 50px;}
 }
 
 

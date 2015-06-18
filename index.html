@@ -390,15 +390,18 @@
   <!-- email footer -->
   <section class="email-footer">
     <div class="container">
-      <p class="text-center active">Like what you see? Want to get in touch? Leave us with your email here <span class="blinking-cursor">|</span></p>
-      <div class="col-md-8 col-md-offset-2 hidden">
-        <div class="input-group">
-          <input type="email" class="form-control" placeholder="Email">
-          <span class="input-group-btn">
-            <button class="btn btn-link btn-lg" type="button">Go!</button>
-          </span>
+      <p class="text-center active">Like what you see? Want to get in touch? Leave us with your email here <span class="blinking-cursor hidden">|</span></p>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Email">
+            <span class="input-group-btn">
+              <button class="btn btn-link btn-lg" type="button">Submit</button>
+            </span>
+          </div>
         </div>
       </div>
+      <p class="text-center hidden thanks"><small>Thank you for your submit</small></p>
     </div>
   </section>
 
@@ -503,11 +506,13 @@ $(window).load(function(){
     winResize();
   });
   //email click event
-  $('.email-footer').click(function() {
-    var _this = $(this);
-    _this.find('.hidden').addClass('active fade in').removeClass('hidden');
-    _this.find('.blinking-cursor').addClass('hidden');
-    _this.find('.form-control').focus();
+  $('.email-footer .btn').click(function() {
+    // var _this = $(this);
+    // _this.find('.hidden').addClass('active fade in').removeClass('hidden');
+    // _this.find('.blinking-cursor').addClass('hidden');
+    // _this.find('.form-control').focus();
+    $('.email-footer .thanks').removeClass('hidden');
+    setTimeout("$('.email-footer .thanks').addClass('hidden');", 2000);
   });
 });
 </script>
