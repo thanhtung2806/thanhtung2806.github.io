@@ -141,7 +141,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 // coming
 .coming { color: #252d37;  position: relative;
   @include mobile {  margin-top: 9rem; }
-  @include desktop { margin-top: 0;}
+  @include desktop { margin-top: 4.5rem; }
   .coming-intro { position: absolute; top: 5%; left:0; width: 100%;
     @include mobile { position: relative; top: 0; padding: 0rem 1.5rem;  }
     @include tablet { position: absolute; top: 5%; }
@@ -156,7 +156,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 
 // process
 .process {
-  @include mobile { padding-top: 5rem;   }
+  @include mobile { padding-top: 5rem; }
   @include tablet { padding-top: 3rem; }
   h1{ font-size: 4.5rem; font-weight: 700; text-transform: uppercase; color: #3f454d;
     @include mobile { font-size: 3.5rem;}

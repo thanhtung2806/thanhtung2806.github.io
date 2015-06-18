@@ -249,7 +249,7 @@ a {
       margin-top: 9rem; } }
   @media (min-width: 992px) {
     .coming {
-      margin-top: 0; } }
+      margin-top: 4.5rem; } }
   .coming .coming-intro {
     position: absolute;
     top: 5%;
