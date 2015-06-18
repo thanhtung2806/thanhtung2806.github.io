@@ -68,7 +68,8 @@ a {
   -o-transition: All .3s ease;
   -ms-transition: All .3s ease; }
   a:hover {
-    color: #da7d07; }
+    color: #da7d07;
+    outline: 0; }
 
 .form-control {
   border: 1px solid #bfd8d8;
@@ -613,13 +614,31 @@ a {
 
 .email-footer {
   background: #f8971c;
-  padding: 3rem;
+  padding: 1rem;
   color: white;
   z-index: 4;
   position: relative; }
   .email-footer p {
     margin: 0;
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    padding: 2rem 0; }
+  .email-footer .blinking-cursor {
+    top: 0.1rem;
+    position: relative; }
+  .email-footer .input-group {
+    margin-bottom: 2rem; }
+  .email-footer .form-control {
+    background: #fff;
+    font-size: 2.2rem;
+    color: #000;
+    border: none;
+    outline: 0;
+    border-radius: 0; }
+  .email-footer .btn-link {
+    color: #fff;
+    font-size: 2.6rem;
+    padding-top: 6px;
+    padding-bottom: 6px; }
 
 .main-footer {
   background: #1e1e1e;
@@ -655,6 +674,49 @@ a {
   height: 100%;
   background: #fff;
   padding: 15rem 0; }
+
+.blinking-cursor {
+  color: #fff;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite; }
+
+@keyframes "blink" {
+  from, to {
+    color: transparent; }
+
+  50% {
+    color: #fff; } }
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent; }
+
+  50% {
+    color: #fff; } }
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent; }
+
+  50% {
+    color: #fff; } }
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent; }
+
+  50% {
+    color: #fff; } }
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent; }
+
+  50% {
+    color: #fff; } }
 
 .carousel.fade {
   opacity: 1; }

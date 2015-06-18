@@ -389,7 +389,17 @@
 
   <!-- email footer -->
   <section class="email-footer">
-    <p class="text-center">Like what you see? Want to get in touch? Leave us with your email here.</p>
+    <div class="container">
+      <p class="text-center active">Like what you see? Want to get in touch? Leave us with your email here <span class="blinking-cursor">|</span></p>
+      <div class="col-md-8 col-md-offset-2 hidden">
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Email">
+          <span class="input-group-btn">
+            <button class="btn btn-link btn-lg" type="button">Go!</button>
+          </span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- main footer -->
@@ -476,7 +486,9 @@
 <script src="js/skrollr.min.js"></script>
 <script>
 $(window).load(function(){
+  //loading init
   $('#div-loading').fadeOut(1000);
+  //scroll
   var s = skrollr.init({forceHeight: false});
   function winResize() {
     var _win = $( window ).width();
@@ -489,6 +501,13 @@ $(window).load(function(){
   winResize();
   $( window ).resize(function() {
     winResize();
+  });
+  //email click event
+  $('.email-footer').click(function() {
+    var _this = $(this);
+    _this.find('.hidden').addClass('active fade in').removeClass('hidden');
+    _this.find('.blinking-cursor').addClass('hidden');
+    _this.find('.form-control').focus();
   });
 });
 </script>
