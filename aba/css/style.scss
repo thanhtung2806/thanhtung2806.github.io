@@ -110,8 +110,8 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 .navbar-aba .navbar-nav>.open>a,.navbar-aba .navbar-nav>.open>a:focus,.navbar-aba .navbar-nav>.open>a:hover{background-color:#f0f1f1}
 
 // home intro
-.home-intro { color: #252d37;  position: relative;
-  .home-intro { position: absolute; top: 5%; left:0; width: 100%;
+.home-intro { color: #252d37;  position: relative; padding-top: 5rem;
+  .infos { position: absolute; top: 5%; left:0; width: 100%;
     @include mobile { position: relative; top: 0; padding: 0 1.5rem; background: #fdf7e9; padding: 1.5rem 0; }
     @include tablet { position: absolute; top: 5%; background: none;}
   }
@@ -209,6 +209,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 .main-footer { background: url(../img/footer-bg.jpg) no-repeat; -webkit-background-size: cover; background-size: cover; width: 100%; position: relative;
   @include mobile { padding-bottom: 20%; background: url(../img/footer-bg.jpg) no-repeat; }
   @include tablet { padding-bottom: 10%;  height:1%;}
+  @include desktop { padding-bottom: 0%;}
   .footer-infos { position: absolute; width: 100%; top: 6%; color: #fff;
     @include mobile { position: relative; top: 0; padding: 0 1.5rem; }
     @include desktop { position: absolute; top: 6%;}

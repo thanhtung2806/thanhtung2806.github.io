@@ -165,21 +165,22 @@ a {
 
 .home-intro {
   color: #252d37;
-  position: relative; }
-  .home-intro .home-intro {
+  position: relative;
+  padding-top: 5rem; }
+  .home-intro .infos {
     position: absolute;
     top: 5%;
     left: 0;
     width: 100%; }
     @media (min-width: 320px) {
-      .home-intro .home-intro {
+      .home-intro .infos {
         position: relative;
         top: 0;
         padding: 0 1.5rem;
         background: #fdf7e9;
         padding: 1.5rem 0; } }
     @media (min-width: 768px) {
-      .home-intro .home-intro {
+      .home-intro .infos {
         position: absolute;
         top: 5%;
         background: none; } }
@@ -411,6 +412,9 @@ a {
     .main-footer {
       padding-bottom: 10%;
       height: 1%; } }
+  @media (min-width: 992px) {
+    .main-footer {
+      padding-bottom: 0%; } }
   .main-footer .footer-infos {
     position: absolute;
     width: 100%;
