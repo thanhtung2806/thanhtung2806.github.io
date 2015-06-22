@@ -213,7 +213,12 @@
 
   <section class="sorter-elements">
     <div class="container">
-      <img src="img/home-mobile/motor1.png" height="" width="206" alt="" class="center-block motor1">
+      <div class="clearfix">
+        <div class="col-sm-6 col-sm-offset-6 img-holder">
+          <img src="img/home-mobile/motor1.png" height="" width="206" alt="" class="center-block motor1">
+        </div>
+      </div>
+
       <div class="clearfix">
         <div class="col-sm-6 bg-overlay">
            <h2 class="orange h1">All Shapes and Sizes</h2>
@@ -287,23 +292,6 @@
           <img src="img/home-mobile/sorterArm2.png" height="" width="269" alt="" class="sort2">
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <!-- process sorter -->
-  <section class="process-sorter hidden">
-
-
-    </div>
-    <div class="clearfix item try-item">
-      <div class="col-sm-3 col-sm-offset-8">
-
-      </div>
-      <img src="img/home/armLeft0.png" alt="" class="armLeft">
-      <img src="img/home/armLeft1.png" alt="" class="armLeft" data-13555="visibility:hidden;" data-13805="visibility:visible;">
-      <img src="img/home/armSingle.png" alt="" class="armSingleLeft" data-13545="transform: rotate(70deg); margin-top: -22px; margin-left: -160px;" data-13755="transform: rotate(0deg); margin-top: 0px; margin-left: -143px;">
-      <img src="img/home/boxGrey.png" alt="" class="boxGrey center-block" data-13250="visibility:hidden;" data-13550="visibility:visible;" data-13555="transform: translateX(0rem);" data-13755="transform: translateX(-35rem);">
     </div>
   </section>
 
@@ -382,7 +370,7 @@
 
 
   <div class="text-center hidden" id="mobile-ver">
-    <h2>Mobile version is under development.</h2>
+    <h2>Desktop version view.</h2>
   </div>
 
   <!-- loading -->
@@ -410,6 +398,19 @@
 $(window).load(function(){
   //loading init
   $('#div-loading').fadeOut(1000);
+  //resize window
+  function winResize() {
+    var _win = $( window ).width();
+    if (_win > 1199){
+      $('#mobile-ver').removeClass('hidden');
+    }else{
+      $('#mobile-ver').addClass('hidden');
+    }
+  }
+  winResize();
+  $( window ).resize(function() {
+    winResize();
+  });
 });
 </script>
 <script type="text/javascript" src="http://localhost:48626/takana.js"></script>
