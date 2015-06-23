@@ -239,6 +239,10 @@ a {
 @media (min-width: 768px) {
   .homepage-mobile .navbar-go .container {
     display: block; } }
+.homepage-mobile .door {
+  background: #fff; }
+  .homepage-mobile .door img {
+    background: url("../img/home-mobile/backgroundGradient.png") repeat-x bottom; }
 
 .home-slide {
   background: #fff; }

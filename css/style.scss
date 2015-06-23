@@ -155,6 +155,9 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .navbar-go .container {
     @include tablet { display: block; }
   }
+  .door { background: #fff;
+    img { background: url('../img/home-mobile/backgroundGradient.png') repeat-x bottom;}
+  }
 }
 
 //slider
