@@ -275,7 +275,9 @@ a {
         left: 0;
         position: relative;
         bottom: 0;
-        margin-bottom: 0px; } }
+        margin-bottom: 0px;
+        padding-left: 1rem;
+        padding-right: 1rem; } }
     @media (min-width: 992px) {
       .home-slide .carousel-caption {
         right: 30%;
@@ -970,6 +972,17 @@ a {
       margin-bottom: 0.7rem; }
   .main-footer p {
     font-size: 1.5rem; }
+
+.main-content {
+  padding-top: 67px;
+  min-height: 1000px;
+  background: #000; }
+  @media (min-width: 320px) {
+    .main-content {
+      padding-top: 40px; } }
+  @media (min-width: 992px) {
+    .main-content {
+      padding-top: 67px; } }
 
 #mobile-ver {
   width: 100%;

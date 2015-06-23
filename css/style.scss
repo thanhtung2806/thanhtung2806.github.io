@@ -170,7 +170,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
     @include ldesktop { height: 512px; }
   }
   .carousel-caption { background: rgba(248,151,28,0.94); bottom: 35%; margin-bottom: -100px; text-shadow: none;
-    @include mobile { right: 0; left: 0; position: relative; bottom:0;  margin-bottom: 0px;}
+    @include mobile { right: 0; left: 0; position: relative; bottom:0;  margin-bottom: 0px; padding-left: 1rem; padding-right: 1rem;}
     @include desktop { right: 30%; left: 30%; padding-left: 20px; padding-right: 20px; bottom: 38%; margin-bottom: -100px; position: absolute;}
     @include ldesktop { bottom: 35%; }
     h3 { margin-top: 0; font-family: 'SohoGothicPro-Medium'; font-weight: 400;
@@ -446,10 +446,15 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   p { font-size: 1.5rem; }
 }
 
+.main-content { padding-top: 67px; min-height: 1000px; background: #000;
+  @include mobile { padding-top: 40px; }
+  @include desktop { padding-top: 67px; }
+
+}
+
 #mobile-ver { width: 100%; position: fixed; z-index: 1200; left: 0; top:0;padding:0;margin:0;height:100%; background: #fff; padding: 15rem 0;}
 
 .blinking-cursor {
-
   color: #fff;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
