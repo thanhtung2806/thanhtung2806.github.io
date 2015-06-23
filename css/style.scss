@@ -168,7 +168,8 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   }
   .carousel-caption { background: rgba(248,151,28,0.94); bottom: 35%; margin-bottom: -100px; text-shadow: none;
     @include mobile { right: 0; left: 0; position: relative; bottom:0;  margin-bottom: 0px;}
-    @include desktop { right: 30%; left: 30%; padding-left: 20px; padding-right: 20px; bottom: 35%; margin-bottom: -100px; position: absolute;}
+    @include desktop { right: 30%; left: 30%; padding-left: 20px; padding-right: 20px; bottom: 38%; margin-bottom: -100px; position: absolute;}
+    @include ldesktop { bottom: 35%; }
     h3 { margin-top: 0; font-family: 'SohoGothicPro-Medium'; font-weight: 400;
       @include mobile { margin-top:0; }
       @include tablet { margin-top:2rem;}
@@ -376,7 +377,9 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   @include tablet { background: #6d6e70; }
   .container { display: block; }
   .clearfix {
-    @include tablet { display: flex; align-items: center; justify-content: center; }
+    @include tablet { display: flex; align-items: center; justify-content: center; min-height: 365px;
+      &:first-child { min-height: inherit; }
+    }
   }
   .bg-overlay { position: relative; z-index:2;
     @include mobile { background: rgba(109,110,112,.6); padding: 2rem 0 3rem; margin: 3rem 0; }

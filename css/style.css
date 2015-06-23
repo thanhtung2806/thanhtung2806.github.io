@@ -278,9 +278,12 @@ a {
         left: 30%;
         padding-left: 20px;
         padding-right: 20px;
-        bottom: 35%;
+        bottom: 38%;
         margin-bottom: -100px;
         position: absolute; } }
+    @media (min-width: 1280px) {
+      .home-slide .carousel-caption {
+        bottom: 35%; } }
     .home-slide .carousel-caption h3 {
       margin-top: 0;
       font-family: 'SohoGothicPro-Medium';
@@ -813,7 +816,10 @@ a {
     .sorter-elements .clearfix {
       display: flex;
       align-items: center;
-      justify-content: center; } }
+      justify-content: center;
+      min-height: 365px; }
+      .sorter-elements .clearfix:first-child {
+        min-height: inherit; } }
   .sorter-elements .bg-overlay {
     position: relative;
     z-index: 2; }
