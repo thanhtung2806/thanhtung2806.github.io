@@ -44,16 +44,16 @@ body {
   font-size: 2.4rem; }
 
 .h4, h4 {
+  font-size: 20px;
+  font-size: 2rem; }
+
+.h5, h5 {
   font-size: 18px;
   font-size: 1.8rem; }
 
-.h5, h5 {
-  font-size: 14px;
-  font-size: 1.4rem; }
-
 .h6, h6 {
-  font-size: 12px;
-  font-size: 1.2rem; }
+  font-size: 16px;
+  font-size: 1.6rem; }
 
 .orange {
   color: #f8971c; }
@@ -975,14 +975,110 @@ a {
 
 .main-content {
   padding-top: 67px;
-  min-height: 1000px;
-  background: #000; }
+  min-height: 1000px; }
   @media (min-width: 320px) {
     .main-content {
       padding-top: 40px; } }
   @media (min-width: 992px) {
     .main-content {
       padding-top: 67px; } }
+
+.main-title {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 5rem 1rem;
+  color: #fff; }
+  .main-title h1 {
+    margin-top: 0;
+    font-weight: 100;
+    font-family: 'SohoGothicPro'; }
+    @media (min-width: 320px) {
+      .main-title h1 {
+        font-size: 3.5rem; } }
+    @media (min-width: 768px) {
+      .main-title h1 {
+        font-size: 4rem; } }
+    @media (min-width: 992px) {
+      .main-title h1 {
+        font-size: 6rem; } }
+  @media (min-width: 992px) {
+    .main-title p {
+      line-height: 1.2;
+      opacity: 0.8; } }
+
+.people__list {
+  padding: 8rem 0 6rem; }
+  @media (min-width: 320px) {
+    .people__list {
+      padding: 4rem 0 2rem; } }
+  @media (min-width: 992px) {
+    .people__list {
+      padding: 8rem 0 6rem; } }
+  .people__list .item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    .people__list .item:hover img, .people__list .item.join-item img {
+      -webkit-filter: none;
+      filter: none; }
+    .people__list .item .infos {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      color: #fff;
+      padding: 0 1.2rem; }
+    .people__list .item h4 {
+      margin: 0; }
+    .people__list .item img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      filter: gray;
+      -webkit-transition: All .3s ease;
+      -moz-transition: All .3s ease;
+      -o-transition: All .3s ease;
+      -ms-transition: All .3s ease; }
+
+.people__investor {
+  background: #F3F3F3;
+  padding: 13rem 0; }
+  @media (min-width: 320px) {
+    .people__investor {
+      padding: 6rem 0 5rem; } }
+  @media (min-width: 992px) {
+    .people__investor {
+      padding: 13rem 0; } }
+  .people__investor h3 {
+    margin-top: 0;
+    font-weight: 100;
+    font-family: 'SohoGothicPro';
+    margin-bottom: 2rem; }
+    @media (min-width: 320px) {
+      .people__investor h3 {
+        font-size: 3.5rem; } }
+    @media (min-width: 768px) {
+      .people__investor h3 {
+        font-size: 4rem; } }
+    @media (min-width: 992px) {
+      .people__investor h3 {
+        font-size: 6rem; } }
+  @media (min-width: 992px) {
+    .people__investor p {
+      line-height: 1.2;
+      opacity: 0.8; } }
+  @media (min-width: 320px) {
+    .people__investor .people__investor__imgs {
+      padding-top: 3rem;
+      padding-bottom: 4rem; } }
+  @media (min-width: 768px) {
+    .people__investor .people__investor__imgs {
+      padding-top: 4rem;
+      padding-bottom: 3rem; } }
+  @media (min-width: 992px) {
+    .people__investor .people__investor__imgs {
+      padding-top: 8rem;
+      padding-bottom: 2rem; } }
 
 #mobile-ver {
   width: 100%;

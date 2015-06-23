@@ -73,9 +73,9 @@ body { font-family: 'ProximaNova'; color: $black-color; font-size: 16px; font-si
 .h1,h1 { font-size: 38px; font-size: 3.8rem; }
 .h2,h2 { font-size: 30px; font-size: 3rem; }
 .h3,h3 { font-size: 24px; font-size: 2.4rem; }
-.h4,h4 { font-size: 18px; font-size: 1.8rem; }
-.h5,h5 { font-size: 14px; font-size: 1.4rem; }
-.h6,h6 { font-size: 12px; font-size: 1.2rem; }
+.h4,h4 { font-size: 20px; font-size: 2rem; }
+.h5,h5 { font-size: 18px; font-size: 1.8rem; }
+.h6,h6 { font-size: 16px; font-size: 1.6rem; }
 .orange { color: $main-color; }
 .white { color: $white-color; }
 .mb15 { margin-bottom: 15px; }
@@ -446,10 +446,50 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   p { font-size: 1.5rem; }
 }
 
-.main-content { padding-top: 67px; min-height: 1000px; background: #000;
+.main-content { padding-top: 67px; min-height: 1000px;
   @include mobile { padding-top: 40px; }
   @include desktop { padding-top: 67px; }
+}
+.main-title { background-repeat: no-repeat; background-size: cover; width: 100%; padding: 5rem 1rem; color: #fff;
+  h1 { margin-top:0; font-weight: 100; font-family: 'SohoGothicPro';
+    @include mobile { font-size: 3.5rem; }
+    @include tablet { font-size: 4rem; }
+    @include desktop { font-size: 6rem; }
+  }
+  p {
+    @include desktop { line-height: 1.2; opacity: 0.8;}
+  }
+}
 
+.people__list { padding: 8rem 0 6rem;
+  @include mobile { padding: 4rem 0 2rem; }
+  @include desktop { padding: 8rem 0 6rem; }
+  .item { position: relative; margin-bottom: 2rem; padding-left: 1rem; padding-right: 1rem;
+    &:hover, &.join-item {
+      img {-webkit-filter: none; filter: none; }
+    }
+    .infos { position: absolute; width: 100%; bottom: 0; color: #fff; padding: 0 1.2rem;}
+    h4 { margin: 0; }
+    img { -webkit-filter: grayscale(100%); filter: grayscale(100%); filter: gray; -webkit-transition:All .3s ease;-moz-transition:All .3s ease;-o-transition:All .3s ease;-ms-transition:All .3s ease;}
+  }
+}
+
+.people__investor { background: #F3F3F3; padding: 13rem 0;
+  @include mobile { padding: 6rem 0 5rem; }
+  @include desktop { padding: 13rem 0; }
+  h3 { margin-top:0; font-weight: 100; font-family: 'SohoGothicPro'; margin-bottom: 2rem;
+    @include mobile { font-size: 3.5rem; }
+    @include tablet { font-size: 4rem; }
+    @include desktop { font-size: 6rem; }
+  }
+  p {
+    @include desktop { line-height: 1.2; opacity: 0.8;}
+  }
+  .people__investor__imgs {
+    @include mobile { padding-top: 3rem; padding-bottom: 4rem; }
+    @include tablet { padding-top: 4rem; padding-bottom: 3rem; }
+    @include desktop { padding-top: 8rem; padding-bottom: 2rem; }
+  }
 }
 
 #mobile-ver { width: 100%; position: fixed; z-index: 1200; left: 0; top:0;padding:0;margin:0;height:100%; background: #fff; padding: 15rem 0;}
