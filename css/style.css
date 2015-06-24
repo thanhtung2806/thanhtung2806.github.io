@@ -111,10 +111,7 @@ a {
   @media (min-width: 320px) {
     .navbar-go {
       min-height: 40px; } }
-  @media (min-width: 992px) {
-    .navbar-go {
-      min-height: 67px; } }
-  @media (min-width: 1280px) {
+  @media (min-width: 768px) {
     .navbar-go {
       min-height: 67px; } }
   .navbar-go .dropdown-menu {
@@ -123,7 +120,7 @@ a {
     @media (min-width: 320px) {
       .navbar-go .dropdown-menu {
         text-align: left; } }
-    @media (min-width: 1280px) {
+    @media (min-width: 768px) {
       .navbar-go .dropdown-menu {
         text-align: right; } }
     .navbar-go .dropdown-menu a {
@@ -132,16 +129,16 @@ a {
       @media (min-width: 320px) {
         .navbar-go .dropdown-menu a {
           color: #231f20; } }
-      @media (min-width: 1280px) {
+      @media (min-width: 768px) {
         .navbar-go .dropdown-menu a {
           color: white; } }
       .navbar-go .dropdown-menu a:hover {
         color: white;
-        background: none; }
+        background: #646263; }
         @media (min-width: 320px) {
           .navbar-go .dropdown-menu a:hover {
             color: #231f20; } }
-        @media (min-width: 1280px) {
+        @media (min-width: 768px) {
           .navbar-go .dropdown-menu a:hover {
             color: white; } }
 
@@ -152,14 +149,11 @@ a {
     .navbar-go .navbar-brand {
       height: 34px;
       padding: 8px 10px; } }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .navbar-go .navbar-brand {
       height: 67px;
       float: left;
       line-height: 45px; } }
-  @media (min-width: 1280px) {
-    .navbar-go .navbar-brand {
-      height: 67px; } }
   .navbar-go .navbar-brand img {
     display: inline-block; }
 
@@ -174,10 +168,7 @@ a {
   @media (min-width: 320px) {
     .navbar-go .navbar-nav > li > a {
       padding: 10px; } }
-  @media (min-width: 992px) {
-    .navbar-go .navbar-nav > li > a {
-      padding: 20px 15px 27px 15px; } }
-  @media (min-width: 1280px) {
+  @media (min-width: 768px) {
     .navbar-go .navbar-nav > li > a {
       padding: 20px 15px 27px 15px; } }
 

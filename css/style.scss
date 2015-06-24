@@ -97,18 +97,18 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 // header
 .navbar-go { background-color: $white-color; border: none; min-height: 67px; margin-bottom: 0; text-align: center;
   @include mobile { min-height: 40px; }
-  @include desktop { min-height: 67px; }
-  @include ldesktop { min-height: 67px; }
+  @include tablet { min-height: 67px; }
+  // @include ldesktop { min-height: 67px; }
 
   .dropdown-menu { background: #716f70;  border: none;
     @include mobile { text-align: left;  }
-    @include ldesktop { text-align: right; }
+    @include tablet { text-align: right; }
     a { color: $white-color; font-size: 2rem;
       @include mobile { color: $black-color; }
-      @include ldesktop { color: $white-color; }
-      &:hover { color: $white-color; background: none;
+      @include tablet { color: $white-color; }
+      &:hover { color: $white-color; background: darken(#716f70, 5%);
         @include mobile { color: $black-color; }
-        @include ldesktop { color: $white-color; }
+        @include tablet { color: $white-color; }
       }
     }
   }
@@ -117,16 +117,16 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 }
 .navbar-go .navbar-brand{  height: 67px; padding: 21px 15px;
   @include mobile { height: 34px;  padding: 8px 10px;}
-  @include desktop { height: 67px; float: left; line-height: 45px; }
-  @include ldesktop { height: 67px; }
+  @include tablet { height: 67px; float: left; line-height: 45px; }
+  // @include ldesktop { height: 67px; }
   img { display: inline-block; }
 }
 // .navbar-go .navbar-brand:focus,.navbar-go .navbar-brand:hover{color:#5e5e5e;background-color:transparent}
 .navbar-go .navbar-text{color: $black-color; }
 .navbar-go .navbar-nav>li>a{color: $black-color; font-size: 2rem; text-transform: uppercase; font-family: 'SohoGothicPro';
   @include mobile { padding: 10px; }
-  @include desktop { padding: 20px 15px 27px 15px;}
-  @include ldesktop { padding: 20px 15px 27px 15px;}
+  @include tablet { padding: 20px 15px 27px 15px;}
+  // @include ldesktop { padding: 20px 15px 27px 15px;}
 }
 .navbar-go .navbar-nav>li>a:focus,.navbar-go .navbar-nav>li>a:hover{color:#333;background-color:transparent}
 .navbar-go .navbar-nav>.active>a,.navbar-go .navbar-nav>.active>a:focus,.navbar-go .navbar-nav>.active>a:hover{color:#555;background-color:#e7e7e7}
