@@ -396,7 +396,7 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 .sorter-elements {  min-height: 20rem; color: #fff;
   @include mobile { background: #6d6e70 url(../img/home-mobile/conveyorBeltBlack.jpg) repeat-y center;}
   @include tablet { background: #6d6e70; }
-  .container { display: block; }
+  .container { display: block; overflow: hidden; }
   .clearfix {
     @include tablet { display: flex; align-items: center; justify-content: center; min-height: 365px;
       &:first-child { min-height: inherit; }

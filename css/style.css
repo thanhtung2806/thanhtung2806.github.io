@@ -856,7 +856,8 @@ a {
     .sorter-elements {
       background: #6d6e70; } }
   .sorter-elements .container {
-    display: block; }
+    display: block;
+    overflow: hidden; }
   @media (min-width: 768px) {
     .sorter-elements .clearfix {
       display: flex;
