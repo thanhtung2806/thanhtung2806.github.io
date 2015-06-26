@@ -80,6 +80,20 @@ a {
     color: #da7d07;
     outline: 0; }
 
+.btn {
+  border-radius: 0; }
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.3); }
+
+.btn-orange {
+  background: #f8971c;
+  border-color: transparent;
+  color: #fff; }
+  .btn-orange:hover {
+    background: #da7d07;
+    color: #fff; }
+
 .form-control {
   border: 1px solid #bfd8d8;
   box-shadow: none;
@@ -101,6 +115,19 @@ a {
 @media (min-width: 768px) {
   .text-right {
     text-alight: right; } }
+
+.center-all {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; }
 
 .navbar-go {
   background-color: white;
@@ -1197,9 +1224,22 @@ a {
       .press .press__sidebar li:first-child {
         border-top: solid 1px #D8D8D8; }
   .press .press__logo .col-md-6 {
-    padding-left: 7.5px;
-    padding-right: 7.5px;
-    margin-top: 1.5rem; }
+    margin-top: 3rem;
+    position: relative; }
+    .press .press__logo .col-md-6:hover .bg-overlay {
+      opacity: 1; }
+  .press .press__logo .press__logo__holder {
+    position: relative; }
+  .press .press__logo .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: All .3s ease;
+    -moz-transition: All .3s ease;
+    -o-transition: All .3s ease;
+    -ms-transition: All .3s ease; }
 
 #mobile-ver {
   width: 100%;
@@ -1292,16 +1332,7 @@ a {
   top: 0;
   padding: 0;
   margin: 0;
-  height: 100%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  height: 100%; }
   .load-holder#div-loading {
     background: #fff; }
 
