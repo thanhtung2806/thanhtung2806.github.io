@@ -253,8 +253,8 @@ a, button { text-decoration: none; -webkit-transition: color 400ms, background 4
 .b-header_logo a { display: block; position: relative;  min-height: 44px; font: 300 2.2em/.9 'Roboto Slab', sans-serif; text-align: right; color: inherit; }
 .b-header_logo a strong { font: 800 12px/1 'Open Sans', sans-serif; text-transform: uppercase; }
 
-.b-header_logo a:before { position: absolute; left: 0; top: 50%; margin-top: -24px; width: 48px; height: 44px; font-size: 48px; text-align: center; line-height: .95; -webkit-perspective: 1000; -moz-perspective: 1000; perspective: 1000; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transition: -webkit-transform 1000ms; -moz-transition: -moz-transform 1000ms; -o-transition: -o-transform 1000ms; transition: transform 1000ms; }
-.b-header_logo a:hover:before { -webkit-transform: rotateY(-180deg); -moz-transform: rotateY(-180deg); -ms-transform: rotateY(-180deg); transform: rotateY(-180deg); }
+/*.b-header_logo a:before { position: absolute; left: 0; top: 50%; margin-top: -24px; width: 48px; height: 44px; font-size: 48px; text-align: center; line-height: .95; -webkit-perspective: 1000; -moz-perspective: 1000; perspective: 1000; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transition: -webkit-transform 1000ms; -moz-transition: -moz-transform 1000ms; -o-transition: -o-transform 1000ms; transition: transform 1000ms; }
+.b-header_logo a:hover:before { -webkit-transform: rotateY(-180deg); -moz-transform: rotateY(-180deg); -ms-transform: rotateY(-180deg); transform: rotateY(-180deg); }*/
 
 /* * * * * *
  * * * * * * Navigation * * * * * *
@@ -568,8 +568,9 @@ a, button { text-decoration: none; -webkit-transition: color 400ms, background 4
 /* * * * * *
  * * * * * * Show transitions * * * * * *
                               * * * * * */
-.b-speaker { opacity: 0; -webkit-transition: opacity 600ms, -webkit-transform 600ms; -moz-transition: opacity 600ms, -moz-transform 600ms; -o-transition: opacity 600ms, -o-transform 600ms; transition: opacity 600ms, transform 600ms; }
+/*@media (min-width: 768px) {
 
+.b-speaker { opacity: 0; -webkit-transition: opacity 600ms, -webkit-transform 600ms; -moz-transition: opacity 600ms, -moz-transform 600ms; -o-transition: opacity 600ms, -o-transform 600ms; transition: opacity 600ms, transform 600ms; }
 .b-speaker:nth-child(1) { -webkit-transition-delay: 200ms; -moz-transition-delay: 200ms; -o-transition-delay: 200ms; transition-delay: 200ms; }
 .b-speaker:nth-child(2) { -webkit-transition-delay: 400ms; -moz-transition-delay: 400ms; -o-transition-delay: 400ms; transition-delay: 400ms; }
 .b-speaker:nth-child(3) { -webkit-transition-delay: 600ms; -moz-transition-delay: 600ms; -o-transition-delay: 600ms; transition-delay: 600ms; }
@@ -579,6 +580,11 @@ a, button { text-decoration: none; -webkit-transition: color 400ms, background 4
 .b-speaker:nth-child(7) { -webkit-transition-delay: 1400ms; -moz-transition-delay: 1400ms; -o-transition-delay: 1400ms; transition-delay: 1400ms; }
 
 .b-section__show .b-speaker { opacity: 1; }
+
+}*/
+
+
+
 
 
 /* --------------------
@@ -673,7 +679,7 @@ a, button { text-decoration: none; -webkit-transition: color 400ms, background 4
 
 }
 
-.b-faq_questions a span { display: block;/* text-overflow: ellipsis; white-space: nowrap; overflow: hidden;*/ }
+.b-faq_questions a span { display: block;/* text-overflow: ellipsis; white-space: nowrap; overflow: hidden;*/ word-wrap: break-word;}
 
 .b-faq_questions_more { text-align: right; }
 
