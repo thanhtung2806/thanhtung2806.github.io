@@ -1,0 +1,61 @@
+/* --------------------
+   -------------------- Intro -------------------- */
+@media (max-width: 767px) {
+
+    .b-intro_slider_item__first {
+        background-image: url('../img/01@xs.jpg');
+    }
+
+    .b-intro_slider_item__second {
+        background-image: url('../img/02@xs.jpg');
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .b-intro_slider_item__first {
+        background-image: url('../img/01.jpg');
+    }
+
+    .b-intro_slider_item__second {
+        background-image: url('../img/02.jpg');
+    }
+
+}
+
+/* --------------------
+   -------------------- Pricing -------------------- */
+/*@media (max-width: 767px) {
+
+    .b-pricing {
+        background-image: url('../img/01@xs.jpg');
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .b-pricing {
+        background-image: url('../img/01.jpg');
+    }
+
+}*/
+
+/* --------------------
+   -------------------- Sing Up -------------------- */
+@media (max-width: 767px) {
+
+    .b-signUp {
+        background-image: url('../img/02@xs.jpg');
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .b-signUp {
+        background-image: url('../img/02.jpg');
+    }
+
+}
