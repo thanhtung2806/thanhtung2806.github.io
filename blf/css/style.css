@@ -457,6 +457,15 @@ a {
   .footer p {
     margin: 0; }
 
+.load-holder {
+  background: #fff;
+  position: fixed;
+  z-index: 3001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh; }
+
 .load-block {
   position: absolute;
   top: calc(50% - 30px);
