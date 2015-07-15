@@ -129,7 +129,6 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .intro__img { background: url(../img/backgroundBig.png) no-repeat; background-size: cover; background-position: center center; height: 100vh; width: 100%; position: relative;
     @include mobile { height: 50rem }
     @include tablet { height: 100vh }
-
     .center-all { height: 100vh;
       @include mobile { height: 40rem }
       @include tablet { height: 100vh }
@@ -137,12 +136,12 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
     .intro__img__logo--big { margin-bottom: 2rem; }
     .intro__img__download { margin-bottom: 1rem; }
     .intro__img__hand { position: absolute; bottom:0;
-      @include desktop { width: 30% }
-      @include ldesktop { width: auto }
+      @include desktop { height: 440px }
+      @include ldesktop { height: 540px }
       &.intro__img__hand--left { left:0; }
       &.intro__img__hand--right { right:0; }
     }
-    .intro__img__scroll { position: absolute; bottom: 10rem; left: 50%; margin-left: -11px;
+    .intro__img__scroll { position: absolute; bottom: 10rem; left: 50%; margin-left: -11px; animation-duration: 3s; animation-delay: 1s;
       @include mobile { bottom: 7rem; }
       @include tablet { bottom: 10rem; }
     }
@@ -213,7 +212,11 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   }
   .panel-bf { border: solid 1px #C5C5C5; border-radius: 0; margin-bottom: 2rem;
     .panel-bf__plus { font-size: 3.8rem; font-weight: 100; line-height: 1.4rem; }
-    .panel-heading { border-radius: 0; padding: 2rem; }
+    .panel-heading { border-radius: 0; padding: 2rem;
+      a { display: block;
+        &:hover, &:focus { text-decoration: none; }
+      }
+    }
     .panel-title { line-height: 1.3; }
     .panel-body { padding: 2rem; }
   }

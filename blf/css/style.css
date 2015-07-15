@@ -233,10 +233,10 @@ a {
       bottom: 0; }
       @media (min-width: 992px) {
         .intro .intro__img .intro__img__hand {
-          width: 30%; } }
+          height: 440px; } }
       @media (min-width: 1280px) {
         .intro .intro__img .intro__img__hand {
-          width: auto; } }
+          height: 540px; } }
       .intro .intro__img .intro__img__hand.intro__img__hand--left {
         left: 0; }
       .intro .intro__img .intro__img__hand.intro__img__hand--right {
@@ -245,7 +245,9 @@ a {
       position: absolute;
       bottom: 10rem;
       left: 50%;
-      margin-left: -11px; }
+      margin-left: -11px;
+      animation-duration: 3s;
+      animation-delay: 1s; }
       @media (min-width: 320px) {
         .intro .intro__img .intro__img__scroll {
           bottom: 7rem; } }
@@ -397,6 +399,10 @@ a {
     .faq .panel-bf .panel-heading {
       border-radius: 0;
       padding: 2rem; }
+      .faq .panel-bf .panel-heading a {
+        display: block; }
+        .faq .panel-bf .panel-heading a:hover, .faq .panel-bf .panel-heading a:focus {
+          text-decoration: none; }
     .faq .panel-bf .panel-title {
       line-height: 1.3; }
     .faq .panel-bf .panel-body {

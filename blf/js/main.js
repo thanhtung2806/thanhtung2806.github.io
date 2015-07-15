@@ -1,4 +1,4 @@
 new WOW().init();
-$(window).load(function(){
+$(document).ready(function(){
   $('#div-loading').fadeOut(2000);
 });
