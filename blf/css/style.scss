@@ -107,6 +107,10 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
   .navbar-collapse { border: none; }
   .navbar-nav { margin-top: 1.1rem; }
   .navbar-nav > li.impress > a { background: $main-color; color: $white-color; }
+  .navbar-right { margin-right:0;
+    @include mobile { margin-right:-15px; }
+    @include tablet { margin-right:0; }
+  }
 }
 .navbar-go .navbar-brand{  height: 60px;
 }
@@ -244,6 +248,25 @@ a { color: $main-color; -webkit-transition:All .3s ease;-moz-transition:All .3s 
 .footer { background: #1a3858; color: $white-color; padding: 2rem 0;
   img { margin-top: 1rem; margin-bottom: 1.5rem;}
   p { margin:0; }
+}
+
+.term { background: #ECECEC;
+  @include mobile { padding: 15rem 0 2rem;  }
+  @include tablet { padding: 15rem 0 8rem;  }
+  .term__content { background: $white-color; padding: 6rem 0 8rem; position: relative;
+    h1 { text-transform: uppercase; font-weight: 700; margin-top: 4rem; line-height: 1.4;
+      @include mobile { margin-top: 2rem;  }
+      @include tablet { margin-top: 4rem;  }
+    }
+    hr { margin: 5rem 0;
+      @include mobile { margin: 2rem 0;   }
+      @include tablet { margin: 5rem 0;  }
+    }
+    .term__content__logo { position: absolute; top: 0rem; left: 50%; margin-left: -5rem; margin-top: -11rem;
+      @include mobile { margin-top: -14rem;  }
+      @include tablet { margin-top: -11rem;  }
+    }
+  }
 }
 
 .load-holder { background: #fff; position: fixed; z-index: 3001; left: 0; top:0; width: 100%; height: 100vh;  }
