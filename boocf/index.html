@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="fonts/custom-fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="css/style.css" rel="stylesheet">
+  <title>Boo</title>
+</head>
+<body>
+  <!-- header -->
+  <nav class="navbar navbar-go navbar-fixed-top hidden" id="nav-header">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logoMini1.png" height="27" width="137" alt=""></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#features">features</a></li>
+          <li><a href="#about">about us</a></li>
+          <li><a href="#faq">faq</a></li>
+          <li><a href="#contact">contact</a></li>
+          <li class="impress"><a href="#get">get blindfold</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      Launch LOGIN
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade modal-login" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <!-- <h4 class="modal-title" id="myModalLabel">Modal title</h4> -->
+          </div>
+          <div class="modal-body">
+            <h3 class="text-center">Log In To Your Account</h3>
+            <div class="divider visible-md visible-lg">
+              <div class="name">OR</div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i><span>Facebook Log In</span></a>
+                </div>
+                <div class="form-group">
+                  <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i><span>Twitter Log In</span></a>
+                </div>
+                <div class="form-group text-center">
+                  <p class="h4 visible-xs visible-sm">OR</p>
+                </div>
+              </div>
+              <div class="col-md-5 col-md-offset-1">
+                <form>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-orange">Log In</button>
+                  </div>
+                  <p><a href="#" class="secondary">Forgot your password?</a></p>
+                </form>
+              </div>
+            </div>
+            <div class="signup clearfix text-center">
+              <span class="gray">Don't have an account?</span>
+              <a href="#">Sign up for free</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- loading -->
+  <div class="load-holder hidden" id="div-loading">
+    <div class="load-block">
+      <div class="blockcont">
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+      </div>
+      <div class="text-center">Loading...</div>
+    </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/wow.min.js"></script> -->
+<script src="js/main.js"></script>
+</html>
