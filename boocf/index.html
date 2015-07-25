@@ -13,7 +13,7 @@
 </head>
 <body>
   <!-- header -->
-  <nav class="navbar navbar-go navbar-fixed-top hidden" id="nav-header">
+  <nav class="navbar navbar-go navbar-static-top" id="nav-header">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -22,76 +22,131 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="img/logoMini1.png" height="27" width="137" alt=""></a>
+        <a class="navbar-brand text-center" href="#"><img src="img/logo.svg" height="60" alt=""></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Gifts</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#features">features</a></li>
-          <li><a href="#about">about us</a></li>
-          <li><a href="#faq">faq</a></li>
-          <li><a href="#contact">contact</a></li>
-          <li class="impress"><a href="#get">get blindfold</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#" class="btn-cart"><img src="img/menu_bag.svg" alt=""></a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
 
-  <div class="container">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      Launch LOGIN
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade modal-login" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog modal-md" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <!-- <h4 class="modal-title" id="myModalLabel">Modal title</h4> -->
-          </div>
-          <div class="modal-body">
-            <h3 class="text-center">Log In To Your Account</h3>
-            <div class="divider visible-md visible-lg">
-              <div class="name">OR</div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i><span>Facebook Log In</span></a>
+  <!-- sign up -->
+  <div class="sign-up clearfix">
+    <div class="container">
+      <div class="row">
+        <div class="sign-up__view col-md-10 col-md-offset-1">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="sign-up__form clearfix">
+                <div class="form-group text-center">
+                  <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i><span>Facebook Sign Up</span></a>
+                  <p><small>No auto posting, ever.</small></p>
+                </div>
+                <div class="divider">OR</div>
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="First name">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Last name">
+                  </div>
                 </div>
                 <div class="form-group">
-                  <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i><span>Twitter Log In</span></a>
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password (minimum 8 characters)">
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="ZIP code">
+                  </div>
+                  <div class="col-md-6 sign-up__form__invite-code">
+                    <a href="#" class="secondary pull-right">Have invite code?</a>
+                  </div>
                 </div>
                 <div class="form-group text-center">
-                  <p class="h4 visible-xs visible-sm">OR</p>
+                  <a href="#" class="btn btn-orange ">Sign Up</a>
                 </div>
+                <p class="sign-up__form__tos text-center"> <small>By signing up, you agree to the <a href="#" class="secondary">Privacy Policy &amp; Terms of Service</a></small> </p>
               </div>
-              <div class="col-md-5 col-md-offset-1">
-                <form>
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-orange">Log In</button>
-                  </div>
-                  <p><a href="#" class="secondary">Forgot your password?</a></p>
-                </form>
-              </div>
+
             </div>
-            <div class="signup clearfix text-center">
-              <span class="gray">Don't have an account?</span>
-              <a href="#">Sign up for free</a>
+            <div class="col-md-5">
+              <div class="sign-up__view__message clearfix">
+                <h3>Get Fresh, Chef-Made Meals Delivered</h3>
+                <h4 class="h5">Join today for free. No commitment, no subscription.</h4>
+                <ul>
+                  <li>Ever-changing daily menus</li>
+                  <li>Local chefs use nourishing, seasonal ingredients</li>
+                  <li>Dishes are chilled for maximum freshness</li>
+                  <li>Heat and dinner’s ready when you are</li>
+                  <li>On-demand or scheduled delivery</li>
+                </ul>
+                <p>Have an account? <a href="#">Log in</a></p>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer__about">
+          <h4 class="h6">About Munchery</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Privacy &amp; Terms</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer__help">
+          <h4 class="h6 text-center">HELP & CONTACT</h4>
+          <div class="clearfix text-center footer__help__link">
+            <a href="#" class="">Help Center</a>
+            <a href="#" class="">Email Support</a>
+          </div>
+          <p class="text-center">Mon-Fri, 7AM-9PM PST</p>
+          <ul class="footer__help__social list-unstyled text-center">
+            <li><a href="#" class="facebook" target="_blank">  </a></li>
+            <li><a href="#" class="twitter" target="_blank">   </a></li>
+            <li><a href="#" class="pinterest" target="_blank"> </a></li>
+            <li><a href="#" class="instagram" target="_blank"> </a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer__download">
+          <h4 class="h6">ORDER ON THE GO</h4>
+          <div class="form-group">
+            <a class="btn btn-download center-block text-left" href="http://mnch.me/a/110101738656125502?channel=interstitial">
+              Get <strong>iPhone</strong> App
+            </a>
+          </div>
+          <div class="form-group">
+            <a class="btn btn-download center-block text-left" href="http://mnch.me/a/110101738656125502?channel=interstitial">
+              Get <strong>Android</strong> App
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
 
  <!-- loading -->
