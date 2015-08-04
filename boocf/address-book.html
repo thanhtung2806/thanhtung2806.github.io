@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="fonts/custom-fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="css/style.css" rel="stylesheet">
+  <title>Boo</title>
+</head>
+<body>
+  <!-- header -->
+  <nav class="navbar navbar-go navbar-static-top" id="nav-header">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand text-center" href="#"><img src="img/logo.svg" height="60" alt=""></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Gifts</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">FREE Food</a></li>
+          <li class="active"><a href="#">Noo Pham</a></li>
+          <li><a href="#" class="btn-cart"><img src="img/menu_bag.svg" alt=""></a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <!-- user profile  -->
+  <div class="container">
+    <div class="acc--header clearfix">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Your Account</h3>
+          </div>
+          <div class="col-md-4 acc--header__links text-right">
+            <span class="gray">Your Credit Balance: $0.00</span>
+            <a href="#" class="secondary">Log Out</a>
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <!-- acc profile -->
+      <div class="col-md-3 acc--profile">
+        <a href="#" class="acc--profile__photo clearfix">
+          <img src="img/blank_user_avatar_large.svg" alt="" class="img-responsive">
+          <span class="acc--profile__photo__text text-center">change photo</span>
+        </a>
+
+        <div class="acc--profile__contact">
+          <h4 class="acc--profile__contact__name">No Noon</h4>
+           <a href="#">Manage Address Book</a>
+        </div>
+
+        <div class="acc--profile__social">
+          <h4 class="h6">Get Dessert on Your Birthday</h4>
+          <p>Connect with Facebook so that we can send you a gift on your birthday!</p>
+
+          <a class="btn btn-fb" href="#"><i class="fa fa-facebook"></i>
+                Connect with Facebook</a>
+        </div>
+
+      </div>
+
+      <!-- acc settings -->
+      <div class="col-md-9 acc--settings">
+        <div class="acc--settings__add-book clearfix">
+          <div class="acc--settings__add-book__header clearfix">
+            <a href="#" class="pull-right btn btn-orange btn-sm">Add an Address</a>
+            <h4>Manage Addresses</h4>
+            <hr>
+          </div>
+          <div class="acc--settings__add-book__body clearfix">
+            <div class="clearfix">
+              <div class="acc--settings__add-book__body__item col-md-10">
+                <div class="clearfix">
+                  <div class="pull-left acc--settings__add-book__body__item__num">1. </div>
+                  <div class="pull-left">
+                    <strong>No Noon</strong><br>
+                    57 N Gate<br>Atherton, CA 94027
+                    <br>555-212-2224
+                  </div>
+                </div>
+                <p><a href="#" class="pull-right btn btn-orange btn-sm">EDIT</a></p>
+                <p>This is your primary address</p>
+              </div>
+            </div>
+            <hr>
+
+            <div class="clearfix">
+              <div class="acc--settings__add-book__body__item col-md-10">
+                <div class="clearfix">
+                  <div class="pull-left acc--settings__add-book__body__item__num">2. </div>
+                  <div class="pull-left">
+                    <strong>No Noon</strong><br>
+                    37 Ringwood Ave<br>Atherton, CA 94027
+                    <br>555-212-2224
+                  </div>
+                </div>
+                <p>
+                  <a href="#" class="pull-right btn btn-orange btn-sm">EDIT</a>
+                  <a href="#" class="pull-right btn btn-grey btn-sm">DELETE</a>
+                </p>
+                <p><a href="" class="secondary">Make this your primary address</a></p>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer--settings footer">
+    <div class="container">
+      <div class="footer__links text-center">
+        <a href="#">About Us</a>
+        <a href="#">Service Areas</a>
+        <a href="#" target="_blank">Blog</a>
+        <a href="#">iOS App</a>
+        <a href="#">Android App</a>
+        <a href="#">Jobs</a>
+        <a href="#">Privacy &amp; Terms</a>
+        <a href="#">Help</a>
+      </div>
+    </div>
+  </footer>
+
+
+ <!-- loading -->
+  <div class="load-holder hidden" id="div-loading">
+    <div class="load-block">
+      <div class="blockcont">
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+        <div class="block-item"></div>
+      </div>
+      <div class="text-center">Loading...</div>
+    </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/wow.min.js"></script> -->
+<script src="js/main.js"></script>
+</html>
