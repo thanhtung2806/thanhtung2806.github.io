@@ -533,6 +533,21 @@ label {
     @media (min-width: 768px) {
       .acc--settings .acc--settings__bg {
         padding: 50px; } }
+  @media (min-width: 320px) {
+    .acc--settings .acc--settings__review__header .btn {
+      margin-right: 10px; } }
+  @media (min-width: 768px) {
+    .acc--settings .acc--settings__review__header .btn {
+      margin-right: 30px; } }
+  .acc--settings .acc--settings__review__body .media:hover .media-right {
+    opacity: 1; }
+  .acc--settings .acc--settings__review__body .media h4 {
+    margin-top: 0;
+    margin-bottom: 5px; }
+  .acc--settings .acc--settings__review__body .media-right {
+    opacity: 0; }
+    .acc--settings .acc--settings__review__body .media-right .btn {
+      margin-bottom: 10px; }
 
 .footer {
   background-color: white;

@@ -268,6 +268,23 @@ label { font-weight: 400;
     @include mobile { padding: 10px }
     @include tablet { padding: 50px }
   }
+  .acc--settings__review__header {
+    .btn {
+      @include mobile { margin-right: 10px;  }
+      @include tablet { margin-right: 30px;   }
+    }
+  }
+  .acc--settings__review__body {
+    .media {
+      &:hover {
+        .media-right { opacity: 1; }
+      }
+      h4 { margin-top: 0; margin-bottom: 5px; }
+    }
+    .media-right { opacity: 0;
+      .btn {  margin-bottom: 10px; }
+    }
+  }
 }
 
 .footer { background-color: white; padding: 1.2rem 0 3.2rem;
