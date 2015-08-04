@@ -59,8 +59,9 @@ body { font-family: 'Montserrat'; color: $black-color; font-size: 14px; font-siz
 .h4,h4 { font-size: 20px; font-size: 2rem; }
 .h5,h5 { font-size: 18px; font-size: 1.8rem; }
 .h6,h6 { font-size: 16px; font-size: 1.6rem; }
-.blue { color: $main-color; }
+.orange { color: $main-color; }
 .white { color: $white-color; }
+.gray { color: $black-color; }
 .mb15 { margin-bottom: 15px; }
 .mt10 { margin-top: 10px; } .mt15 { margin-top: 15px; }
 
@@ -95,6 +96,9 @@ a.secondary { color: #b9b9af; text-decoration: underline;
 
 .form-control { border: 1px solid #b9b9af; box-shadow: none; color: #42413e; height: 40px; border-radius: 2px;
   &:hover, &:focus { border: 1px solid #b9b9af; }
+}
+label { font-weight: 400;
+  span { color: $main-color; font-weight: 100; }
 }
 .form-group { margin-bottom: 20px; }
 .checkbox, .radio {margin-bottom: 15px;}
@@ -232,7 +236,7 @@ a.secondary { color: #b9b9af; text-decoration: underline;
   }
 }
 
-.acc--settings {
+.acc--settings { margin-bottom: 30px;
   .acc--settings__links { background: #fff;
     @include mobile { padding: 10px 0px 20px 0px; }
     @include tablet { padding: 10px 30px 20px 30px; }
@@ -259,6 +263,10 @@ a.secondary { color: #b9b9af; text-decoration: underline;
       @include mobile { margin-right: 10px;  }
       @include tablet { margin-right: 30px;   }
     }
+  }
+  .acc--settings__bg { background: #fff;
+    @include mobile { padding: 10px  }
+    @include tablet { padding: 50px   }
   }
 }
 

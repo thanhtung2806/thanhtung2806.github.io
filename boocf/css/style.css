@@ -55,11 +55,14 @@ body {
   font-size: 16px;
   font-size: 1.6rem; }
 
-.blue {
+.orange {
   color: #f27242; }
 
 .white {
   color: #ffffff; }
+
+.gray {
+  color: #4A4A4A; }
 
 .mb15 {
   margin-bottom: 15px; }
@@ -149,6 +152,12 @@ a.secondary {
   border-radius: 2px; }
   .form-control:hover, .form-control:focus {
     border: 1px solid #b9b9af; }
+
+label {
+  font-weight: 400; }
+  label span {
+    color: #f27242;
+    font-weight: 100; }
 
 .form-group {
   margin-bottom: 20px; }
@@ -461,59 +470,69 @@ a.secondary {
   .acc--profile .acc--profile__social h4 {
     line-height: 1.3; }
 
-.acc--settings .acc--settings__links {
-  background: #fff; }
-  @media (min-width: 320px) {
-    .acc--settings .acc--settings__links {
-      padding: 10px 0px 20px 0px; } }
-  @media (min-width: 768px) {
-    .acc--settings .acc--settings__links {
-      padding: 10px 30px 20px 30px; } }
-  .acc--settings .acc--settings__links h4 {
-    margin-top: 30px; }
-  .acc--settings .acc--settings__links li {
-    margin-top: 4px; }
-.acc--settings .acc--settings__links__mobile {
-  position: relative; }
-  .acc--settings .acc--settings__links__mobile span {
-    background: #f27242;
-    color: #fff;
-    z-index: 1;
-    padding: 7px 5px;
-    position: absolute;
-    bottom: 0px;
-    width: 100%; }
-.acc--settings .acc--settings__referral {
-  background: url(../img/referrals-page.jpg) no-repeat;
-  background-color: rgba(255, 255, 255, 0.9);
-  background-size: cover;
-  background-position: 50% 50%;
-  padding: 40px 0 30px;
+.acc--settings {
   margin-bottom: 30px; }
-  .acc--settings .acc--settings__referral h1, .acc--settings .acc--settings__referral h2 {
-    line-height: 1.3;
-    font-weight: 100; }
-  .acc--settings .acc--settings__referral .btn {
-    margin-bottom: 10px; }
-.acc--settings .acc--settings__add-book {
-  background: #fff; }
+  .acc--settings .acc--settings__links {
+    background: #fff; }
+    @media (min-width: 320px) {
+      .acc--settings .acc--settings__links {
+        padding: 10px 0px 20px 0px; } }
+    @media (min-width: 768px) {
+      .acc--settings .acc--settings__links {
+        padding: 10px 30px 20px 30px; } }
+    .acc--settings .acc--settings__links h4 {
+      margin-top: 30px; }
+    .acc--settings .acc--settings__links li {
+      margin-top: 4px; }
+  .acc--settings .acc--settings__links__mobile {
+    position: relative; }
+    .acc--settings .acc--settings__links__mobile span {
+      background: #f27242;
+      color: #fff;
+      z-index: 1;
+      padding: 7px 5px;
+      position: absolute;
+      bottom: 0px;
+      width: 100%; }
+  .acc--settings .acc--settings__referral {
+    background: url(../img/referrals-page.jpg) no-repeat;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 40px 0 30px;
+    margin-bottom: 30px; }
+    .acc--settings .acc--settings__referral h1, .acc--settings .acc--settings__referral h2 {
+      line-height: 1.3;
+      font-weight: 100; }
+    .acc--settings .acc--settings__referral .btn {
+      margin-bottom: 10px; }
+  .acc--settings .acc--settings__add-book {
+    background: #fff; }
+    @media (min-width: 320px) {
+      .acc--settings .acc--settings__add-book {
+        padding: 20px 0 20px 20px; } }
+    @media (min-width: 768px) {
+      .acc--settings .acc--settings__add-book {
+        padding: 30px 0 30px 40px; } }
+  .acc--settings .acc--settings__add-book__body__item__num {
+    width: 25px; }
+  .acc--settings .acc--settings__add-book__body__item .btn {
+    margin-left: 20px;
+    margin: 10px 0 10px 20px; }
   @media (min-width: 320px) {
-    .acc--settings .acc--settings__add-book {
-      padding: 20px 0 20px 20px; } }
+    .acc--settings .acc--settings__add-book__header .btn {
+      margin-right: 10px; } }
   @media (min-width: 768px) {
-    .acc--settings .acc--settings__add-book {
-      padding: 30px 0 30px 40px; } }
-.acc--settings .acc--settings__add-book__body__item__num {
-  width: 25px; }
-.acc--settings .acc--settings__add-book__body__item .btn {
-  margin-left: 20px;
-  margin: 10px 0 10px 20px; }
-@media (min-width: 320px) {
-  .acc--settings .acc--settings__add-book__header .btn {
-    margin-right: 10px; } }
-@media (min-width: 768px) {
-  .acc--settings .acc--settings__add-book__header .btn {
-    margin-right: 30px; } }
+    .acc--settings .acc--settings__add-book__header .btn {
+      margin-right: 30px; } }
+  .acc--settings .acc--settings__bg {
+    background: #fff; }
+    @media (min-width: 320px) {
+      .acc--settings .acc--settings__bg {
+        padding: 10px; } }
+    @media (min-width: 768px) {
+      .acc--settings .acc--settings__bg {
+        padding: 50px; } }
 
 .footer {
   background-color: white;
