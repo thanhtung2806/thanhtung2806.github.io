@@ -265,8 +265,8 @@ label { font-weight: 400;
     }
   }
   .acc--settings__bg { background: #fff;
-    @include mobile { padding: 10px  }
-    @include tablet { padding: 50px   }
+    @include mobile { padding: 10px }
+    @include tablet { padding: 50px }
   }
 }
 
