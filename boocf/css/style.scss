@@ -182,7 +182,6 @@ label { font-weight: 400;
 }
 
 //sign up
-
 .sign-up { background-image: url(../img/signup-background.jpg); background-repeat: no-repeat; background-size: cover; background-color: white; width: 100%;
   .sign-up__view { background-color: white; background-color: rgba(255,255,255,0.95); padding-top: 50px; padding-bottom: 60px; margin-top: 40px; margin-bottom: 150px;
     @include mobile { padding-top: 20px; padding-bottom: 30px; margin-top: 30px; margin-bottom: 50px; }
@@ -281,12 +280,77 @@ label { font-weight: 400;
       }
       h4 { margin-top: 0; margin-bottom: 5px; }
     }
-    .media-right { opacity: 0;
+    .media-right {
+      @include mobile { display: block; opacity: 1; padding-left: 0px;}
+      @include lmobile { display: table-cell; opacity: 0; padding-left: 10px;}
       .btn {  margin-bottom: 10px; }
     }
   }
 }
 
+.hero { background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; background-image: url(../img/hero.jpg);
+  &.hero--end { background-image: url(../img/key-lime-pie.jpg); margin-bottom: 30px;
+    @include mobile { height: 290px; }
+    @include tablet { height: 420px; }
+  }
+  @include mobile { height: 375px; }
+  @include tablet { height: 620px; }
+  .hero__panel { background: #fff;  padding: 20px; position: relative;
+    @include mobile { margin-top: 20px; margin-bottom: 40px; }
+    @include tablet { margin-top: 80px; margin-bottom: 131px; }
+    &:before { border: 1px solid #b9b9af; border-color: rgba(185,185,175,0.2); background-color: transparent; content: ""; display: block; height: auto; width: auto; position: absolute;
+      @include mobile { top: 10px; right: 10px; bottom: 10px; left: 10px; }
+      @include tablet { top: 20px; right: 20px; bottom: 20px; left: 20px; }
+    }
+    h1 { font-weight: 100;  font-size: 2.4rem; text-transform: uppercase; line-height: 52px;
+      @include mobile { margin-top: 10px;}
+      @include tablet { margin-top: 50px; }
+      strong { font-weight: 400; display: block; font-size: 3.6rem;}
+      &:after { display: block; margin-top: 18px; height: 3px; background-color: #515252; content: " "; margin-left: auto; margin-right: auto; width: 50px; }
+    }
+    p {   line-height: 1.6;
+      @include mobile { width: auto; margin: 10px auto 20px;}
+      @include tablet { width: 320px; margin: 19px auto 58px;}
+    }
+  }
+  .how-area-menu {
+    @include mobile { margin-top: 20px; margin-bottom: 40px; }
+    @include tablet { margin-top: 80px; margin-bottom: 131px; }
+  }
+}
+
+.page-title { padding: 40px 0;
+  @include mobile { padding: 20px 0; }
+  @include tablet { padding: 40px 0; }
+  h1 { font-weight: 100; margin: 0; padding:0; font-size: 2.6rem; }
+}
+
+.how-item { background: #fff; margin-bottom: 10px;
+  .how-item__info { padding: 65px;
+    @include mobile { padding: 25px 15px 15px 15px; }
+    @include tablet { padding: 40px 65px 20px 65px; }
+    @include ldesktop { padding: 65px; }
+  }
+  .how-item__img { padding-right: 0; padding-left: 0;}
+  h1 { font-weight: 100; margin: 0 0 30px; padding:0; font-size: 2.8rem; text-transform: uppercase;
+    @include mobile { margin: 0 0 10px; }
+    @include tablet { margin: 0 0 30px; }
+  }
+  p { line-height: 1.8; }
+}
+
+.how-area-menu { background: #fff; padding: 60px 0; margin-bottom: 10px;
+  @include mobile { padding: 20px 0; }
+  @include tablet { padding: 60px 0; }
+  h1 { font-weight: 100; margin: 0 0 30px; padding:0; font-size: 2.8rem;
+    @include mobile { margin: 0 0 10px; }
+    @include tablet { margin: 0 0 30px; }
+  }
+  .form-control { margin-bottom: 10px; }
+}
+
+
+// footer
 .footer { background-color: white; padding: 1.2rem 0 3.2rem;
   &.footer--settings {  background: none; }
   h4 { text-transform: uppercase; margin-bottom: 2rem; font-weight: 400;}
@@ -317,7 +381,7 @@ label { font-weight: 400;
     }
   }
   .footer__links { font-size: 1.3rem;
-    a { color: #b9b9af; margin: 0 10px; display: inline-block; }
+    a { color: #b9b9af; margin: 0 10px 5px 10px; display: inline-block; }
   }
 }
 

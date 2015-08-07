@@ -544,10 +544,184 @@ label {
   .acc--settings .acc--settings__review__body .media h4 {
     margin-top: 0;
     margin-bottom: 5px; }
-  .acc--settings .acc--settings__review__body .media-right {
-    opacity: 0; }
-    .acc--settings .acc--settings__review__body .media-right .btn {
-      margin-bottom: 10px; }
+  @media (min-width: 320px) {
+    .acc--settings .acc--settings__review__body .media-right {
+      display: block;
+      opacity: 1;
+      padding-left: 0px; } }
+  @media (min-width: 480px) {
+    .acc--settings .acc--settings__review__body .media-right {
+      display: table-cell;
+      opacity: 0;
+      padding-left: 10px; } }
+  .acc--settings .acc--settings__review__body .media-right .btn {
+    margin-bottom: 10px; }
+
+.hero {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(../img/hero.jpg); }
+  .hero.hero--end {
+    background-image: url(../img/key-lime-pie.jpg);
+    margin-bottom: 30px; }
+    @media (min-width: 320px) {
+      .hero.hero--end {
+        height: 290px; } }
+    @media (min-width: 768px) {
+      .hero.hero--end {
+        height: 420px; } }
+  @media (min-width: 320px) {
+    .hero {
+      height: 375px; } }
+  @media (min-width: 768px) {
+    .hero {
+      height: 620px; } }
+  .hero .hero__panel {
+    background: #fff;
+    padding: 20px;
+    position: relative; }
+    @media (min-width: 320px) {
+      .hero .hero__panel {
+        margin-top: 20px;
+        margin-bottom: 40px; } }
+    @media (min-width: 768px) {
+      .hero .hero__panel {
+        margin-top: 80px;
+        margin-bottom: 131px; } }
+    .hero .hero__panel:before {
+      border: 1px solid #b9b9af;
+      border-color: rgba(185, 185, 175, 0.2);
+      background-color: transparent;
+      content: "";
+      display: block;
+      height: auto;
+      width: auto;
+      position: absolute; }
+      @media (min-width: 320px) {
+        .hero .hero__panel:before {
+          top: 10px;
+          right: 10px;
+          bottom: 10px;
+          left: 10px; } }
+      @media (min-width: 768px) {
+        .hero .hero__panel:before {
+          top: 20px;
+          right: 20px;
+          bottom: 20px;
+          left: 20px; } }
+    .hero .hero__panel h1 {
+      font-weight: 100;
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      line-height: 52px; }
+      @media (min-width: 320px) {
+        .hero .hero__panel h1 {
+          margin-top: 10px; } }
+      @media (min-width: 768px) {
+        .hero .hero__panel h1 {
+          margin-top: 50px; } }
+      .hero .hero__panel h1 strong {
+        font-weight: 400;
+        display: block;
+        font-size: 3.6rem; }
+      .hero .hero__panel h1:after {
+        display: block;
+        margin-top: 18px;
+        height: 3px;
+        background-color: #515252;
+        content: " ";
+        margin-left: auto;
+        margin-right: auto;
+        width: 50px; }
+    .hero .hero__panel p {
+      line-height: 1.6; }
+      @media (min-width: 320px) {
+        .hero .hero__panel p {
+          width: auto;
+          margin: 10px auto 20px; } }
+      @media (min-width: 768px) {
+        .hero .hero__panel p {
+          width: 320px;
+          margin: 19px auto 58px; } }
+  @media (min-width: 320px) {
+    .hero .how-area-menu {
+      margin-top: 20px;
+      margin-bottom: 40px; } }
+  @media (min-width: 768px) {
+    .hero .how-area-menu {
+      margin-top: 80px;
+      margin-bottom: 131px; } }
+
+.page-title {
+  padding: 40px 0; }
+  @media (min-width: 320px) {
+    .page-title {
+      padding: 20px 0; } }
+  @media (min-width: 768px) {
+    .page-title {
+      padding: 40px 0; } }
+  .page-title h1 {
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    font-size: 2.6rem; }
+
+.how-item {
+  background: #fff;
+  margin-bottom: 10px; }
+  .how-item .how-item__info {
+    padding: 65px; }
+    @media (min-width: 320px) {
+      .how-item .how-item__info {
+        padding: 25px 15px 15px 15px; } }
+    @media (min-width: 768px) {
+      .how-item .how-item__info {
+        padding: 40px 65px 20px 65px; } }
+    @media (min-width: 1280px) {
+      .how-item .how-item__info {
+        padding: 65px; } }
+  .how-item .how-item__img {
+    padding-right: 0;
+    padding-left: 0; }
+  .how-item h1 {
+    font-weight: 100;
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 2.8rem;
+    text-transform: uppercase; }
+    @media (min-width: 320px) {
+      .how-item h1 {
+        margin: 0 0 10px; } }
+    @media (min-width: 768px) {
+      .how-item h1 {
+        margin: 0 0 30px; } }
+  .how-item p {
+    line-height: 1.8; }
+
+.how-area-menu {
+  background: #fff;
+  padding: 60px 0;
+  margin-bottom: 10px; }
+  @media (min-width: 320px) {
+    .how-area-menu {
+      padding: 20px 0; } }
+  @media (min-width: 768px) {
+    .how-area-menu {
+      padding: 60px 0; } }
+  .how-area-menu h1 {
+    font-weight: 100;
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 2.8rem; }
+    @media (min-width: 320px) {
+      .how-area-menu h1 {
+        margin: 0 0 10px; } }
+    @media (min-width: 768px) {
+      .how-area-menu h1 {
+        margin: 0 0 30px; } }
+  .how-area-menu .form-control {
+    margin-bottom: 10px; }
 
 .footer {
   background-color: white;
@@ -611,7 +785,7 @@ label {
     font-size: 1.3rem; }
     .footer .footer__links a {
       color: #b9b9af;
-      margin: 0 10px;
+      margin: 0 10px 5px 10px;
       display: inline-block; }
 
 .load-holder {
