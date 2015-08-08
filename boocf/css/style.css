@@ -577,6 +577,20 @@ label {
   @media (min-width: 768px) {
     .hero {
       height: 620px; } }
+  .hero.hero--landing {
+    background-image: url(../img/flex-hero.jpg); }
+    @media (min-width: 320px) {
+      .hero.hero--landing {
+        height: 480px; } }
+    @media (min-width: 768px) {
+      .hero.hero--landing {
+        height: 620px; } }
+    .hero.hero--landing .hero__panel__text {
+      margin-bottom: 10px; }
+    .hero.hero--landing .hero__panel__form {
+      margin-bottom: 10px; }
+      .hero.hero--landing .hero__panel__form .form-control {
+        margin-bottom: 10px; }
   .hero .hero__panel {
     background: #fff;
     padding: 20px;
@@ -721,6 +735,113 @@ label {
       .how-area-menu h1 {
         margin: 0 0 30px; } }
   .how-area-menu .form-control {
+    margin-bottom: 10px; }
+
+.landing--features {
+  padding-top: 4.06rem;
+  padding-bottom: 7.5rem;
+  background: #fff; }
+  .landing--features h1 {
+    text-transform: uppercase;
+    line-height: 1.35;
+    font-weight: 400;
+    margin-bottom: 30px; }
+    .landing--features h1 small {
+      color: #333;
+      font-weight: 100; }
+  .landing--features .landing--features__item {
+    margin-top: 20px; }
+    .landing--features .landing--features__item h4 {
+      font-weight: 100;
+      margin-top: 20px; }
+
+.landing--cheft {
+  background-color: #ECECEC;
+  padding-top: 2rem; }
+  .landing--cheft h1 {
+    text-transform: uppercase;
+    margin-top: 7rem;
+    font-weight: 100; }
+    @media (min-width: 320px) {
+      .landing--cheft h1 {
+        margin-top: 2rem; } }
+    @media (min-width: 768px) {
+      .landing--cheft h1 {
+        margin-top: 7rem; } }
+
+.landing--beyond {
+  background-color: #fff;
+  padding: 5rem 0 4rem; }
+  .landing--beyond h1 {
+    text-transform: uppercase;
+    font-weight: 100; }
+  .landing--beyond .landing--beyond__item {
+    margin-top: 5rem; }
+    .landing--beyond .landing--beyond__item p {
+      line-height: 1.8; }
+      .landing--beyond .landing--beyond__item p strong {
+        margin-bottom: 5px;
+        display: block; }
+  .landing--beyond .landing--beyond__impress {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 400; }
+    .landing--beyond .landing--beyond__impress img {
+      margin-right: 10px; }
+  .landing--beyond .landing--beyond__impress__stat {
+    display: inline-block;
+    width: 70px;
+    line-height: 1.25;
+    font-size: 1.6rem;
+    font-weight: 100;
+    margin-left: 1.5rem; }
+
+.landing--ready {
+  padding-top: 8rem; }
+  .landing--ready .landing--ready__fly {
+    z-index: 1; }
+    @media (min-width: 320px) {
+      .landing--ready .landing--ready__fly {
+        position: relative;
+        top: 0;
+        right: 0; } }
+    @media (min-width: 992px) {
+      .landing--ready .landing--ready__fly {
+        position: absolute;
+        top: 30px;
+        right: -50px; } }
+  .landing--ready .landing--ready__fly__overlay {
+    background: #fff;
+    padding: 40px; }
+  .landing--ready h1 {
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 20px; }
+  .landing--ready p {
+    line-height: 1.7; }
+
+.landing--claim {
+  padding: 40px 0 60px; }
+  .landing--claim h1 {
+    font-weight: 100;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    line-height: 52px; }
+    .landing--claim h1 strong {
+      font-weight: 400;
+      display: block;
+      font-size: 3.6rem; }
+    .landing--claim h1:after {
+      display: block;
+      margin-top: 18px;
+      height: 3px;
+      background-color: #515252;
+      content: " ";
+      margin-left: auto;
+      margin-right: auto;
+      width: 50px; }
+  .landing--claim .form-control {
     margin-bottom: 10px; }
 
 .footer {

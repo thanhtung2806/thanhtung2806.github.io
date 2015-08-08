@@ -11,7 +11,7 @@
 }
 
 
-@font-face {
+/*@font-face {
   font-family: 'Montserrat';
   src: url('Montserrat/Montserrat-Bold.eot');
   src: url('Montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
@@ -21,7 +21,7 @@
        url('Montserrat/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
   font-weight: 700;
   font-style: normal;
-}
+}*/
 
 @font-face {
   font-family: 'Montserrat';

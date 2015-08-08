@@ -295,6 +295,14 @@ label { font-weight: 400;
   }
   @include mobile { height: 375px; }
   @include tablet { height: 620px; }
+  &.hero--landing { background-image: url(../img/flex-hero.jpg);
+    @include mobile { height: 480px; }
+    @include tablet { height: 620px; }
+    .hero__panel__text { margin-bottom:10px; }
+    .hero__panel__form { margin-bottom: 10px;
+      .form-control { margin-bottom: 10px; }
+    }
+  }
   .hero__panel { background: #fff;  padding: 20px; position: relative;
     @include mobile { margin-top: 20px; margin-bottom: 40px; }
     @include tablet { margin-top: 80px; margin-bottom: 131px; }
@@ -349,6 +357,52 @@ label { font-weight: 400;
   .form-control { margin-bottom: 10px; }
 }
 
+.landing--features { padding-top: 4.06rem; padding-bottom: 7.5rem; background: #fff;
+  h1 { text-transform: uppercase; line-height: 1.35; font-weight: 400; margin-bottom: 30px;
+    small { color: #333; font-weight: 100; }
+  }
+  .landing--features__item { margin-top: 20px;
+    h4 { font-weight: 100; margin-top: 20px; }
+  }
+}
+
+.landing--cheft { background-color: #ECECEC; padding-top: 2rem;
+  h1 { text-transform: uppercase; margin-top: 7rem; font-weight: 100;
+    @include mobile { margin-top: 2rem; }
+    @include tablet { margin-top: 7rem; }
+  }
+}
+
+.landing--beyond { background-color: #fff; padding: 5rem 0 4rem;;
+  h1 { text-transform: uppercase;  font-weight: 100;}
+  .landing--beyond__item { margin-top: 5rem;
+    p { line-height: 1.8;
+      strong { margin-bottom: 5px; display: block; }
+    }
+  }
+  .landing--beyond__impress { margin-bottom: 3rem; font-size: 3rem; font-weight: 400;
+    img { margin-right: 10px; }
+  }
+  .landing--beyond__impress__stat { display: inline-block; width: 70px; line-height: 1.25; font-size: 1.6rem; font-weight: 100; margin-left: 1.5rem;}
+}
+
+.landing--ready { padding-top: 8rem;
+  .landing--ready__fly {  z-index: 1;
+    @include mobile { position: relative; top: 0; right: 0; }
+    @include desktop { position: absolute; top: 30px; right: -50px; }
+  }
+  .landing--ready__fly__overlay { background: #fff; padding: 40px; }
+  h1 { text-transform: uppercase;  font-weight: 100; margin-top: 0; margin-bottom: 20px;}
+  p { line-height: 1.7; }
+}
+
+.landing--claim { padding: 40px 0 60px;
+  h1 { font-weight: 100;  font-size: 2.4rem; text-transform: uppercase; line-height: 52px;
+    strong { font-weight: 400; display: block; font-size: 3.6rem;}
+    &:after { display: block; margin-top: 18px; height: 3px; background-color: #515252; content: " "; margin-left: auto; margin-right: auto; width: 50px; }
+  }
+  .form-control { margin-bottom: 10px; }
+}
 
 // footer
 .footer { background-color: white; padding: 1.2rem 0 3.2rem;
