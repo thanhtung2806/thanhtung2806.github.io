@@ -1,0 +1,204 @@
+/* noon style*/
+a {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease; }
+  a:hover, a:focus {
+    outline: 0; }
+
+p {
+  font-size: 16px;
+  font-weight: 100; }
+
+strong, a {
+  font-weight: 600; }
+
+.btn-orange {
+  background: #F58323;
+  border-color: transparent;
+  color: #fff; }
+  .btn-orange:hover, .btn-orange:focus {
+    background: #db6a0a;
+    color: #fff; }
+
+.btn-trans {
+  background: none;
+  border-color: #fff;
+  color: #fff; }
+  .btn-trans:hover, .btn-trans:focus {
+    background: #fff;
+    color: #233881; }
+
+.landing__bg {
+  background: url(../img/landing/bg.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: center; }
+
+.landing {
+  min-height: 2000px; }
+
+/* landing intro */
+.landing__intro {
+  color: #fff; }
+  @media (min-width: 320px) {
+    .landing__intro {
+      padding: 15px 0 10px; } }
+  @media (min-width: 768px) {
+    .landing__intro {
+      padding: 100px 0 50px; } }
+  .landing__intro img {
+    margin-bottom: 15px; }
+  .landing__intro h1 {
+    font-weight: 600;
+    margin-top: 0;
+    line-height: 1.35; }
+    @media (min-width: 320px) {
+      .landing__intro h1 {
+        font-size: 22px;
+        margin-bottom: 15px; } }
+    @media (min-width: 768px) {
+      .landing__intro h1 {
+        font-size: 30px;
+        margin-bottom: 30px; } }
+  .landing__intro p {
+    margin-bottom: 15px; }
+  .landing__intro .btn {
+    margin-bottom: 15px;
+    padding: 10px 15px; }
+  .landing__intro .landing__intro__sign {
+    color: #D0D3DB; }
+    .landing__intro .landing__intro__sign a {
+      color: #D0D3DB; }
+
+/* landing testimonials */
+.landing__testimonials {
+  background: #fff;
+  color: #606780;
+  padding: 30px 0; }
+  .landing__testimonials h1 {
+    font-weight: 600;
+    border-bottom: solid 1px #606780;
+    display: inline-block; }
+  @media (min-width: 320px) {
+    .landing__testimonials h2 {
+      font-size: 20px; } }
+  @media (min-width: 768px) {
+    .landing__testimonials h2 {
+      font-size: 24px; } }
+  @media (min-width: 320px) {
+    .landing__testimonials img {
+      margin: 15px auto; } }
+  @media (min-width: 768px) {
+    .landing__testimonials img {
+      margin: 30px auto; } }
+  .landing__testimonials .carousel-control {
+    background: none; }
+    .landing__testimonials .carousel-control.left .fa {
+      left: 0; }
+    .landing__testimonials .carousel-control.right .fa {
+      right: 0; }
+    .landing__testimonials .carousel-control .fa {
+      top: 50%;
+      position: absolute;
+      background: #D8D8D8;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 50%;
+      margin-top: -25px;
+      text-shadow: none; }
+
+.landing__how {
+  color: #fff; }
+  @media (min-width: 320px) {
+    .landing__how {
+      padding: 15px; } }
+  @media (min-width: 768px) {
+    .landing__how {
+      padding: 50px; } }
+  .landing__how .fa {
+    width: 120px;
+    height: 120px;
+    line-height: 110px;
+    border-radius: 50%;
+    border: solid 4px #fff;
+    font-size: 50px; }
+    @media (min-width: 320px) {
+      .landing__how .fa {
+        margin: 15px auto; } }
+    @media (min-width: 992px) {
+      .landing__how .fa {
+        margin: 40px auto; } }
+  .landing__how .landing__how__item {
+    margin-bottom: 15px; }
+  .landing__how h2 {
+    line-height: 1.2; }
+    @media (min-width: 320px) {
+      .landing__how h2 {
+        min-height: 15px; } }
+    @media (min-width: 992px) {
+      .landing__how h2 {
+        min-height: 75px; } }
+  .landing__how p {
+    color: #D0D3DB; }
+
+@media (min-width: 320px) {
+  .landing__mentors {
+    padding: 15px; } }
+@media (min-width: 768px) {
+  .landing__mentors {
+    padding: 40px; } }
+.landing__mentors h1 {
+  color: #606780;
+  margin-bottom: 40px;
+  margin-top: 0; }
+.landing__mentors .landing__mentors__item {
+  border: solid 1px #C8CAD4;
+  border-radius: 5px;
+  margin-bottom: 15px; }
+  .landing__mentors .landing__mentors__item img.img-responsive {
+    border-radius: 5px 5px 0 0;
+    width: 100%; }
+  .landing__mentors .landing__mentors__item h2 {
+    color: #233881;
+    font-weight: 700; }
+  .landing__mentors .landing__mentors__item .fa-circle {
+    font-size: 20px;
+    color: #18B6FB;
+    margin-top: 22px; }
+
+.landing__footer {
+  color: #D0D3DB; }
+  @media (min-width: 320px) {
+    .landing__footer {
+      padding-top: 20px; } }
+  @media (min-width: 768px) {
+    .landing__footer {
+      padding-top: 40px; } }
+  .landing__footer a {
+    font-weight: 100;
+    color: #D0D3DB;
+    font-size: 16px; }
+  .landing__footer .fa {
+    color: #fff;
+    font-size: 30px; }
+  .landing__footer .landing__footer__copy {
+    background: #243881;
+    padding: 15px 0;
+    font-weight: 100; }
+  @media (min-width: 320px) {
+    .landing__footer li {
+      margin-bottom: 5px; } }
+  @media (min-width: 768px) {
+    .landing__footer li {
+      margin-bottom: 20px; } }
+  @media (min-width: 320px) {
+    .landing__footer .landing__footer__item {
+      margin-bottom: 10px; } }
+  @media (min-width: 768px) {
+    .landing__footer .landing__footer__item {
+      margin-bottom: 40px; } }
+
+/*# sourceMappingURL=landing.css.map */
