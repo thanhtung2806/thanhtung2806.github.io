@@ -433,6 +433,8 @@ label {
   background-size: cover;
   background-color: white;
   width: 100%; }
+  .sign-up.term {
+    background: #f4f7f8; }
   .sign-up .sign-up__view {
     background-color: white;
     background-color: rgba(255, 255, 255, 0.95);

@@ -219,6 +219,7 @@ label { font-weight: 400;
 
 //sign up
 .sign-up { background-image: url(../img/signup-background.jpg); background-repeat: no-repeat; background-size: cover; background-color: white; width: 100%;
+  &.term { background: #f4f7f8; }
   .sign-up__view { background-color: white; background-color: rgba(255,255,255,0.95); padding-top: 50px; padding-bottom: 60px; margin-top: 40px; margin-bottom: 150px;
     @include mobile { padding-top: 20px; padding-bottom: 30px; margin-top: 30px; margin-bottom: 50px; }
     @include tablet { padding-top: 50px; padding-bottom: 60px; margin-top: 40px; margin-bottom: 150px;  }
