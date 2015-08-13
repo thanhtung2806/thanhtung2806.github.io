@@ -549,6 +549,59 @@ label { font-weight: 400;
   .detail__review__item { margin-bottom: 40px; }
 }
 
+.checkout {
+  @include mobile { padding: 15px 0 20px; }
+  @include tablet { padding: 40px 0 50px; }
+  .checkout__bg { background: #fff; border: 1px solid #e8ebe9; }
+  .checkout__main { margin-bottom: 15px;
+    .checkout__bg {
+      @include mobile { padding: 10px; }
+      @include tablet { padding: 50px; }
+    }
+    h1 { margin-top:0; margin-bottom: 20px; border-bottom: solid 1px #e8ebe9; font-weight: 100; padding-bottom: 20px; }
+    .nav-tabs { margin-bottom: 30px; border-bottom: 1px solid #e8ebe9;
+      li { padding: 0; margin-bottom: 0;
+        a { border-top: 1px solid #e8ebe9; border-bottom: 3px solid #fff; border-right: 1px solid #e8ebe9; border-radius: 0; margin: 0; color: #79776b; padding: 15px; font-size: 13px;
+          &:hover { border-bottom-color: #eee }
+        }
+        &.active a { background-color: #f9f9f9; border-bottom: 3px solid #fed55a; }
+      }
+    }
+    .checkout__main__item__link { line-height: 40px; }
+  }
+  .checkout__main__item { margin-bottom: 10px;
+    img { display: inline-block; margin-right: 5px; }
+    h4 { margin-top: 0; margin-bottom: 3px; font-weight: 400;}
+    p { color: #79776b }
+    select.form-control { border-radius: 0;-webkit-appearance: none; -moz-appearance: none; -moz-border-radius: 0px; -ms-border-radius: 0px; background-color: white; border: 1px solid #b9b9af; background-image: url(../img/SelectArrows.svg); background-repeat: no-repeat; background-position: center right; height: 40px; margin-bottom: 10px;}
+  }
+  .checkout__main__step { margin-bottom: 40px;}
+  .checkout__main__addr { margin-bottom: 40px;
+    img { margin-bottom: 15px; }
+    .checkout__main__addr__main { height: 70px; width: 100%; background-image: url(../img/SelectArrows.svg); background-position: 95% center; background-repeat: no-repeat; border: 1px solid #b9b9af; color: #333;
+      small { color: lighten(#333, 20%); }
+    }
+    ul { margin:0; padding:0;}
+    .dropdown-menu { border-radius: 0; border-top:0; width: 100%; min-width: 200px; border-color: #b9b9af;
+      a { padding: 13px 15px; border-top: solid 1px #f5f5f5; border-left: solid 4px #fff; font-weight: 100;
+        &:hover { color: $main-color; border-left-color: #f5f5f5;}
+        span { font-weight: 100; }
+      }
+      >.active>a { background: #f5f5f5; color: #333; border-left-color: #42413e; }
+    }
+  }
+  .checkout__info {
+    .checkout__bg {
+      @include mobile { padding: 10px; }
+      @include tablet { padding: 30px; }
+    }
+    .table {
+      td { border-top: none; padding: 3px 0; }
+    }
+    hr { border-color: #333; }
+    .form-control { margin-bottom: 5px; }
+  }
+}
 
 
 // footer
