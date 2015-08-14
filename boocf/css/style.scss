@@ -603,7 +603,78 @@ label { font-weight: 400;
     .form-control { margin-bottom: 5px; }
   }
 }
+.about {
+  .landing--cheft {
+    h1 { text-transform: uppercase; font-weight: 600; line-height: 1.4;
+    &:after { display: block; height: 2px; background-color: #515252; content: " "; width: 50px; margin-top: 9px; }
+    }
+  }
+}
+.about__header {
+  &.hero { background-image: url(../img/hero-about.jpg);
+    @include mobile { height: 325px; }
+    @include tablet { height: 485px; }
+    .hero__panel { background-color: rgba(255,255,255,0.9); }
+  }
+}
 
+.about__story { background: #f4f7f8;
+  @include mobile { padding: 20px; }
+  @include tablet { padding: 70px; }
+  h2 { text-transform: uppercase; font-weight: 600; line-height: 1.4;
+    &:after { display: block; height: 2px; background-color: #515252; content: " "; margin-left: auto; margin-right: auto; width: 50px; margin-top: 9px; }
+  }
+  .nav {
+    @include mobile { margin-bottom: 15px; }
+    @include tablet { margin-bottom: 50px; }
+    li { display: inline-block;
+      &.active {
+        a { color: #515252; border-bottom: 3px solid #42413e; font-weight: 400;
+          span { color: #515252; }
+        }
+      }
+    }
+    a { color: #79776b; border-bottom: 3px solid #f4f7f8;
+      &:hover, &:focus { background: none; color: darken(#79776b, 20%); }
+      span { color: $main-color; }
+    }
+  }
+  h4, h5 { line-height: 1.4; margin-bottom: 20px;
+    @include mobile { margin-bottom: 10px; }
+    @include tablet { margin-bottom: 20px; }
+  }
+  p { margin-bottom: 15px;
+    @include mobile { margin-bottom: 5px; }
+    @include tablet { margin-bottom: 15px; }
+  }
+}
+
+.about__team { background: #fff;
+  @include mobile { padding: 20px; }
+  @include tablet { padding: 70px; }
+  h2 { text-transform: uppercase; font-weight: 600; line-height: 1.4;
+    &:after { display: block; height: 2px; background-color: #515252; content: " "; margin-left: auto; margin-right: auto; width: 50px; margin-top: 9px; }
+  }
+  .about__team__items {
+    @include mobile { padding: 20px; }
+    @include tablet { padding: 50px; }
+  }
+  .about__team__item { padding: 0;
+    @include mobile { margin-bottom: 15px; }
+    @include tablet { margin-bottom: 0; }
+    &:hover {
+      .about__team__item__overlay { opacity: 0.9; }
+    }
+  }
+  .about__team__item__overlay { opacity: 0; position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; background-color: #f15a22; color: white; padding: 20px;
+    h3 { margin-top: 5px;
+      &:after { display: block; width: 45px; height: 1px; margin-top: 10px; background-color: white; content: " "; }
+    }
+    p {
+      strong { font-weight: 400; }
+    }
+  }
+}
 
 // footer
 .footer { background-color: white; padding: 1.2rem 0 3.2rem;

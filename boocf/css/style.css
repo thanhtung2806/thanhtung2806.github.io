@@ -1299,6 +1299,150 @@ label {
 .checkout .checkout__info .form-control {
   margin-bottom: 5px; }
 
+.about .landing--cheft h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.4; }
+  .about .landing--cheft h1:after {
+    display: block;
+    height: 2px;
+    background-color: #515252;
+    content: " ";
+    width: 50px;
+    margin-top: 9px; }
+
+.about__header.hero {
+  background-image: url(../img/hero-about.jpg); }
+  @media (min-width: 320px) {
+    .about__header.hero {
+      height: 325px; } }
+  @media (min-width: 768px) {
+    .about__header.hero {
+      height: 485px; } }
+  .about__header.hero .hero__panel {
+    background-color: rgba(255, 255, 255, 0.9); }
+
+.about__story {
+  background: #f4f7f8; }
+  @media (min-width: 320px) {
+    .about__story {
+      padding: 20px; } }
+  @media (min-width: 768px) {
+    .about__story {
+      padding: 70px; } }
+  .about__story h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.4; }
+    .about__story h2:after {
+      display: block;
+      height: 2px;
+      background-color: #515252;
+      content: " ";
+      margin-left: auto;
+      margin-right: auto;
+      width: 50px;
+      margin-top: 9px; }
+  @media (min-width: 320px) {
+    .about__story .nav {
+      margin-bottom: 15px; } }
+  @media (min-width: 768px) {
+    .about__story .nav {
+      margin-bottom: 50px; } }
+  .about__story .nav li {
+    display: inline-block; }
+    .about__story .nav li.active a {
+      color: #515252;
+      border-bottom: 3px solid #42413e;
+      font-weight: 400; }
+      .about__story .nav li.active a span {
+        color: #515252; }
+  .about__story .nav a {
+    color: #79776b;
+    border-bottom: 3px solid #f4f7f8; }
+    .about__story .nav a:hover, .about__story .nav a:focus {
+      background: none;
+      color: #43423b; }
+    .about__story .nav a span {
+      color: #f27242; }
+  .about__story h4, .about__story h5 {
+    line-height: 1.4;
+    margin-bottom: 20px; }
+    @media (min-width: 320px) {
+      .about__story h4, .about__story h5 {
+        margin-bottom: 10px; } }
+    @media (min-width: 768px) {
+      .about__story h4, .about__story h5 {
+        margin-bottom: 20px; } }
+  .about__story p {
+    margin-bottom: 15px; }
+    @media (min-width: 320px) {
+      .about__story p {
+        margin-bottom: 5px; } }
+    @media (min-width: 768px) {
+      .about__story p {
+        margin-bottom: 15px; } }
+
+.about__team {
+  background: #fff; }
+  @media (min-width: 320px) {
+    .about__team {
+      padding: 20px; } }
+  @media (min-width: 768px) {
+    .about__team {
+      padding: 70px; } }
+  .about__team h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.4; }
+    .about__team h2:after {
+      display: block;
+      height: 2px;
+      background-color: #515252;
+      content: " ";
+      margin-left: auto;
+      margin-right: auto;
+      width: 50px;
+      margin-top: 9px; }
+  @media (min-width: 320px) {
+    .about__team .about__team__items {
+      padding: 20px; } }
+  @media (min-width: 768px) {
+    .about__team .about__team__items {
+      padding: 50px; } }
+  .about__team .about__team__item {
+    padding: 0; }
+    @media (min-width: 320px) {
+      .about__team .about__team__item {
+        margin-bottom: 15px; } }
+    @media (min-width: 768px) {
+      .about__team .about__team__item {
+        margin-bottom: 0; } }
+    .about__team .about__team__item:hover .about__team__item__overlay {
+      opacity: 0.9; }
+  .about__team .about__team__item__overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #f15a22;
+    color: white;
+    padding: 20px; }
+    .about__team .about__team__item__overlay h3 {
+      margin-top: 5px; }
+      .about__team .about__team__item__overlay h3:after {
+        display: block;
+        width: 45px;
+        height: 1px;
+        margin-top: 10px;
+        background-color: white;
+        content: " "; }
+    .about__team .about__team__item__overlay p strong {
+      font-weight: 400; }
+
 .footer {
   background-color: white;
   padding: 1.2rem 0 3.2rem; }
