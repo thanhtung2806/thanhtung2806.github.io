@@ -107,6 +107,9 @@ img {
 .pad-bot{
 	padding-bottom:54px;
 	}
+	.pad-top{
+	padding-top:54px;
+	}
 p{
 	line-height:18px;
 	}
@@ -184,7 +187,7 @@ span{
 ----------- TYPOGRAPHY: BASE 12px, LINE-HEIGHT:18px --------------
 --------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Roboto Condensed', 'Oswald', 'Open Sans', sans-serif;
 	font-weight:300;
 	}
 h1, h2, h3{
@@ -536,7 +539,9 @@ a:hover {
 	background-color: #d94e13 !important;
 	}
 .green .team-img .overlay-img{
-   	background-color: rgba(22,160,133, 0.95);
+  /*background-color: rgba(22,160,133, 0.95);*/
+  background-color: rgba(217,78,19, 0.95);
+
 	border-radius:50%;
 	}
 .green.underline{
@@ -805,7 +810,7 @@ a.current:hover{
 	}
 .navbar .nav span{
 	line-height:18px;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Roboto Condensed', 'Oswald', 'Open Sans', sans-serif;
 	font-weight:300;
 	font-size:18px;
 	}
@@ -1897,3 +1902,7 @@ tbody td{
 .table-body .description{
 	font-size:12px;
 	}
+
+
+.nav-lang { position: absolute; top: 46px; right: 20px; z-index: 300;}
+.nav-lang a{ margin: 0 2px; display: inline-block;}
