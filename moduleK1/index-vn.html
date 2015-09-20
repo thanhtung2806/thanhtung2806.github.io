@@ -701,17 +701,29 @@
           alert("Form not complete");
         else {
           ajax.SetText("Sending...");
-          $.post("sendmail.html", {
+          $.post("mail/sendmail.php", {
             name: userName, email: userEmail, comments: userComments
           }, function(data) {
-            if(data == "true") {
+            // console.log(data);
+            if(data) {
+              // console.log('a');
               ajax.SetText("Sent!");
+              $("input[id=namecon]").val('');
+              $("input[id=emailcon]").val('');
+              $("textarea[id=commentcon]").val('');
             } else {
               ajax.SetText("Submit");
-              alert(data);
+
+              // alert(data);
             }
-
-
+          }).done(function() {
+              // alert( "second success" );
+            })
+            .fail(function() {
+              // alert( "error" );
+            })
+            .always(function() {
+              //finished
           });
         }
 
