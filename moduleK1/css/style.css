@@ -526,7 +526,8 @@ a:hover {
 	background-color:#d94e13 !important;
 	}
 .green .team-members .block-inner{
-	border:2px solid #d94e13;
+	border: 2px solid #fff;
+	/*border:2px solid #d94e13;*/
 	position:relative;
 	}
 .green .contact-icons a{
@@ -713,11 +714,19 @@ a:hover {
 	background-color:#BDC3C7 !important;
 	color:#313336;
 	}
+.gray-light-bg2{
+	background-color:#c4c4c4 !important;
+	color:#313336;
+	}
 /*GRAY*/
 .gray-bg{
-	background-color:#28242a !important;
+	background-color:#404042 !important;
 	color:#ffffff;
-	}
+}
+.white-bg { background-color:#fff !important; color:#000; }
+	.dark-gray-bg { background: #636363!important; color: #fff; }
+	.gray-bg2 { background: #959595!important; color: #fff; }
+	.dark-black-bg { background: #22272B!important; color: #fff; }
 /*GENERAL COLORS*/
 .colored-background,
 a.colored-background,
@@ -766,6 +775,8 @@ a.current:hover{
 	margin: 0 auto;
 	padding: 9px 5px;
 	}
+.navbar-brand img { display: inline; float: left; margin-right: 40px;}
+.navbar-brand h1 { color: #000; text-align: left;}
 @media screen and (min-width:768px){
 	#navigate,
 	.navbar{
@@ -874,7 +885,7 @@ a.current:hover{
    	-o-transition: all 0.3s ease-in-out;
    	-ms-transition: all 0.3s ease-in-out;
    	transition: all 0.3s ease-in-out;
-   	color:#ffffff !important;
+   	color:#fff !important;
    	background-color:transparent;
 	}
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover,  .navbar .nav > li > a:hover, .navbar .nav > .active > a:focus,
@@ -887,7 +898,7 @@ a.current:hover{
    	transition: all 0.3s ease-in-out;
    	outline:0;
 	text-decoration:none;
-	color:#ffffff !important;
+	color:#fff !important;
 	background-color:transparent;
 	}
 .sticky-wrapper{
@@ -925,7 +936,7 @@ a.current:hover{
 	height:auto;
 	}
 .carousel_pagination a {
-	background-color:#d94e13;
+	/*background-color:#d94e13;*/ background-color:#000;
 	display: block;
 	float: left;
 	height: 6px;
@@ -961,8 +972,9 @@ a.current:hover{
 	font-weight:400;
 	}
 .home-overlay h4 span {
+	color: #000;
 	position:relative;
-	text-shadow: 0px 0px 1px rgba(22,160,33,0.3);
+	/*text-shadow: 0px 0px 1px rgba(22,160,33,0.3);*/
 	}
 .home-overlay h4 span:before, .home-overlay h4 span:after {
 	border-top: 2px solid #d94e13;
@@ -1108,6 +1120,7 @@ cite {
 	}
 cite{
 	color:#d94e13 !important;
+	/*color:#000 !important;*/
 	}
 .testimonials-img{
 	display: block;
@@ -1132,13 +1145,13 @@ cite{
 .team-img{
 	border-radius:50%;
 	overflow:hidden !important;
-	height:234px;/*234/18=13*/
+	height:234px;/*234/18=13*/ line-height: 234px;
 	width:234px;
 	margin: 0 auto;
-	position:relative;
+	position:relative; text-align: center;
 	}
 .team-img img{
-	width:100%;
+	width:80%; display: inline-block;
 	}
 .team-members .block-inner{
 	height:252px; /*252/18=14*/
