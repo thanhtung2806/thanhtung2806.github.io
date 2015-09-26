@@ -84,6 +84,7 @@ img {
 	position: relative;
 	width: 81px;
 	}
+.orange.underline { background-color: #d94e13; color: #d94e13; }
 .page-title h1{
 	font-size: 49px; /*line-height is 54px = 3x18px*/
 	margin-bottom: 9px; /*9px of underline + 9px = 18px*/
@@ -526,7 +527,7 @@ a:hover {
 	background-color:#d94e13 !important;
 	}
 .green .team-members .block-inner{
-	border: 2px solid #fff;
+	border: 2px solid #3b3b3b;
 	/*border:2px solid #d94e13;*/
 	position:relative;
 	}
@@ -720,13 +721,15 @@ a:hover {
 	}
 /*GRAY*/
 .gray-bg{
-	background-color:#404042 !important;
+	background-color: #858585 !important;
 	color:#ffffff;
 }
+.gray-bg2 { background: #e5e5e5!important; color: #404042; }
+.gray-bg3 { background: #c6c6c5!important; color: #404042; }
 .white-bg { background-color:#fff !important; color:#000; }
+.white-bg2 { background:#f6f6f4 !important; color:#000; }
 	.dark-gray-bg { background: #636363!important; color: #fff; }
-	.gray-bg2 { background: #959595!important; color: #fff; }
-	.dark-black-bg { background: #22272B!important; color: #fff; }
+.black-bg1 { background: #414141!important; color: #fff; }
 /*GENERAL COLORS*/
 .colored-background,
 a.colored-background,
@@ -817,7 +820,7 @@ a.current:hover{
 	line-height:18px;
 	}
 .navbar .nav i{
-	color:#d94e13;
+	/*color:#d94e13;*/ color: #fff;
 	}
 .navbar .nav span{
 	line-height:18px;
@@ -885,7 +888,7 @@ a.current:hover{
    	-o-transition: all 0.3s ease-in-out;
    	-ms-transition: all 0.3s ease-in-out;
    	transition: all 0.3s ease-in-out;
-   	color:#fff !important;
+   	color:#252c24 !important;
    	background-color:transparent;
 	}
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover,  .navbar .nav > li > a:hover, .navbar .nav > .active > a:focus,
@@ -898,7 +901,7 @@ a.current:hover{
    	transition: all 0.3s ease-in-out;
    	outline:0;
 	text-decoration:none;
-	color:#fff !important;
+	color:#252c24 !important;
 	background-color:transparent;
 	}
 .sticky-wrapper{
@@ -1104,11 +1107,11 @@ span.highlights-first{
 ------------------------ TESTIMONIALS ----------------------------
 --------------------------------------------------------------- */
 .testimonials{
-	background:url("../images/parallax.jpg") repeat fixed 50% 0 transparent;
+	/*background:url("../images/parallax.jpg") repeat fixed 50% 0 transparent;*/
 	}
 .testimonials .testimonials-quote {
 	padding:18px 0 18px 0;
-	color:#ffffff;
+	/*color:#ffffff;*/ color: #333;
 	}
 cite {
 	display:block;
@@ -1119,8 +1122,8 @@ cite {
 	margin-top:18px;
 	}
 cite{
-	color:#d94e13 !important;
-	/*color:#000 !important;*/
+	/*color:#d94e13 !important;*/
+	color:#333 !important;
 	}
 .testimonials-img{
 	display: block;
@@ -1129,10 +1132,12 @@ cite{
 	margin:0 auto;
 	}
 .testimonials-img img{
-	border-color: #1F2E3C #1F2E3C #d94e13 #d94e13;
+	/*border-color: #1F2E3C #1F2E3C #d94e13 #d94e13;*/
+	padding: 3px !important;
+	border-color: #333;
 	border-radius: 50%;
 	border-style: solid;
-	border-width: 9px;
+	border-width: 2px;
 	margin: 0 auto;
 	width: 108px; /* 108+ 9 +9= 126 / 18 = 7 */
 	}
@@ -1177,6 +1182,7 @@ cite{
 	margin-left:auto !important;
 	margin-right:auto;
 	}
+.team-members h5 { font-weight: 400; }
 .names {
 	margin-top:18px;
 	}
@@ -1621,12 +1627,14 @@ a.current{
 --------------------------- CONTACT ------------------------------
 --------------------------------------------------------------- */
 .contact-form .btn{
-	width:100%;
+	width:100%; background: #f37032; color: #f37032;
 	}
+.contact-form .btn:hover { background: #fff; }
 /*CONTACT FORM*/
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
 	 background-color: rgba(0, 0, 0, 0);
-	 border: 1px solid #d94e13;
+	 /*border: 1px solid #d94e13;*/
+	 border: 1px solid #fff;
 	 border-radius: 0 0 0 0;
 	 color: #FFFFFF;
 	 font-size: 14px;
@@ -1668,7 +1676,7 @@ textarea {
 --------------------------- COPYRIGHT ----------------------------
 --------------------------------------------------------------- */
 .copyright{ background: #28242a ;
-	color:#ffffff;
+	color:#000;
 	margin:0;
 	padding:0;
 	}
