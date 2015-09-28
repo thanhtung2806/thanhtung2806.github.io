@@ -90,7 +90,7 @@ img {
 	margin-bottom: 9px; /*9px of underline + 9px = 18px*/
 	margin-top: 18px;
 	}
-@media screen and (max-width:768px){
+@media screen and (max-width:1170px){
 	.smxs-margin{
 		margin-bottom:18px;
 	}
@@ -542,8 +542,8 @@ a:hover {
 	}
 .green .team-img .overlay-img{
   /*background-color: rgba(22,160,133, 0.95);*/
-  background-color: rgba(217,78,19, 0.95);
-
+  /*background-color: rgba(217,78,19, 0.95);*/
+  background-color: rgba(59,59,59, 0.95);
 	border-radius:50%;
 	}
 .green.underline{
@@ -1166,7 +1166,7 @@ cite{
 	.team-img{
 		border-radius:50%;
 		overflow:hidden;
-		height:198px; /*198/18=11*/
+		height:198px; /*198/18=11*/ line-height: 198px;
 		width:198px;
 		margin-left:auto;
 		margin-right:auto;
@@ -1927,3 +1927,22 @@ tbody td{
 
 .nav-lang { position: absolute; top: 46px; right: 20px; z-index: 300;}
 .nav-lang a{ margin: 0 2px; display: inline-block;}
+
+
+.img-content { position: relative; }
+.img-content:hover .text-holder { opacity: 1;}
+.img-content .text-holder { opacity: 0; -webkit-transition: all 0.3s ease-in-out;
+   	-moz-transition: all 0.3s ease-in-out;
+   	-o-transition: all 0.3s ease-in-out;
+   	-ms-transition: all 0.3s ease-in-out;
+   	transition: all 0.3s ease-in-out;}
+
+.img-content .text-holder p { font-size: 15px; }
+.img-content .b1 { position: absolute; top: 90px; left: -50px; }
+.img-content .b2 { position: absolute; top: 90px; right: -50px; }
+.img-content .b3 { position: absolute; bottom: 90px; left: -70px; }
+.img-content .b4 { position: absolute; bottom: 90px; right: -70px; }
+
+
+
+
