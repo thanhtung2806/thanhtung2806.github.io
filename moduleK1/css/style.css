@@ -86,7 +86,7 @@ img {
 	}
 .orange.underline { background-color: #d94e13; color: #d94e13; }
 .page-title h1{
-	font-size: 49px; /*line-height is 54px = 3x18px*/
+	font-size: 42px; /*line-height is 54px = 3x18px*/
 	margin-bottom: 9px; /*9px of underline + 9px = 18px*/
 	margin-top: 18px;
 	}
@@ -100,16 +100,16 @@ img {
 	margin-top:-81px;
 	}
 .page-title{
-	margin-top:54px;
+	margin-top:35px;
 	}
 .title {
-	padding-bottom:54px;
+	padding-bottom:30px;
 	}
 .pad-bot{
-	padding-bottom:54px;
+	padding-bottom:30px;
 	}
 	.pad-top{
-	padding-top:54px;
+	padding-top:35px;
 	}
 p{
 	line-height:18px;
@@ -225,11 +225,11 @@ h5{
 	}
 h6{
 	font-size:18px;
-	line-height:18px; /*18*1*/
+	line-height:20px; /*18*1*/
 	}
 p{
 	font-size:14px;
-	line-height:18px; /*18*1*/
+	line-height:20px; /*18*1*/
 	}
 /*h1.light-text{
 	text-shadow: 0px 0px 1px rgba(255,255,255,0.3);
@@ -779,7 +779,7 @@ a.current:hover{
 	padding: 9px 5px;
 	}
 .navbar-brand img { display: inline; float: left; margin-right: 40px;}
-.navbar-brand h1 { color: #3d3d3d; text-align: left; font-size: 33px;}
+.navbar-brand h1 { color: #3d3d3d; text-align: left; font-size: 31px; line-height: 39px;}
 @media screen and (min-width:768px){
 	#navigate,
 	.navbar{
@@ -791,7 +791,7 @@ a.current:hover{
 		line-height:90px;
 	}
 	.navbar-brand img{
-		height:108px;
+		/*height:108px;*/
 	}
 	.navbar .nav > li > a{
 		padding:0 15px;
@@ -1614,8 +1614,10 @@ cite{
 .portfolioFilter a,
 .portfolioFilter span{
 	padding:9px;
-	line-height:36px;
+	line-height:36px; color: #000;
 	}
+.portfolioFilter a:hover, .portfolioFilter span:hover{ color: #d94e13; }
+.portfolioFilter a.current{ color: #fff; background: #000 !important;}
 a.current{
 	padding:9px;
 	text-decoration:none;
@@ -1640,8 +1642,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	 color: #FFFFFF;
 	 font-size: 14px;
 	 line-height: 18px;
-	 margin-bottom: 9px;
-	 margin-top: 9px;
+	 margin-bottom: 13px;
+	 margin-top: 0px;
 	 padding: 8px 9px !important; /*1px of border + 8px + 8px + 1px of border = 18px*/
 	}
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus{
@@ -1690,17 +1692,18 @@ textarea {
 }
 .footer-icons{
 	margin-bottom:0;
-	display:table;
-	height:36px;
+	/*display:table;*/
+	/*height:36px;*/
 	}
 .footer-icons a{
-	color:#ffffff;
+	display: inline-block;
+	color:#000;
 	text-decoration:none;
 	font-size:30px;
 	line-height:36px;
 	}
 .footer-icons a{
-	color:#ffffff;
+	color:#000;
 	}
 .footer-icons i{
 	font-size:30px;
@@ -1710,35 +1713,35 @@ textarea {
 .footer-icons i:hover{
 	color:#d94e13;
 	}
-.copyright .container{
-	width:100%;
+.copyright .container{ padding-top: 15px; padding-bottom: 10px;
+/*	width:100%;
 	display:table;
-	margin:0 auto;
+	margin:0 auto;*/
 	}
 .copyright .rights{
-	display: table-cell;
-	float: none;
+	/*display: table-cell;*/
+	/*float: none;*/
 	font-size: 12px;
-	vertical-align: middle;
-	line-height:18px;
+	/*vertical-align: middle;*/
+	line-height:36px;
 	}
 .copyright .rights a{
 	font-size: 12px;
-	line-height:18px;
+	line-height:36px;
 	}
-@media screen and (max-width:991px){
+@media screen and (max-width:725px){
 	.copyright .container{
-		margin-bottom:0;
+		/*margin-bottom:0;
 		margin-top:0;
-		display:block;
+		display:block;*/
 	}
-	.copyright .rights{
-		display:block;
-		line-height:18px;
-		clear:both;
-		margin-top:9px;
-		margin-bottom:9px;
-		float:none;
+	.copyright .rights{ text-align: center;
+		/*display:block;*/
+		/*line-height:18px;*/
+		/*clear:both;*/
+		/*margin-top:9px;
+		margin-bottom:9px;*/
+		/*float:none;*/
 	}
  	.copyright .bottom-logo{
 		display:block;
@@ -1926,8 +1929,8 @@ tbody td{
 	}
 
 
-.nav-lang { position: absolute; top: 85px; right: 20px; z-index: 300;}
-.nav-lang a{ margin: 0 2px; display: inline-block; color: #3B3B3B; font-size: 20px;}
+.nav-lang { position: absolute; top: 70px; right: 20px; z-index: 300;}
+	.nav-lang a{ margin: 0 2px; display: inline-block; color: #3B3B3B; font-size: 20px;}
 
 
 .img-content { position: relative; }
@@ -1939,11 +1942,35 @@ tbody td{
    	transition: all 0.3s ease-in-out;}
 
 .img-content .text-holder p { font-size: 15px; }
-.img-content .b1 { position: absolute; top: 90px; left: -50px; }
-.img-content .b2 { position: absolute; top: 90px; right: -50px; }
-.img-content .b3 { position: absolute; bottom: 90px; left: -70px; }
-.img-content .b4 { position: absolute; bottom: 90px; right: -70px; }
+/*.img-content .b1 { position: absolute; top: 90px; left: -13px; }*/
+/*.img-content .b2 { position: absolute; top: 90px; right: -13px; }
+.img-content .b3 { position: absolute; bottom: 60px; left: -25px; }
+.img-content .b4 { position: absolute; bottom: 90px; right: -10px; }*/
 
-
+.workflow-item { position: absolute; }
+.workflow-item .row{ position: relative; }
+.workflow-item .col-lg-6{ padding: 0; }
+.workflow-item .img{ width: 300px; height: 300px; background-size: contain; display: block; }
+.workflow-item p{ opacity: 0; }
+.workflow-a {  top: -28px; left: -94px; }
+	.workflow-a	.img { background-image: url("../images/workB1A.png"); }
+		.workflow-a:hover .img { background-image: url("../images/workB1.png"); }
+		.workflow-a:hover p { opacity: 1; }
+	.workflow-a	.b1 { top: 100px; left: 86px; position: relative; }
+.workflow-b { bottom: -28px; left: -52px; }
+	.workflow-b	.img { background-image: url("../images/workB4A.png"); }
+		.workflow-b:hover .img { background-image: url("../images/workB4.png"); }
+		.workflow-b:hover p { opacity: 1; }
+	.workflow-b	.b2 { top: 125px; left: 78px; position: relative; }
+.workflow-c { top: -28px; right: -27px; }
+	.workflow-c	.img { background-image: url("../images/workB2A.png"); }
+		.workflow-c:hover .img { background-image: url("../images/workB2.png"); }
+		.workflow-c:hover p { opacity: 1; }
+	.workflow-c	.b3 { top: 125px; right: 18px; position: relative; }
+.workflow-d { bottom: -38px; right: 16px; }
+	.workflow-d	.img { background-image: url("../images/workB3A.png"); }
+		.workflow-d:hover .img { background-image: url("../images/workB3.png"); }
+		.workflow-d:hover p { opacity: 1; }
+	.workflow-d	.b4 { top: 105px; right: -10px; position: relative; }
 
 
