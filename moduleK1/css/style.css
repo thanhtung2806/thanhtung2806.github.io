@@ -481,6 +481,10 @@ a:hover {
    	background-color: rgba(255,255,255, 0.95);
 	border-radius:500px 500px 500px 500px;
 	}
+.white .team-img .bg-service{
+   	background-color: #b4b4b4;
+	border-radius:500px 500px 500px 500px;
+	}
 .white.underline{
 	background-color: #ffffff;
 	color:#ffffff;
@@ -544,6 +548,12 @@ a:hover {
   /*background-color: rgba(22,160,133, 0.95);*/
   /*background-color: rgba(217,78,19, 0.95);*/
   background-color: rgba(59,59,59, 0.95);
+	border-radius:50%;
+	}
+.green .team-img .bg-service{
+  /*background-color: rgba(22,160,133, 0.95);*/
+  /*background-color: rgba(217,78,19, 0.95);*/
+  background-color: #b4b4b4;
 	border-radius:50%;
 	}
 .green.underline{
@@ -651,6 +661,10 @@ a:hover {
 	}
 .blue .team-img .overlay-img{
    	background-color: rgba(31,46,60, 0.95);
+	border-radius:50%;
+	}
+.blue .team-img .bg-service{
+   	background-color: #b4b4b4;
 	border-radius:50%;
 	}
 .blue.underline{
@@ -980,7 +994,7 @@ a.current:hover{
 	/*text-shadow: 0px 0px 1px rgba(22,160,33,0.3);*/
 	}
 .home-overlay h4 span:before, .home-overlay h4 span:after {
-	border-top: 2px solid #d94e13;
+	border-top: 2px solid #fff;
 	bottom: 0;
 	content: "";
 	position: absolute;
@@ -1198,6 +1212,13 @@ cite{
     width: 100%;
 	display:table;
 	}
+.bg-service{
+	height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	display:table;
+	}
 .team-img .overlay-img .contact-icons{
 	display:table-cell;
 	vertical-align:middle;
@@ -1210,6 +1231,11 @@ cite{
    	-o-transition: all 0.4s ease-in-out;
    	-ms-transition: all 0.4s ease-in-out;
    	transition: all 0.4s ease-in-out;
+	}
+.team-img .bg-service .contact-icons{
+	display:table-cell;
+	vertical-align:middle;
+	width:100%;
 	}
 .team-img:hover .overlay-img .contact-icons{
 	transform: scale(1,1);
@@ -1827,6 +1853,14 @@ textarea {
 /* ---------------------------------------------------------------
 --------------------------- OTHER --------------------------------
 --------------------------------------------------------------- */
+
+/* Add by duythanhxinhdep */
+
+.slider-text{
+	color:#fff !important;
+	}
+
+
 /* ACCORDION */
 .panel-group .panel{
 	border-radius:0;
@@ -1929,8 +1963,8 @@ tbody td{
 	}
 
 
-.nav-lang { position: absolute; top: 70px; right: 20px; z-index: 300;}
-	.nav-lang a{ margin: 0 2px; display: inline-block; color: #3B3B3B; font-size: 20px;}
+.nav-lang { position: absolute; top: 60px; right: 20px; z-index: 300;}
+	.nav-lang a{ margin: 0 2px; display: inline-block; color: #3B3B3B; font-size: 16px;}
 
 
 .img-content { position: relative; }
@@ -1953,24 +1987,43 @@ tbody td{
 .workflow-item .img{ width: 300px; height: 300px; background-size: contain; display: block; }
 .workflow-item p{ opacity: 0; }
 .workflow-a {  top: -28px; left: -94px; }
+	.workflow-a .img-preload { background-image: url("../images/workB1.png"); display: none}
 	.workflow-a	.img { background-image: url("../images/workB1A.png"); }
 		.workflow-a:hover .img { background-image: url("../images/workB1.png"); }
-		.workflow-a:hover p { opacity: 1; }
-	.workflow-a	.b1 { top: 100px; left: 86px; position: relative; }
+		.workflow-a:hover p { opacity: 1; top: 120px; -webkit-transition: all 1.5s ease-in-out;
+				   	-moz-transition: all 0.3s ease-in-out;
+				   	-o-transition: all 0.3s ease-in-out;
+				   	-ms-transition: all 0.3s ease-in-out;
+				   	transition: all 0.3s ease-in-out;}
+	.workflow-a	.b1 { top: 110px; left: 86px; position: relative; }
 .workflow-b { bottom: -28px; left: -52px; }
+	.workflow-b .img-preload { background-image: url("../images/workB4.png"); display: none}
 	.workflow-b	.img { background-image: url("../images/workB4A.png"); }
 		.workflow-b:hover .img { background-image: url("../images/workB4.png"); }
-		.workflow-b:hover p { opacity: 1; }
+		.workflow-b:hover p { opacity: 1; top: 135px; -webkit-transition: all 1.5s ease-in-out;
+				   	-moz-transition: all 0.3s ease-in-out;
+				   	-o-transition: all 0.3s ease-in-out;
+				   	-ms-transition: all 0.3s ease-in-out;
+				   	transition: all 0.3s ease-in-out;}
 	.workflow-b	.b2 { top: 125px; left: 78px; position: relative; }
 .workflow-c { top: -28px; right: -27px; }
+	.workflow-c .img-preload { background-image: url("../images/workB2.png"); display: none}
 	.workflow-c	.img { background-image: url("../images/workB2A.png"); }
 		.workflow-c:hover .img { background-image: url("../images/workB2.png"); }
-		.workflow-c:hover p { opacity: 1; }
+		.workflow-c:hover p { opacity: 1; top: 135px; -webkit-transition: all 1.5s ease-in-out;
+				   	-moz-transition: all 0.3s ease-in-out;
+				   	-o-transition: all 0.3s ease-in-out;
+				   	-ms-transition: all 0.3s ease-in-out;
+				   	transition: all 0.3s ease-in-out;}
 	.workflow-c	.b3 { top: 125px; right: 18px; position: relative; }
 .workflow-d { bottom: -38px; right: 16px; }
+	.workflow-d .img-preload { background-image: url("../images/workB3.png"); display: none}
 	.workflow-d	.img { background-image: url("../images/workB3A.png"); }
 		.workflow-d:hover .img { background-image: url("../images/workB3.png"); }
-		.workflow-d:hover p { opacity: 1; }
+		.workflow-d:hover p { opacity: 1; top: 115px; -webkit-transition: all 1.5s ease-in-out;
+				   	-moz-transition: all 0.3s ease-in-out;
+				   	-o-transition: all 0.3s ease-in-out;
+				   	-ms-transition: all 0.3s ease-in-out;
+				   	transition: all 0.3s ease-in-out;}
 	.workflow-d	.b4 { top: 105px; right: -10px; position: relative; }
-
 
