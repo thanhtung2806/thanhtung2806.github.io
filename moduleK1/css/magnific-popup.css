@@ -288,7 +288,7 @@ img.mfp-img {
 .mfp-bottom-bar {
   margin-top: -36px;
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
   width: 100%;
   cursor: auto; }
