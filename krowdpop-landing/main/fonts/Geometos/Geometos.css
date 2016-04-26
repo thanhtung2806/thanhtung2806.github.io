@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Geometos';
+    src: url('fonts/Geometos.eot');
+    src: url('fonts/Geometos.eot') format('embedded-opentype'),
+         url('fonts/Geometos.woff2') format('woff2'),
+         url('fonts/Geometos.woff') format('woff'),
+         url('fonts/Geometos.ttf') format('truetype'),
+         url('fonts/Geometos.svg#Geometos') format('svg');
+}

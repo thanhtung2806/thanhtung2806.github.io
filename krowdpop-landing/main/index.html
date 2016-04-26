@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Krowdpop</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/select2.full.min.js"></script>
+
+	<script>
+	  $(document).ready(function(){
+		$("#sticker").sticky({topSpacing:0});
+	  });
+	</script>
+	<script>
+		$(function(){
+			// Instantiate MixItUp:
+			var $topmovements = $('#topmovements-list');
+			var $topevents = $('#topevents-list');
+			var $pastevents = $('#pastevents-list');
+			$topmovements.mixItUp();
+			$topevents.mixItUp();
+			$pastevents.mixItUp();
+
+		  	$('select.huvi-nice-select').niceSelect();
+			$('select#select-topmovements').change(function(e){
+				$topmovements.mixItUp('filter', this.value);
+			});
+			$('select#select-topevents').change(function(e){
+				$topevents.mixItUp('filter', this.value);
+			});
+			$('select#select-pastevents').change(function(e){
+				$pastevents.mixItUp('filter', this.value);
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.huvi-event-block .progressbar').each(function(index, element){
+				var val = $(this).data('value');
+				val = val>100?100:val;
+				$(this).find('.percent').animate({width:val+'%'},100);
+				$(this).find('.value').text(val+'%').animate({left:val+'%'},100);
+			})
+			$('.trending-progress .progressbar').each(function(index, element){
+				var $this = $(this);
+				var val = $this.data('value');
+				val = val>100?100:val;
+				$this.find('.percent').animate({width:val+'%'},100, function(){
+					$this.find('.value').css({left:val+'%'});
+					$this.find('.value').delay(100).fadeIn('slow');
+				});
+			})
+			$('#trending-slider .item').click(function(){
+				$this = $(this);
+				if($this.hasClass('actived')) {
+					return;
+				}
+				$('#trending-slider .item').removeClass('actived');
+				$this.addClass('actived');
+				var id = $this.data('id');
+				$('.trending-artists').css({display:'none'});
+				$('#'+id).fadeIn();
+			});
+		});
+		$(window).load(function(){
+			$('#trending-slider .owl-item:nth-child(3) .item').click();
+		});
+	</script>
+	<script>
+	  $(function() {
+		var projects = [
+		  {
+			value: "artist 1",
+			label: "artist 1",
+		  },
+		  {
+			value: "artist 2",
+			label: "artist 2",
+		  },
+			{
+			value: "artist 3",
+			label: "artist 3",
+		  },
+			{
+			value: "artist 4",
+			label: "artist 4",
+		  },
+		];
+		  var locations = [
+		  {
+			value: "location 1",
+			label: "location 1",
+		  },
+		  {
+			value: "location 2",
+			label: "location 2",
+		  },
+			{
+			value: "location 3",
+			label: "location 3",
+		  },
+			{
+			value: "location 4",
+			label: "location 4",
+		  },
+		];
+
+		$( "#select2-myartist" ).autocomplete({
+		  minLength: 0,
+		  source: projects,
+		  focus: function( event, ui ) {
+			$( "#select2-myartist" ).val( ui.item.label );
+			return false;
+		  },
+		  select: function( event, ui ) {
+			$( "#select2-myartist" ).val( ui.item.label );
+			$( "#myartist-id" ).val( ui.item.value );
+
+			return false;
+		  }
+		})
+		.autocomplete( "instance" )._renderItem = function( ul, item ) {
+		  return $( "<li>" )
+			.append( "<a>" + item.label + "</a>" )
+			.appendTo( ul );
+		};
+		  $( "#select2-location" ).autocomplete({
+			  minLength: 0,
+			  source: locations,
+			  focus: function( event, ui ) {
+				$( "#select2-location" ).val( ui.item.label );
+				return false;
+			  },
+			  select: function( event, ui ) {
+				$( "#select2-location" ).val( ui.item.label );
+				$( "#location-id" ).val( ui.item.value );
+
+				return false;
+			  }
+			})
+			.autocomplete( "instance" )._renderItem = function( ul, item ) {
+			  return $( "<li>" )
+				.append( "<a>" + item.label + "</a>" )
+				.appendTo( ul );
+			};
+	  });
+  </script>
+  <script>
+		(function($){
+			$(window).load(function(){
+				$.mCustomScrollbar.defaults.scrollButtons.enable=true; //enable scrolling buttons by default
+				$.mCustomScrollbar.defaults.axis="yx"; //enable 2 axis scrollbars by default
+				$(".huvi-scrollbar").mCustomScrollbar({theme:"rounded",scrollButtons: {enable: false}});
+
+				$(".all-themes-switch a").click(function(e){
+					e.preventDefault();
+					var $this=$(this),
+						rel=$this.attr("rel"),
+						el=$(".content");
+					switch(rel){
+						case "toggle-content":
+							el.toggleClass("expanded-content");
+							break;
+					}
+				});
+
+			});
+		})(jQuery);
+	</script>
+
+    <nav class="navbar navbar-default" id="sticker">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <a class="navbar-brand" href="#"><img src="logo.png" alt=""></a></div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="defaultNavbar1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">how it works</a></li>
+            <li><a href="#">backstage</a></li>
+          </ul>
+          <ul class="link-icon">
+          	<li><a href="" class="icon-people pink hvr-push"></a></li>
+          	<li><a href="" class="icon-lang hvr-push">EN</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <section id="home-slider-banner" class="home-slider-banner">
+  		<div><img src="images/banner.jpg" alt=""></div>
+  		<div><img src="images/banner.jpg" alt=""></div>
+    </section>
+    <div class="form-under-banner">
+    	<div class="container">
+    		<div class="banner-form-wrap">
+    			<form action="#">
+    				<h2>I wanna <strong>see</strong></h2>
+    				<div class="input-search-wrap">
+						<input id="select2-myartist" class="input-search" placeholder="My artist">
+						<input type="hidden" id="myartist-id">
+  					</div>
+
+    				<h2>Perform <strong>in</strong></h2>
+    				<div class="input-search-wrap">
+						<input id="select2-location" class="input-search" placeholder="Location">
+						<input type="hidden" id="location-id">
+					</div>
+    				<a href="#" class="btn-submit">Vote now</a>
+    			</form>
+    		</div>
+    	</div>
+    </div>
+    <script>
+		$(document).ready(function(){
+		  $("#home-slider-banner").owlCarousel({
+			  items : 1,
+//			  animateOut : true,
+			  nav : true,
+			  navText : ['','']
+		  });
+		});
+	</script>
+
+    <section class="under-slidebanner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="under-slidebanner-block vote">
+                        <div class="content-wrap">
+                            <img src="img/icon-vote.png" alt="">
+							<div class="text-center"><h2 title="vote">vote</h2></div>
+                            <p>Vote for favorites artist to perform in your city</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="under-slidebanner-block fund">
+                        <div class="content-wrap">
+                            <img src="img/icon-fund.png" alt="">
+							<div class="text-center"><h2 title="fund">fund</h2></div>
+                            <p>Purchase Krowpop ticket to crownfund the fun</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="under-slidebanner-block join">
+                        <div class="content-wrap">
+                            <img src="img/icon-join.png" alt="">
+							<div class="text-center"><h2 title="join">join</h2></div>
+                            <p>Meet and hang out with passineate music fan, like you</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center how-it-wrap">
+              <a href="#" class="btn-submit">how it works</a>
+            </div>
+        </div>
+    </section>
+    <section class="about-krowdpop">
+      <div class="container">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="text-center clearfix">
+            <h1 class="section-titles" title="about krowdpop">about krowdpop</h1>
+          </div>
+
+          <p class="text-center">
+            Krowdpop is the world's first platform for crowdfunding K-pop. <br>
+  From concerts, projects, causes, to even making friends that share the same passion
+  as you do. With Krowdpop, we give power to the fans.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="events home-section">
+       	<div class="container">
+       		<div class="text-center"><h1 class="section-title" title="movements & events">movements & events</h1></div>
+
+       		<div>
+
+			  <!-- Nav tabs -->
+			  <ul class="nav nav-tabs event-tabs" role="tablist">
+				<li role="presentation"><a href="#topmovements" aria-controls="topmovements" role="tab" data-toggle="tab">top movements</a></li>
+				<li role="presentation" class="active"><a href="#topevents" aria-controls="topevents" role="tab" data-toggle="tab">top events</a></li>
+				<li role="presentation"><a href="#pastevents" aria-controls="pastevents" role="tab" data-toggle="tab">past events</a></li>
+			  </ul>
+
+			  <!-- Tab panes -->
+			  <div class="tab-content event-tab-content">
+				<div role="tabpanel" class="tab-pane" id="topmovements">
+					<div class="text-center">
+						<!-- <label for="select-topmovements" class="lbl-filter-by">Filter by</label>
+						<div class="huvi-nice-select-wrap">
+							<select name="" id="select-topmovements" class="huvi-nice-select">
+								<option value=".cate-1">Completed movements</option>
+								<option value=".cate-2">cate 2</option>
+								<option value=".cate-3">cate 3</option>
+							</select>
+						</div> -->
+					</div>
+					<div id="topmovements-list" class="row events-list">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-1" data-myorder="2">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event1.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="70"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> Vote</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-2" data-myorder="4">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event2.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="30"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> View event</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-1" data-myorder="1">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event3.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="50"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> Vote</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-2" data-myorder="8">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event4.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="60"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> Vote</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-2" data-myorder="8">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event5.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="10"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> View event</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-2" data-myorder="8">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event6.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="90"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> Vote</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-2" data-myorder="8">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event7.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="80"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> Vote</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-2" data-myorder="8">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event8.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="20"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> View event</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-2" data-myorder="8">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event9.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="100"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> Vote</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="huvi-btn-viewall-wrap">
+						<a href="#" class="huvi-btn-viewall"><i class="icon"></i>View all</a>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane active" id="topevents">
+					<!-- <div class="text-center">
+						<label for="select-topevents" class="lbl-filter-by">Filter by</label>
+						<div class="huvi-nice-select-wrap">
+							<select name="" id="select-topevents" class="huvi-nice-select">
+								<option value=".cate-1">Completed events</option>
+								<option value=".cate-2">cate 2</option>
+								<option value=".cate-3">cate 3</option>
+							</select>
+						</div>
+					</div> -->
+					<div id="topevents-list" class="row events-list">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="huvi-event-feature">
+								<div class="col-left">
+									<div class="img-wrap">
+										<img src="images/img-event-featured-2.jpg" alt="event 1" class="img">
+									</div>
+									<label class="lbl-newfeeds">featured event</label>
+								</div>
+								<div class="col-right">
+									<div class="huvi-event-block">
+										<div class="img-wrap text-center">
+
+										</div>
+										<div class="details text-center">
+                      <img src="images/mtv-logo.png" alt="event 1" class="img center-block">
+											<h3 class="title">MTV connection April <br>Wake up the monster</h3>
+											<address>Ho Chi Minh city, Vietnam</address>
+											<p>April 28, 2016 <br> <br></p>
+											<p class="author">Organized by <img src="images/logo-black.png" alt=""> </p>
+										</div>
+										<!-- <div class="vote-bar">
+											<a href="javascript:;"><i class="icon"></i> Fund</a>
+											<span><i class="icon"></i> 2 Days</span>
+										</div> -->
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="huvi-event-feature">
+
+                <div class="col-right reverse">
+                  <div class="huvi-event-block">
+                    <div class="img-wrap text-center">
+
+                    </div>
+                    <div class="details text-center">
+                      <img src="images/mtv-logo.png" alt="event 1" class="img center-block">
+                      <h3 class="title">MTV connection April <br>Wake up the monster</h3>
+                      <address>Ho Chi Minh city, Vietnam</address>
+                      <p>April 28, 2016 <br> <br></p>
+                      <p class="author">Organized by <img src="images/logo-black.png" alt=""> </p>
+                    </div>
+                    <!-- <div class="vote-bar">
+                      <a href="javascript:;"><i class="icon"></i> Fund</a>
+                      <span><i class="icon"></i> 2 Days</span>
+                    </div> -->
+                  </div>
+                </div>
+                 <div class="col-left reverse">
+                  <div class="img-wrap">
+                    <img src="images/img-event-featured-3.jpg" alt="event 1" class="img">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+					</div>
+					<!-- <div class="huvi-btn-viewall-wrap">
+						<a href="#" class="huvi-btn-viewall green"><i class="icon"></i>View all</a>
+					</div> -->
+				</div>
+				<div role="tabpanel" class="tab-pane" id="pastevents">
+					<!-- <div class="text-center">
+						<label for="select-pastevents" class="lbl-filter-by">Filter by</label>
+						<div class="huvi-nice-select-wrap">
+							<select name="" id="select-pastevents" class="huvi-nice-select">
+								<option value=".cate-1">Completed events</option>
+								<option value=".cate-2">cate 2</option>
+								<option value=".cate-3">cate 3</option>
+							</select>
+						</div>
+					</div> -->
+					<div id="pastevents-list" class="row events-list">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-1" data-myorder="2">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event1.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="70"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> Vote</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-2" data-myorder="4">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event2.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="30"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> Vote</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mix cate-1" data-myorder="1">
+							<div class="huvi-event-block">
+								<div class="img-wrap">
+									<img src="img/img-event-water.gif" alt="" class="img-water">
+									<img src="images/img-event3.jpg" alt="event 1" class="img">
+								</div>
+								<div class="details">
+									<div class="progressbar" data-value="50"><div class="percent"></div><div class="value">0%</div></div>
+									<div class="progress-people">
+										<span>0 <i class="icon"></i></span>
+										<span>5.000 <i class="icon"></i></span>
+										<span>10.000 <i class="icon"></i></span>
+									</div>
+									<h3 class="title">bring ailee to vietnam</h3>
+									<address>Ho Chi Minh city, Vietnam</address>
+									<p class="author">Created by <img src="images/img-createdby.jpg" alt=""> Richard</p>
+								</div>
+								<div class="vote-bar">
+									<a href="javascript:;"><i class="icon"></i> Vote</a>
+									<span><i class="icon"></i> 2 Days</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="huvi-btn-viewall-wrap">
+						<a href="#" class="huvi-btn-viewall"><i class="icon"></i>View all</a>
+					</div>
+				</div>
+			  </div>
+			</div>
+       	</div>
+    </section>
+    <section class="community home-section">
+       	<div class="container">
+			<div class="text-center"><h1 class="section-title" title="krowdpop community">krowdpop community</h1></div>
+       		<div class="main-content has-sidebar-right">
+       			<div class="community-newfeeds">
+       				<label class="lbl-newfeeds">new feeds</label>
+       				<ul>
+       					<li>
+       						<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/img-nf1.jpg" alt="...">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#">Ammy Joanna Linsay</a></h4>
+									<p>780 Krowpoint</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed iles
+do teor incididunt ut labo dolore magna aliqua. Ut enimminim</p>
+									<p><a href="javascript:;"><i class="fa fa-comment"></i> Comment</a><a href="javascript:;"><i class="fa fa-heart"></i> Like</a><a href="javascript:;"><i class="fa fa-share-alt"></i> Share</a></p>
+								</div>
+
+							</div>
+      						<a href="#" class="point">+5 Point</a>
+       					</li>
+       					<li>
+       						<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/img-nf2.jpg" alt="...">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#">Ammy Joanna Linsay</a></h4>
+									<p>780 Krowpoint</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed iles
+do teor incididunt ut labo dolore magna aliqua. Ut enimminim</p>
+									<p><a href="javascript:;"><i class="fa fa-comment"></i> Comment</a><a href="javascript:;"><i class="fa fa-heart"></i> Like</a><a href="javascript:;"><i class="fa fa-share-alt"></i> Share</a></p>
+								</div>
+							</div>
+      						<a href="#" class="point">+5 Point</a>
+       					</li>
+       					<li>
+       						<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/img-nf3.jpg" alt="...">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#">Ammy Joanna Linsay</a></h4>
+									<p>780 Krowpoint</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed iles
+do teor incididunt ut labo dolore magna aliqua. Ut enimminim</p>
+									<p><a href="javascript:;"><i class="fa fa-comment"></i> Comment</a><a href="javascript:;"><i class="fa fa-heart"></i> Like</a><a href="javascript:;"><i class="fa fa-share-alt"></i> Share</a></p>
+								</div>
+							</div>
+      						<a href="#" class="point">+5 Point</a>
+       					</li>
+       					<li>
+       						<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/img-nf4.jpg" alt="...">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#">Ammy Joanna Linsay</a></h4>
+									<p>780 Krowpoint</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed iles
+do teor incididunt ut labo dolore magna aliqua. Ut enimminim</p>
+									<p><a href="javascript:;"><i class="fa fa-comment"></i> Comment</a><a href="javascript:;"><i class="fa fa-heart"></i> Like</a><a href="javascript:;"><i class="fa fa-share-alt"></i> Share</a></p>
+								</div>
+							</div>
+      						<a href="#" class="point">+5 Point</a>
+       					</li>
+       					<li>
+       						<div class="media">
+								<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="images/img-nf5.jpg" alt="...">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#">Ammy Joanna Linsay</a></h4>
+									<p>780 Krowpoint</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed iles
+do teor incididunt ut labo dolore magna aliqua. Ut enimminim</p>
+									<p><a href="javascript:;"><i class="fa fa-comment"></i> Comment</a><a href="javascript:;"><i class="fa fa-heart"></i> Like</a><a href="javascript:;"><i class="fa fa-share-alt"></i> Share</a></p>
+								</div>
+							</div>
+      						<a href="#" class="point">+5 Point</a>
+       					</li>
+       				</ul>
+       			</div>
+       			<div>
+       				<div class="text-krowdpoint-wrap">
+       					<label>What are Krowdpoints?</label>
+       					<img src="img/img-arrow-krowdpoint.png" alt="">
+       					<p>Join chat room to get more Krowd Point and get a ticket to meet your idol</p>
+       					<p><span>10point = 1USD</span></p>
+       					<p><span><span>Find out more</span></span></p>
+       				</div>
+       				<div class="clearfix"></div>
+       			</div>
+
+       		</div>
+       		<div class="sidebar">
+
+       			<div class="community-sidebar top-fans">
+       				<h2><span>Top fans</span></h2>
+       				<div>
+       					<!-- Nav tabs -->
+						<ul class="nav nav-tabs topfanclubs-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#topfans-globally" aria-controls="topfans" role="tab" data-toggle="tab">Globally</a></li>
+							<li role="presentation"><a href="#topfans-aroundyou" aria-controls="topfans" role="tab" data-toggle="tab">Around you</a></li>
+						</ul>
+     					<!-- Tab panes -->
+						<div class="tab-content event-tab-content">
+							<div role="tabpanel" class="tab-pane active" id="topfans-globally">
+								<div class="community-sidebar-list-wrap huvi-scrollbar">
+									<ul class="community-sidebar-list">
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm5.jpg" alt="...">
+														<label>No.1</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Phuc An Nguyen</a></h4>
+													<p>Vietnam</p>
+													<p>239.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm6.jpg" alt="...">
+														<label>No.2</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Yuki Monotane</a></h4>
+													<p>Japanese</p>
+													<p>10.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm7.jpg" alt="...">
+														<label>No.3</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Jin Ju Jung</a></h4>
+													<p>Korea</p>
+													<p>100.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm8.jpg" alt="...">
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Anne Hathaway</a></h4>
+													<p>America</p>
+													<p>90.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm7.jpg" alt="...">
+														<label>No.3</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Jin Ju Jung</a></h4>
+													<p>Korea</p>
+													<p>100.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm8.jpg" alt="...">
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Anne Hathaway</a></h4>
+													<p>America</p>
+													<p>90.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm5.jpg" alt="...">
+														<label>No.1</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Phuc An Nguyen</a></h4>
+													<p>Vietnam</p>
+													<p>239.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm6.jpg" alt="...">
+														<label>No.2</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Yuki Monotane</a></h4>
+													<p>Japanese</p>
+													<p>10.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="topfans-aroundyou">
+								<div class="community-sidebar-list-wrap huvi-scrollbar">
+									<ul class="community-sidebar-list">
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm7.jpg" alt="...">
+														<label>No.3</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Jin Ju Jung</a></h4>
+													<p>Korea</p>
+													<p>100.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm8.jpg" alt="...">
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Anne Hathaway</a></h4>
+													<p>America</p>
+													<p>90.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm5.jpg" alt="...">
+														<label>No.1</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Phuc An Nguyen</a></h4>
+													<p>Vietnam</p>
+													<p>239.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm6.jpg" alt="...">
+														<label>No.2</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Yuki Monotane</a></h4>
+													<p>Japanese</p>
+													<p>10.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm7.jpg" alt="...">
+														<label>No.3</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Jin Ju Jung</a></h4>
+													<p>Korea</p>
+													<p>100.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm8.jpg" alt="...">
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Anne Hathaway</a></h4>
+													<p>America</p>
+													<p>90.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm5.jpg" alt="...">
+														<label>No.1</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Phuc An Nguyen</a></h4>
+													<p>Vietnam</p>
+													<p>239.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<a href="#">
+														<img class="media-object" src="images/img-cm6.jpg" alt="...">
+														<label>No.2</label>
+													</a>
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Yuki Monotane</a></h4>
+													<p>Japanese</p>
+													<p>10.000 krowdpoints</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+       				</div>
+
+       			</div>
+            <div class="community-sidebar top-fanclubs">
+              <h2><span>Top fanclubs</span></h2>
+              <div>
+                <!-- Nav tabs -->
+            <ul class="nav nav-tabs topfanclubs-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#topfanclubs-globally" aria-controls="topfanclubs" role="tab" data-toggle="tab">Globally</a></li>
+              <li role="presentation"><a href="#topfanclubs-aroundyou" aria-controls="topfanclubs" role="tab" data-toggle="tab">Around you</a></li>
+            </ul>
+              <!-- Tab panes -->
+            <div class="tab-content event-tab-content">
+              <div role="tabpanel" class="tab-pane active" id="topfanclubs-globally">
+                <div class="community-sidebar-list-wrap huvi-scrollbar">
+                  <ul class="community-sidebar-list">
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm1.jpg" alt="...">
+                            <label>No.1</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Wonder Fanclub</a></h4>
+                          <p>Vietnam</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm2.jpg" alt="...">
+                            <label>No.2</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Exo Fanclub</a></h4>
+                          <p>Mexico</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm3.jpg" alt="...">
+                            <label>No.3</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Big Bang Fanclub</a></h4>
+                          <p>French</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm4.jpg" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Miss A Fanclub</a></h4>
+                          <p>Singapore</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm1.jpg" alt="...">
+                            <label>No.1</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Wonder Fanclub</a></h4>
+                          <p>Vietnam</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm2.jpg" alt="...">
+                            <label>No.2</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Exo Fanclub</a></h4>
+                          <p>Mexico</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="topfanclubs-aroundyou">
+                <div class="community-sidebar-list-wrap huvi-scrollbar">
+                  <ul class="community-sidebar-list">
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm3.jpg" alt="...">
+                            <label>No.3</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Big Bang Fanclub</a></h4>
+                          <p>French</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm4.jpg" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Miss A Fanclub</a></h4>
+                          <p>Singapore</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm1.jpg" alt="...">
+                            <label>No.1</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Wonder Fanclub</a></h4>
+                          <p>Vietnam</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm2.jpg" alt="...">
+                            <label>No.2</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Exo Fanclub</a></h4>
+                          <p>Mexico</p>
+                          <p>18.000 member</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm7.jpg" alt="...">
+                            <label>No.3</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Jin Ju Jung</a></h4>
+                          <p>Korea</p>
+                          <p>100.000 krowdpoints</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm8.jpg" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Anne Hathaway</a></h4>
+                          <p>America</p>
+                          <p>90.000 krowdpoints</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm5.jpg" alt="...">
+                            <label>No.1</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Phuc An Nguyen</a></h4>
+                          <p>Vietnam</p>
+                          <p>239.000 krowdpoints</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" src="images/img-cm6.jpg" alt="...">
+                            <label>No.2</label>
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Yuki Monotane</a></h4>
+                          <p>Japanese</p>
+                          <p>10.000 krowdpoints</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+              </div>
+
+            </div>
+       		</div>
+       	</div>
+    </section>
+    <section class="trending home-section">
+       	<div class="container">
+			<div class="text-center"><h1 class="section-title" title="trending artists">trending artists</h1></div>
+       		<div class="trending-artists" id="trending-artist-1">
+       			<div class="block4">
+       				<div class="block1">
+       					<div class="img-wrap">
+							<img src="images/img-trend3-1.jpg" alt="">
+						</div>
+						<div class="info">
+							<h3>Miss A</h3>
+							<p><strong>Movements:</strong> 22 movements <br>
+							<strong>Talk:</strong> 9.834 people <br>
+							<strong>Funding:</strong> 15 Krowpop <br>
+							<strong>Votes:</strong> 22.430 votes</p>
+							<h4>Most active countries</h4>
+							<ul class="most-active-countries">
+								<li>Korea</li>
+								<li>Singapore</li>
+								<li>China</li>
+								<li>Viet Nam</li>
+								<li>Indonesia</li>
+								<li>Malaysia</li>
+							</ul>
+						</div>
+					</div>
+					<div class="block2">
+						<div class="img-wrap">
+							<img src="images/img-trend3-2.jpg" alt="">
+						</div>
+						<div class="info">
+							<h4>most voted movements</h4>
+							<h3>i’m singing my blue</h3>
+							<p>Music Bank Inkigayo</p>
+							<div class="trending-progress">
+								<div class="progressbar" data-value="70"><div class="percent"><div class="line"></div></div><div class="value">30.000</div></div>
+								<p><span>0</span><span>35.000</span></p>
+							</div>
+						</div>
+					</div>
+       			</div>
+				<div class="block3">
+					<img src="images/img-trend3-3.jpg" alt="">
+				</div>
+       		</div>
+       		<div class="trending-artists" id="trending-artist-2">
+       			<div class="block4">
+       				<div class="block1">
+       					<div class="img-wrap">
+							<img src="images/img-trend3-1.jpg" alt="">
+						</div>
+						<div class="info">
+							<h3>Miss A</h3>
+							<p><strong>Movements:</strong> 22 movements <br>
+							<strong>Talk:</strong> 9.834 people <br>
+							<strong>Funding:</strong> 15 Krowpop <br>
+							<strong>Votes:</strong> 22.430 votes</p>
+							<h4>Most active countries</h4>
+							<ul class="most-active-countries">
+								<li>Korea</li>
+								<li>Singapore</li>
+								<li>China</li>
+								<li>Viet Nam</li>
+								<li>Indonesia</li>
+								<li>Malaysia</li>
+							</ul>
+						</div>
+					</div>
+					<div class="block2">
+						<div class="img-wrap">
+							<img src="images/img-trend3-2.jpg" alt="">
+						</div>
+						<div class="info">
+							<h4>most voted movements</h4>
+							<h3>i’m singing my blue</h3>
+							<p>Music Bank Inkigayo</p>
+							<div class="trending-progress">
+								<div class="progressbar" data-value="70"><div class="percent"><div class="line"></div></div><div class="value">30.000</div></div>
+								<p><span>0</span><span>35.000</span></p>
+							</div>
+						</div>
+					</div>
+       			</div>
+				<div class="block3">
+					<img src="images/img-trend3-3.jpg" alt="">
+				</div>
+       		</div>
+       		<div class="trending-artists" id="trending-artist-3">
+       			<div class="block4">
+       				<div class="block1">
+       					<div class="img-wrap">
+							<img src="images/img-trend3-1.jpg" alt="">
+						</div>
+						<div class="info">
+							<h3>Miss A</h3>
+							<p><strong>Movements:</strong> 22 movements <br>
+							<strong>Talk:</strong> 9.834 people <br>
+							<strong>Funding:</strong> 15 Krowpop <br>
+							<strong>Votes:</strong> 22.430 votes</p>
+							<h4>Most active countries</h4>
+							<ul class="most-active-countries">
+								<li>Korea</li>
+								<li>Singapore</li>
+								<li>China</li>
+								<li>Viet Nam</li>
+								<li>Indonesia</li>
+								<li>Malaysia</li>
+							</ul>
+						</div>
+					</div>
+					<div class="block2">
+						<div class="img-wrap">
+							<img src="images/img-trend3-2.jpg" alt="">
+						</div>
+						<div class="info">
+							<h4>most voted movements</h4>
+							<h3>i’m singing my blue</h3>
+							<p>Music Bank Inkigayo</p>
+							<div class="trending-progress">
+								<div class="progressbar" data-value="70"><div class="percent"><div class="line"></div></div><div class="value">30.000</div></div>
+								<p><span>0</span><span>35.000</span></p>
+							</div>
+						</div>
+					</div>
+       			</div>
+				<div class="block3">
+					<img src="images/img-trend3-3.jpg" alt="">
+				</div>
+       		</div>
+       		<div class="trending-artists" id="trending-artist-4">
+       			<div class="block4">
+       				<div class="block1">
+       					<div class="img-wrap">
+							<img src="images/img-trend3-1.jpg" alt="">
+						</div>
+						<div class="info">
+							<h3>Miss A</h3>
+							<p><strong>Movements:</strong> 22 movements <br>
+							<strong>Talk:</strong> 9.834 people <br>
+							<strong>Funding:</strong> 15 Krowpop <br>
+							<strong>Votes:</strong> 22.430 votes</p>
+							<h4>Most active countries</h4>
+							<ul class="most-active-countries">
+								<li>Korea</li>
+								<li>Singapore</li>
+								<li>China</li>
+								<li>Viet Nam</li>
+								<li>Indonesia</li>
+								<li>Malaysia</li>
+							</ul>
+						</div>
+					</div>
+					<div class="block2">
+						<div class="img-wrap">
+							<img src="images/img-trend3-2.jpg" alt="">
+						</div>
+						<div class="info">
+							<h4>most voted movements</h4>
+							<h3>i’m singing my blue</h3>
+							<p>Music Bank Inkigayo</p>
+							<div class="trending-progress">
+								<div class="progressbar" data-value="70"><div class="percent"><div class="line"></div></div><div class="value">30.000</div></div>
+								<p><span>0</span><span>35.000</span></p>
+							</div>
+						</div>
+					</div>
+       			</div>
+				<div class="block3">
+					<img src="images/img-trend3-3.jpg" alt="">
+				</div>
+       		</div>
+       		<div class="trending-artists" id="trending-artist-5">
+       			<div class="block4">
+       				<div class="block1">
+       					<div class="img-wrap">
+							<img src="images/img-trend3-1.jpg" alt="">
+						</div>
+						<div class="info">
+							<h3>Miss A</h3>
+							<p><strong>Movements:</strong> 22 movements <br>
+							<strong>Talk:</strong> 9.834 people <br>
+							<strong>Funding:</strong> 15 Krowpop <br>
+							<strong>Votes:</strong> 22.430 votes</p>
+							<h4>Most active countries</h4>
+							<ul class="most-active-countries">
+								<li>Korea</li>
+								<li>Singapore</li>
+								<li>China</li>
+								<li>Viet Nam</li>
+								<li>Indonesia</li>
+								<li>Malaysia</li>
+							</ul>
+						</div>
+					</div>
+					<div class="block2">
+						<div class="img-wrap">
+							<img src="images/img-trend3-2.jpg" alt="">
+						</div>
+						<div class="info">
+							<h4>most voted movements</h4>
+							<h3>i’m singing my blue</h3>
+							<p>Music Bank Inkigayo</p>
+							<div class="trending-progress">
+								<div class="progressbar" data-value="70"><div class="percent"><div class="line"></div></div><div class="value">30.000</div></div>
+								<p><span>0</span><span>35.000</span></p>
+							</div>
+						</div>
+					</div>
+       			</div>
+				<div class="block3">
+					<img src="images/img-trend3-3.jpg" alt="">
+				</div>
+       		</div>
+
+       		<div id="trending-slider" class="trending-slider">
+       			<div class="item" data-id="trending-artist-1">
+       				<div class="content">
+       					<div class="img-wrap">
+							<img src="images/img-trend1.jpg" alt="">
+						</div>
+						<h3>SNSD</h3>
+       				</div>
+       			</div>
+       			<div class="item" data-id="trending-artist-2">
+       				<div class="content">
+       					<div class="img-wrap">
+							<img src="images/img-trend2.jpg" alt="">
+						</div>
+						<h3>BIGBANG</h3>
+					</div>
+       			</div>
+       			<div class="item" data-id="trending-artist-3">
+       				<div class="content">
+       					<div class="img-wrap">
+							<img src="images/img-trend3.jpg" alt="">
+						</div>
+						<h3>MISS A</h3>
+					</div>
+       			</div>
+       			<div class="item" data-id="trending-artist-4">
+       				<div class="content">
+       					<div class="img-wrap">
+							<img src="images/img-trend4.jpg" alt="">
+						</div>
+						<h3>WONDER GIRL</h3>
+					</div>
+       			</div>
+       			<div class="item" data-id="trending-artist-5">
+       				<div class="content">
+       					<div class="img-wrap">
+							<img src="images/img-trend5.jpg" alt="">
+						</div>
+						<h3>2PM</h3>
+					</div>
+       			</div>
+       		</div>
+       		<script>
+				$(document).ready(function(){
+				  $("#trending-slider").owlCarousel({
+//					  animateOut : true,
+					  nav : true,
+					  navText : ['',''],
+					  responsive : {
+						  0: {
+							  items : 1
+						  },
+						  480: {
+							  items : 3
+						  },
+						  768: {
+							  items : 5
+						  }
+					  }
+				  });
+				});
+			</script>
+       	</div>
+
+    </section>
+    <section class="dig-deeper home-section">
+        <div class="container">
+			<div class="text-center"><h1 class="section-title" title="DIG DEEPER">DIG DEEPER</h1></div>
+            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam. Duis aute irure dolor in reprehenderit in</p>
+            <div class="huvi-deeper-block-wrap">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="huvi-deeper-block">
+                            <img src="images/img-dd1.jpg" alt="">
+                            <div class="content-wrap">
+                                <h2>artist</h2>
+                                <p>See where your most active fans are <br>and get connected!</p>
+                                <a href="" class="btn-signin blue">sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="huvi-deeper-block">
+                            <img src="images/img-dd2.jpg" alt="">
+                            <div class="content-wrap">
+                                <h2>promoters</h2>
+                                <p>Take advantage of our full suite of analytic & ticketing tools to take the risk out of throwing an event</p>
+                                <a href="" class="btn-signin violet">sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="huvi-deeper-block">
+                            <img src="images/img-dd3.jpg" alt="">
+                            <div class="content-wrap">
+                                <h2>fan clubs</h2>
+                                <p>Connect to other fans like you and get rewarded for doing what you do best!</p>
+                                <a href="" class="btn-signin red">sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-top">
+        <div class="container">
+            <div class="tbl-featuredin">
+                <div class="col-left">as featured in</div>
+                <div class="col-right"><img src="img/icon-featuredin.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <a href="index.html"><img src="logo.png" alt="kpop logo" class="logo-footer"></a>
+        <div class="footer-menu">
+            <a href="">About Krowpop</a>
+            <a href="">Press</a>
+            <a href="">FAQ</a>
+            <a href="">Term of services</a>
+            <a href="">Privacy Pocility</a>
+        </div>
+        <div class="social-icon-wrap">
+            <a href="" class="social-icon social-fb hvr-push"><i class="fa fa-facebook"></i></a>
+            <a href="" class="social-icon social-tw hvr-push"><i class="fa fa-twitter"></i></a>
+            <a href="" class="social-icon social-g hvr-push"><i class="fa fa-google-plus"></i></a>
+        </div>
+        <p class="copyright">copyright 2014 by kpop united</p>
+    </footer>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            wow = new WOW({
+              boxClass:     'wow',      // default
+              animateClass: 'animated', // default
+              offset:       0,          // default
+              mobile:       true,       // default
+              live:         true        // default
+            })
+            wow.init();
+        });
+    </script>
+  </body>
+</html>
