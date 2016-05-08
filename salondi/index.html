@@ -135,8 +135,13 @@
     <nav class="nav-mini navbar navbar-fixed-top hidden-sm hidden-xs">
         <div class="container">
             <div class="navbar-header">
-                <div class="pull-left">
-                  <button type="button" class="navbar-toggle">
+                <div class="pull-right">
+                <a href="#"><span class="icon" style="background-image: url(img/phone-icon.png)"></span>HOTLINE <span>1900 2148</span></a>
+                <a href="#"><span class="icon" style="background-image: url(img/account-icon.png)"></span> Tài khoản</a>
+              </div>
+              <div class="">
+                <div class="dropdown">
+                  <button type="button" id="city2Pick" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="navbar-toggle">
                     <span>
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -145,27 +150,60 @@
                     </span>
                     Tất cả danh mục
                   </button>
+                  <div class="dropdown-menu" aria-labelledby="city2Pick">
+                    <div class="row">
+                      <div class="col-md-3 nav-first">
+                        <ul class="">
+                          <li><a href="#" class="active">tóc nghệ thuật <i class="fa fa-angle-right pull-right"></i> </a></li>
+                          <li><a href="#">nail nghệ thuật<i class="fa fa-angle-right pull-right"></i> </a></li>
+                          <li><a href="#">trang điểm<i class="fa fa-angle-right pull-right"></i> </a></li>
+                          <li><a href="#">spa<i class="fa fa-angle-right pull-right"></i> </a></li>
+                          <li><a href="#">massage<i class="fa fa-angle-right pull-right"></i> </a></li>
+                          <li><a href="#">salon cho nam<i class="fa fa-angle-right pull-right"></i> </a></li>
+                          <li><a href="#">tẩy lông<i class="fa fa-angle-right pull-right"></i> </a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-5">
+                        <ul>
+                          <li><a href="#">Haircuts and Hairdressing</a></li>
+                          <li><a href="#">Blow Dry</a></li>
+                          <li><a href="#">Hair Colouring and Highlights Treatments</a></li>
+                          <li><a href="#">Hair Conditioning and Scalp Treatments</a></li>
+                          <li><a href="#">Hair Consulting</a></li>
+                          <li><a href="#">Brazilian Blow Dry Keratin Treatment</a></li>
+                          <li class="more-link"><a href="#">Xem tất cả các dịch vụ về Tóc</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-4">
+                        <a href="#" class="promotion"><img class="img-responsive" src="img/hair2.jpg" />
+                          <div>
+                            <h3>Những Salon yêu thích 2015</h3>
+                          </div>
+                        </a>
+                      </div>
 
-                  <form class="search-form form-inline">
-                    <div class='input-group'>
-                        <select data-class="input-group-addon" class="input-group-addon btn" type="submit">
-                            <option disabled selected>Chọn địa điểm</option>
-                            <option value="hn">Hà Nội</option>
-                            <option value="sg">Sài Gòn</option>
-                        </select>
-                        <input type='text' placeholder="Bạn muốn book dịch vụ nào?"/>
-                        <button class="input-group-addon btn" type="submit">
-                            Tìm kiếm
-                        </button>
                     </div>
-                  </form>
+
+                  </div>
+                </div>
+
+
+                <form class="search-form form-inline">
+                  <div class='input-group'>
+                      <select data-class="input-group-addon" class="input-group-addon btn" type="submit">
+                          <option disabled selected>Book dịch vụ</option>
+                          <option value="dv1">Dịch vụ 1</option>
+                          <option value="dv2">Dịch vụ 2</option>
+                      </select>
+                      <input type='text' placeholder="Bạn muốn book dịch vụ nào?"/>
+                      <button class="input-group-addon btn" type="submit">
+                          Tìm kiếm
+                      </button>
+                  </div>
+                </form>
               </div>
 
-              <div class="pull-right">
-                <a href="#"><span class="icon" style="background-image: url(img/phone-icon.png)"></span>HOTLINE <span>1900 2148</span></a>
-                <a href="#"><span class="icon" style="background-image: url(img/account-icon.png)"></span> Tài khoản</a>
 
-                </div>
 
             </div>
 

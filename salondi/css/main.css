@@ -137,6 +137,8 @@ p {
       margin-right: 30px; }
       .navbar .navbar-fullWidth > li .dropdown {
         position: static; }
+        .navbar .navbar-fullWidth > li .dropdown.open .dropdown-toggle {
+          background: #f2f2f2; }
       .navbar .navbar-fullWidth > li > a, .navbar .navbar-fullWidth > li .dropdown-toggle {
         font-size: 1.4rem;
         text-transform: uppercase;
@@ -168,6 +170,8 @@ p {
               text-decoration: underline; }
 
 .nav-mini {
+  border: none;
+  visibility: hidden;
   background: white;
   top: -50px;
   -webkit-transition: all 0.33s;
@@ -177,6 +181,7 @@ p {
   transition: all 0.33s; }
   .nav-mini.shown {
     top: 0;
+    visibility: visible;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
   .nav-mini .navbar-toggle, .nav-mini input, .nav-mini .btn, .nav-mini div.fancy-select div.trigger {
@@ -184,7 +189,7 @@ p {
     float: left;
     font-size: 1.4rem;
     color: #7f7f7f;
-    padding: 6px 15px;
+    padding: 7px 15px;
     border: #e2e2e2 1px solid;
     border-radius: 0;
     line-height: 1.5em; }
@@ -198,13 +203,18 @@ p {
   .nav-mini .search-form {
     display: inline-block; }
   .nav-mini div.fancy-select div.trigger {
+    border-right: none;
     margin-top: 2px;
     padding-right: 40px; }
     .nav-mini div.fancy-select div.trigger:after {
       top: 15px;
       border-top-color: #c3c3c3; }
+  .nav-mini div.fancy-select ul.options {
+    margin-left: 12px; }
+    .nav-mini div.fancy-select ul.options.open {
+      top: 42px; }
   .nav-mini input {
-    width: 260px; }
+    width: 360px; }
   .nav-mini input, .nav-mini .btn {
     margin-top: 8px; }
   .nav-mini .input-group-addon {
@@ -219,14 +229,17 @@ p {
     padding-right: 15px; }
   .nav-mini a {
     display: inline-block;
-    padding: 14px 15px 8px;
+    padding: 16px 15px 17px;
     font-size: 1.4rem;
     color: #464646;
+    border-left: solid 1px #dddddd;
     -webkit-transition: all 0.33s;
     -moz-transition: all 0.33s;
     -ms-transition: all 0.33s;
     -o-transition: all 0.33s;
     transition: all 0.33s; }
+    .nav-mini a:first-child {
+      border-left: none; }
     .nav-mini a span {
       color: #ff5c39; }
     .nav-mini a.bigFont {
@@ -249,6 +262,58 @@ p {
     -ms-transition: background-position 0.33s;
     -o-transition: background-position 0.33s;
     transition: background-position 0.33s; }
+  .nav-mini .dropdown.open .navbar-toggle {
+    background: #f2f2f2;
+    padding-bottom: 9px;
+    padding-right: 30px;
+    margin-bottom: 0;
+    margin-right: 0;
+    border: none;
+    color: #2f2f2f;
+    border-radius: 4px 4px 0 0;
+    line-height: 30px; }
+  .nav-mini .dropdown-menu {
+    width: 100%;
+    background: #f2f2f2;
+    border: none;
+    padding: 0 40px 0 15px;
+    margin-top: 0;
+    border-radius: 0 0 4px 4px;
+    top: 54px; }
+    .nav-mini .dropdown-menu ul {
+      padding: 25px 0 15px;
+      list-style: none; }
+      .nav-mini .dropdown-menu ul > li > a {
+        display: block;
+        padding: 2px 15px 2px 20px;
+        color: #2f2f2f;
+        font-size: 1.4rem;
+        line-height: 2.4em; }
+      .nav-mini .dropdown-menu ul > li.more-link {
+        margin-top: 10px; }
+        .nav-mini .dropdown-menu ul > li.more-link a {
+          text-decoration: underline; }
+    .nav-mini .dropdown-menu .nav-first {
+      padding-left: 0;
+      padding-right: 0;
+      border-right: solid 1px #dadada; }
+      .nav-mini .dropdown-menu .nav-first a {
+        text-decoration: none;
+        text-transform: capitalize; }
+        .nav-mini .dropdown-menu .nav-first a:hover, .nav-mini .dropdown-menu .nav-first a.active {
+          background: #ff5c39;
+          color: #fff; }
+          .nav-mini .dropdown-menu .nav-first a:hover .fa-angle-right, .nav-mini .dropdown-menu .nav-first a.active .fa-angle-right {
+            color: #fff; }
+        .nav-mini .dropdown-menu .nav-first a .fa-angle-right {
+          font-size: 22px;
+          color: #ccc;
+          line-height: 28px; }
+    .nav-mini .dropdown-menu .promotion {
+      padding-top: 31px; }
+
+div.fancy-select ul.options {
+  border-radius: 0; }
 
 .dropdown .dropdown-toggle {
   border-radius: 0;
@@ -265,6 +330,9 @@ p.result-text {
 .list-content hr {
   margin-top: 10px;
   margin-bottom: 10px; }
+.list-content .dropdown-menu {
+  border-radius: 0;
+  margin-top: -1px; }
 
 /***********************************/
 /***************BLOCK***************/
@@ -384,6 +452,8 @@ p.result-text {
     border-radius: 0;
     border: #dcdcdc 1px solid;
     border-left: none; }
+  .filter-block .fa-angle-down {
+    color: #cbcbcb; }
 
 .section-banner > .container {
   position: relative; }
@@ -439,7 +509,7 @@ p.result-text {
   .search-tabs div.fancy-select .trigger {
     padding-right: 40px; }
     .search-tabs div.fancy-select .trigger:after {
-      top: 20px;
+      top: 16px;
       border-top-color: #c3c3c3; }
   .search-tabs button {
     padding: 9px 40px;
@@ -482,7 +552,6 @@ p.result-text {
 */
 .rating {
   unicode-bidi: bidi-override;
-  direction: rtl;
   text-align: left;
   display: inline-block; }
 
@@ -520,9 +589,6 @@ p.result-text {
     margin-top: 0;
     text-transform: none;
     font-weight: 600; }
-    .result-profile h2 + p {
-      margin-bottom: 0;
-      color: #7b7b7b; }
   .result-profile .votes {
     display: inline-block;
     color: #7b7b7b; }
@@ -533,6 +599,13 @@ p.result-text {
       color: #ff5c39; }
   .result-profile p {
     margin-bottom: 8px; }
+  .result-profile .fa-map-marker {
+    color: #b7b7b7; }
+  .result-profile .fa-star {
+    color: #b4b4b4;
+    font-size: 18px; }
+    .result-profile .fa-star.active {
+      color: #fdb32b; }
 
 .map-btn {
   font-size: 1.3rem;
@@ -554,7 +627,7 @@ p.result-text {
       font-size: 1.1rem;
       width: 100%;
       text-align: center;
-      padding: 9px;
+      padding: 6px;
       background: #f8f8f8; }
       .list-holder .item.btn-more:hover {
         cursor: pointer; }
@@ -562,7 +635,8 @@ p.result-text {
     padding-right: 0; }
   .list-holder p {
     margin: 0;
-    color: #464646; }
+    color: #464646;
+    line-height: 30px; }
   .list-holder .price {
     margin-left: 10px; }
   .list-holder i.fa-clock-o {
@@ -576,11 +650,18 @@ p.result-text {
   .list-holder .price-per {
     color: #00a89c; }
   .list-holder .book-btn {
-    padding: 5px 9px;
+    padding: 8px 9px;
     width: 100%;
     color: white;
     text-transform: uppercase;
-    background: #ff5c39; }
+    background: #ff5c39;
+    display: inline-block;
+    text-decoration: none; }
+    .list-holder .book-btn:hover {
+      background: #ff3206; }
+  .list-holder .col-xs-3 {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 /***********************************/
 /***************FORM****************/
@@ -618,10 +699,10 @@ input[type=radio] {
     content: '';
     display: block;
     position: absolute;
-    width: 11px;
-    height: 11px;
-    top: 2px;
-    left: 2px;
+    width: 9px;
+    height: 9px;
+    top: 3px;
+    left: 3px;
     border-radius: 50%;
     background-color: #ff5c39; }
   input[type=radio] + label span {
@@ -641,12 +722,13 @@ input[type=checkbox] {
   input[type=checkbox]:checked + label span:before {
     content: '\f00c';
     font-family: FontAwesome;
-    color: #464646;
+    color: #a4a5ab;
     display: block;
     margin-top: -4px;
     margin-left: 1px; }
   input[type=checkbox] + label {
-    width: 100%; }
+    width: 100%;
+    font-size: 13px; }
     input[type=checkbox] + label span {
       position: relative;
       display: inline-block;
@@ -789,6 +871,23 @@ footer {
   .socials li a {
     font-size: 2rem;
     margin-right: 15px; }
+
+.pagination {
+  margin-bottom: 50px; }
+  .pagination > li {
+    margin: 0 5px; }
+    .pagination > li.active a {
+      background: #ff5c39;
+      border-color: #d14a2d;
+      color: #fff; }
+    .pagination > li:first-child a, .pagination > li:last-child a {
+      border-radius: 1px; }
+    .pagination > li > a {
+      background: #f9f9f9;
+      border-color: #dbdbdb;
+      color: #333;
+      border-radius: 1px;
+      margin: 0 5px; }
 
 /***********************************/
 /************RESPONSIVE*************/
