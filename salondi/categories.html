@@ -72,7 +72,28 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="Salondi Logo" /></a>
+            <div class="row">
+              <div class="col-md-4">
+    	          <a class="navbar-brand pull-left" href="index.html">
+                  <img src="img/logo.jpg" alt="Salondi Logo" />
+                </a>
+              </div>
+              <div class="col-md-8 hidden-xs ">
+                <div class="search-form form-inline pull-right navbar-search">
+                  <div class='input-group'>
+                      <select data-class="input-group-addon" class="input-group-addon btn" type="submit">
+                          <option disabled selected>Book dịch vụ</option>
+                          <option value="dv1">Dịch vụ 1</option>
+                          <option value="dv2">Dịch vụ 2</option>
+                      </select>
+                      <input type='text' placeholder="Bạn muốn book dịch vụ nào?"/>
+                      <button class="input-group-addon btn" type="submit">
+                          Tìm kiếm
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
 	        </div>
 
 	        <div id="navbar" class="navbar-collapse collapse">
@@ -143,11 +164,53 @@
         <div class="container">
             <div class="row">
                 <aside class="col-md-3">
+
+                    <div class="filter-block">
+                        <h3>Danh mục</h3>
+                        <div class="content ">
+                          <div class="form-group">
+                                <a class="active" href="#">
+                                    TÓC NGHỆ THUẬT
+                                </a>
+                            </div>
+                                                        <div class="form-group">
+                                <a href="#">
+                                    NAILS NGHỆ THUẬT
+                                </a>
+                            </div>
+                                                        <div class="form-group">
+                                <a href="#">
+                                    SALON NAM
+                                </a>
+                            </div>
+                                                        <div class="form-group">
+                                <a href="#">
+                                    MAKE - UP
+                                </a>
+                            </div>
+                                                        <div class="form-group">
+                                <a href="#">
+                                    SPA
+                                </a>
+                            </div>
+                                                        <div class="form-group">
+                                <a href="#">
+                                    MASSAGE
+                                </a>
+                            </div>
+                                                        <div class="form-group">
+                                <a href="#">
+                                    TRIỆT LÔNG
+                                </a>
+                            </div>
+                                                    </div>
+                    </div>
+
                     <div class="filter-block">
                         <h3>thời gian đặt</h3>
                         <div class="form-group">
-                            <div class='input-group date input-dropdown' id='datePicker'>
-                                <input type='text' class="form-control" />
+                            <div class='input-group date input-dropdown' >
+                                <input type='text' class="form-control" id='datePicker' placeholder="Chọn ngày"/>
                                 <span class="input-group-addon">
                                     <i class="fa fa-angle-down"></i>
                                 </span>
@@ -155,7 +218,7 @@
                         </div>
                         <div class="form-group">
                             <div class='input-group date input-dropdown' id='timePicker'>
-                                <input type='text' class="form-control" />
+                                <input type='text' class="form-control" placeholder="Chọn giờ"/>
                                 <span class="input-group-addon">
                                     <i class="fa fa-angle-down"></i>
                                 </span>
@@ -702,6 +765,7 @@
     <script src="js/vendor/fancySelect.js"></script>
     <script src="js/vendor/moment.js"></script>
     <script src="js/vendor/vi.js"></script>
+    <script src="js/vendor/jquery-ui.js"></script>
     <script src="js/vendor/bootstrap-datetimepicker.js"></script>
     <script src="js/vendor/wow.min.js"></script>
     <script>

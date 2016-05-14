@@ -1,6 +1,7 @@
 @import url('../fonts/SFUITextRegular.css');
 @import url('../fonts/VNFGothamBook.css');
 @import url('../fonts/SanFranciscoText-RegularG3.css');
+@import url('../fonts/SanFranciscoText-Semibold.css');
 
 /***********************************/
 /**********GENERAL VARIABLE*********/
@@ -19,6 +20,7 @@ $orange: #ff5c39;
 /*Fonts*/
 $font-sf: 'SFUITextRegular', sans-serif;
 $font-sf3: 'SanFranciscoText-RegularG3', sans-serif;
+$font-sfb: 'SanFranciscoText-Semibold', sans-serif;
 $font-gotham: 'VNFGothamBook', sans-serif;
 
 @mixin prefix($property, $css) {

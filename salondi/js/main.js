@@ -15,7 +15,7 @@ $(function() {
 
 			992: {
 				items: 3
-			}, 
+			},
 
 			1200: {
 				items: 5
@@ -24,10 +24,16 @@ $(function() {
 	});
 
 	$('select').fancySelect();
-	$('#datePicker').datetimepicker({
-        locale: 'vi',
-        format: 'dd/MM/YYYY'
-    });
+	// $('#datePicker').datetimepicker({
+ //        locale: 'vi',
+ //        format: 'dd/MM/YYYY'
+ //    });
+  $( "#datePicker" ).datepicker({
+    numberOfMonths: [1, 2],
+    showButtonPanel: true,
+    minDate: 0
+  });
+
     $('#timePicker').datetimepicker({
         locale: 'vi',
         format: 'LT'
@@ -45,7 +51,7 @@ $(window).scroll(function(e) {
 })
 
 $(window).load(function() {
-  
+
 })
 
 $(window).resize(function() {

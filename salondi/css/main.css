@@ -1,6 +1,7 @@
 @import url("../fonts/SFUITextRegular.css");
 @import url("../fonts/VNFGothamBook.css");
 @import url("../fonts/SanFranciscoText-RegularG3.css");
+@import url("../fonts/SanFranciscoText-Semibold.css");
 /***********************************/
 /**********GENERAL VARIABLE*********/
 /***********************************/
@@ -8,6 +9,7 @@
 /*Fonts*/
 @import url(fancySelect.css);
 @import url(bootstrap-datetimepicker.min.css);
+@import "https://www.treatwell.co.uk/css/jquery-ui";
 /***********************************/
 /**************GENERAL**************/
 /***********************************/
@@ -130,6 +132,8 @@ p {
       margin: 0 auto; }
   .navbar .navbar-fullWidth {
     width: 100%;
+    margin-left: -20px;
+    margin-right: -20px;
     margin-top: 20px;
     position: relative; }
     .navbar .navbar-fullWidth > li {
@@ -339,7 +343,7 @@ p.result-text {
 /***********************************/
 /*salon block*/
 .salon-block {
-  margin-bottom: 12px; }
+  margin-bottom: 9px; }
   .salon-block h3 {
     margin-top: 0;
     margin-bottom: 16px; }
@@ -454,6 +458,17 @@ p.result-text {
     border-left: none; }
   .filter-block .fa-angle-down {
     color: #cbcbcb; }
+  .filter-block .form-group {
+    margin: 0; }
+    .filter-block .form-group a {
+      display: block;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 2px;
+      text-decoration: none;
+      font-size: 1.2em; }
+      .filter-block .form-group a:hover, .filter-block .form-group a.active {
+        background: #dedede; }
 
 .section-banner > .container {
   position: relative; }
@@ -587,6 +602,7 @@ p.result-text {
   .result-profile h2 {
     margin-bottom: 10px;
     margin-top: 0;
+    font-family: "SanFranciscoText-Semibold", sans-serif;
     text-transform: none;
     font-weight: 600; }
   .result-profile .votes {
@@ -656,7 +672,9 @@ p.result-text {
     text-transform: uppercase;
     background: #ff5c39;
     display: inline-block;
-    text-decoration: none; }
+    text-decoration: none;
+    border: solid 1px #dedede;
+    border-radius: 1px; }
     .list-holder .book-btn:hover {
       background: #ff3206; }
   .list-holder .col-xs-3 {
@@ -757,7 +775,7 @@ input[type=checkbox] {
 /*banner*/
 .section-banner {
   min-height: 469px;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #cbcfd2; }
@@ -889,9 +907,62 @@ footer {
       border-radius: 1px;
       margin: 0 5px; }
 
+.section-banners h2 {
+  margin: 30px 0; }
+
+.navbar-home {
+  border-bottom: none; }
+
+.navbar-search {
+  border: solid 2px #e5e5e5;
+  border-radius: 3px;
+  padding: 2px 3px 4px 3px;
+  width: 100%;
+  margin: 40px 0; }
+  .navbar-search .input-group {
+    width: 100%;
+    height: 31px; }
+    .navbar-search .input-group .fancy-select {
+      background: none;
+      border: none;
+      padding: 0;
+      height: 31px;
+      width: 150px; }
+      .navbar-search .input-group .fancy-select div.trigger {
+        border: none;
+        border-right: solid 1px #dcdcdc;
+        border-radius: 0;
+        height: 31px;
+        line-height: 31px;
+        padding: 0 31px;
+        font-size: 14px;
+        color: #959595; }
+        .navbar-search .input-group .fancy-select div.trigger:after {
+          border-top-color: #cbcbcb;
+          top: 13px; }
+  .navbar-search input {
+    border: none;
+    font-size: 14px;
+    height: 31px;
+    line-height: 31px;
+    padding: 0 15px;
+    width: 78.9%; }
+  .navbar-search .btn {
+    background: #ff5c39;
+    color: #fff;
+    border-color: #dcdcdc;
+    height: 31px;
+    padding: 5px 31px;
+    font-size: 14px; }
+  .navbar-search div.fancy-select ul.options.open {
+    top: 37px; }
+
 /***********************************/
 /************RESPONSIVE*************/
 /***********************************/
+@media (min-width: 1600px) {
+  .section-banner {
+    background-size: contain; } }
 @media (max-width: 1200px) {
   .search-tabs input.form-control {
     width: 60%; }
@@ -948,7 +1019,10 @@ footer {
       font-size: .9rem; }
 
   .navbar .navbar-fullWidth > li {
-    margin-right: 5px; } }
+    margin-right: 5px; }
+
+  .navbar-search input {
+    width: 72.9%; } }
 @media (max-width: 992px) {
   .navbar .navbar-nav {
     margin-left: 0;
@@ -1003,5 +1077,191 @@ footer {
 
   footer input.form-control {
     width: 180px; } }
+.ui-widget {
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  color: #4d4d4d; }
+
+.ui-widget-header {
+  border: 0;
+  background: none;
+  color: #4d4d4d; }
+
+.ui-datepicker {
+  width: auto !important;
+  border: 0;
+  background: white;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 0; }
+
+.ui-datepicker.ui-datepicker-multi {
+  z-index: 1000 !important;
+  width: auto !important;
+  min-width: 33em; }
+
+.ui-datepicker.ui-datepicker-multi .ui-datepicker-group {
+  padding: 0 10px; }
+
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: 0; }
+
+.ui-datepicker .ui-datepicker-title {
+  line-height: 34px; }
+
+.ui-datepicker .ui-state-hover, .ui-datepicker .ui-widget-content .ui-state-hover,
+.ui-datepicker .ui-state-focus, .ui-datepicker .ui-widget-content .ui-state-focus {
+  background: none;
+  border-width: 0; }
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  top: 8px;
+  width: 12px;
+  height: 16px;
+  cursor: pointer; }
+
+.ui-datepicker .ui-datepicker-prev .ui-icon,
+.ui-datepicker .ui-datepicker-next .ui-icon {
+  top: 9px;
+  left: 10px;
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+
+.ui-datepicker .ui-datepicker-prev {
+  left: 0; }
+
+.ui-datepicker .ui-datepicker-prev .ui-icon {
+  background-image: url("https://cdn2.treatwell.net/images/static/arrow-prev.png"); }
+
+.ui-datepicker .ui-datepicker-prev.ui-state-hover .ui-icon, .ui-datepicker .ui-datepicker-prev.ui-datepicker-prev-hover .ui-icon {
+  background-image: url("https://cdn1.treatwell.net/images/static/arrow-prev-hover.png"); }
+
+.ui-datepicker .ui-datepicker-prev.ui-state-hover.ui-state-disabled .ui-icon, .ui-datepicker .ui-datepicker-prev.ui-state-hover.ui-state-disabled:hover .ui-icon, .ui-datepicker .ui-datepicker-prev.ui-state-hover.ui-state-disabled.ui-state-hover .ui-icon, .ui-datepicker .ui-datepicker-prev.ui-datepicker-prev-hover.ui-state-disabled .ui-icon, .ui-datepicker .ui-datepicker-prev.ui-datepicker-prev-hover.ui-state-disabled:hover .ui-icon, .ui-datepicker .ui-datepicker-prev.ui-datepicker-prev-hover.ui-state-disabled.ui-state-hover .ui-icon {
+  background-image: url("https://cdn2.treatwell.net/images/static/arrow-prev.png"); }
+
+.ui-datepicker .ui-datepicker-next {
+  right: 0; }
+
+.ui-datepicker .ui-datepicker-next .ui-icon {
+  background-image: url("https://cdn2.treatwell.net/images/static/arrow-next.png"); }
+
+.ui-datepicker .ui-datepicker-next.ui-state-hover .ui-icon, .ui-datepicker .ui-datepicker-next.ui-datepicker-next-hover .ui-icon {
+  background-image: url("https://cdn1.treatwell.net/images/static/arrow-next-hover.png"); }
+
+.ui-datepicker .ui-datepicker-next.ui-state-hover.ui-state-disabled .ui-icon, .ui-datepicker .ui-datepicker-next.ui-state-hover.ui-state-disabled:hover .ui-icon, .ui-datepicker .ui-datepicker-next.ui-state-hover.ui-state-disabled.ui-state-hover .ui-icon, .ui-datepicker .ui-datepicker-next.ui-datepicker-next-hover.ui-state-disabled .ui-icon, .ui-datepicker .ui-datepicker-next.ui-datepicker-next-hover.ui-state-disabled:hover .ui-icon, .ui-datepicker .ui-datepicker-next.ui-datepicker-next-hover.ui-state-disabled.ui-state-hover .ui-icon {
+  background-image: url("https://cdn2.treatwell.net/images/static/arrow-next.png"); }
+
+.ui-datepicker .datepicker-actions {
+  padding: 18px 10px 10px 10px; }
+
+.ui-datepicker .datepicker-actions .button.main-action {
+  float: right;
+  font-size: 12px;
+  font-weight: bold; }
+
+.ui-datepicker .datepicker-actions .link.secondary-action {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 2.07143em;
+  color: #ff5c39;
+  cursor: pointer;
+  margin-right: 1.36364em;
+  margin-top: 3px;
+  text-transform: uppercase; }
+
+.ui-datepicker .datepicker-actions .link.secondary-action:hover {
+  color: #f44a26; }
+
+.ui-datepicker .datepicker-actions .button.secondary-action {
+  margin-right: 1.36364em;
+  padding: 5px 15px;
+  background: #e6e4e1;
+  color: #646463;
+  text-shadow: none;
+  box-shadow: inset 0 -1px #666666; }
+
+.ui-datepicker .datepicker-actions .button.secondary-action:hover {
+  background-color: #f2f2f2 !important;
+  color: #666666 !important;
+  box-shadow: inset 0 -1px gray; }
+
+.ui-datepicker .ui-datepicker-group table {
+  width: 210px;
+  margin: 0; }
+
+.ui-datepicker table {
+  font-size: 14px;
+  border-spacing: 0; }
+
+.ui-datepicker th {
+  text-align: center;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1em;
+  padding: 0 0 0.72727em;
+  color: gray; }
+
+.ui-datepicker td {
+  font-size: 13px;
+  padding: 0;
+  border: 1px solid #e6e4e3;
+  text-align: center; }
+
+.ui-datepicker td a, .ui-datepicker td span,
+.ui-datepicker td .ui-state-default {
+  display: block;
+  width: 29px;
+  height: 29px;
+  line-height: 30px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #4d4d4d;
+  text-align: center; }
+
+.ui-datepicker td.ui-state-disabled {
+  opacity: 1;
+  filter: Alpha(Opacity=100);
+  background: white;
+  border: 1px solid #d6d5d4;
+  color: #8a8a88;
+  cursor: default; }
+
+.ui-datepicker td.ui-state-disabled .ui-state-default {
+  color: #b3b3b3; }
+
+.ui-datepicker td.ui-datepicker-other-month {
+  background: none;
+  border: 1px solid #e6e4e3; }
+
+.ui-datepicker td.ui-datepicker-today a {
+  background: #fff;
+  font-weight: bold;
+  color: #333; }
+
+.ui-datepicker td a.ui-state-hover {
+  background: #f2f2f2;
+  color: #4d4d4d;
+  border: 0; }
+
+.ui-datepicker td a.ui-state-active, .ui-state-default .ui-state-highlight {
+  background: #ff5c39;
+  color: white;
+  font-weight: normal; }
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+  background: #ff5c39;
+  border: none;
+  color: white;
+  opacity: 1;
+  font-weight: normal; }
+  .ui-datepicker .ui-datepicker-buttonpane button:hover {
+    background: #ff5c39; }
+
+.ui-widget-content {
+  border: 1px solid #EAEAEA; }
 
 /*# sourceMappingURL=main.css.map */
