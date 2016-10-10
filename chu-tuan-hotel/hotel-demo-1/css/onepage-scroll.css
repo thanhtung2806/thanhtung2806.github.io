@@ -1,0 +1,79 @@
+body, html {
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+body, .onepage-wrapper, html {
+    display: block;
+    height: 100%;
+    padding: 0;
+    position: static;
+    width: 100%;
+}
+.onepage-wrapper {
+    display: block;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.onepage-wrapper .section {
+    height: 100%;
+    width: 100%;
+}
+.onepage-pagination {
+    left: 10px;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    z-index: 5;
+}
+.onepage-pagination li {
+    padding: 0;
+    text-align: center;
+}
+.onepage-pagination li a {
+    display: block;
+    height: 4px;
+    padding: 10px;
+    width: 4px;
+}
+.onepage-pagination li a:before {
+    background: none repeat scroll 0 0 #ffffff;
+    border-radius: 10px;
+    content: "";
+    height: 4px;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    width: 4px;
+}
+.onepage-pagination li a.active:before {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #ffffff;
+    height: 10px;
+    left: 8px;
+    margin-top: -4px;
+    width: 10px;
+}
+.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
+    overflow: auto;
+}
+.disabled-onepage-scroll .onepage-wrapper .section {
+    position: relative !important;
+    top: auto !important;
+}
+.disabled-onepage-scroll .onepage-wrapper {
+    min-height: 100%;
+    transform: none !important;
+}
+.disabled-onepage-scroll .onepage-pagination {
+    display: none;
+}
+body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
+    position: inherit;
+}

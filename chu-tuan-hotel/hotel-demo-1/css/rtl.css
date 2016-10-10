@@ -1,0 +1,235 @@
+body{direction:rtl;}
+ul li i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+nav > ul > li:hover > a {
+    padding: 45px 35px 45px 15px;
+}
+nav > ul > li > a i, nav > ul > li > a i.fa {
+    left: auto;
+    right: 10px;
+}
+nav > ul > li ul li a::before {
+    left: auto;
+    right: 20px;
+}
+nav > ul > li ul li:hover > a {
+    padding-left: 30px;
+    padding-right: 50px;
+}
+nav > ul > li > ul > li:hover > ul {
+    left: auto;
+    right: 100%;
+}
+.parallax-reservation label {
+    text-align: right;
+}
+.field i, .form-field input {
+    left: 10px;
+    right: auto;
+}
+.parallax-reservation .field i::after {
+    left: auto;
+    right: -10px;
+}
+.field input.userincr-btn-dec, .field input.userincr-btn-inc, .form-field input.userincr-btn-dec, .form-field input.userincr-btn-inc {
+    left: 10px;
+    padding: 0 !important;
+    right: auto;
+}
+.parallax-reservation .field input {
+    padding: 14px 20px 14px 30px;
+}
+.owl-carousel {direction:ltr}
+.owl-stage{direction:rtl}
+
+.deal li {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+.deal li i {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.blog-detail > ul.meta li a i, .blog-img > ul.meta li a i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+.about > a {
+    float: right;
+    margin-right: 0;
+}
+.widget-title::before {
+    left: auto;
+    right: 0;
+}
+.topbar p i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+nav > ul > li > a:after {
+    right: auto;
+    left: 2px;
+}
+nav > ul > li > a::before {
+    left: 0;
+    right: auto;
+}
+header.header2 nav > ul > li:hover > a, header.header3 nav > ul > li:hover > a {
+    padding: 20px 35px 20px 15px;
+}
+nav > ul > li ul li:hover > a::before {
+    left: auto;
+    right: 30px;
+}
+header.header2 nav > ul > li, header.header3 nav > ul > li{text-align:right;}
+.slider-whitebox > img {
+    margin-right: 0;
+    margin-left: 30px;
+}
+.whitebox-inner{text-align:right;}
+.simple-title:before {
+    left: auto;
+    right: 0;
+}
+.about-destination {
+    padding-left: 0;
+    padding-right: 30px;
+}
+.about-destination li {
+    display: inline-block;
+    float: none;
+}
+.about-destination li a::before {
+    left: -8px;
+    right: auto;
+}
+footer.fancy ul li{text-align:right}
+.widget ul li a{float:right;}
+footer.fancy .widget-title {
+    padding-left: 0;
+    padding-right: 15px;
+}
+.toggle {
+    padding-left: 0;
+    padding-right: 22px;
+}
+.toggle-item > span {
+    left: auto;
+    right: -23px;
+}
+.toggle-item > h2 {
+    padding: 20px 55px 20px 20px;
+}
+.toggle-item .content {
+    padding: 0 55px 20px 20px;
+}
+header.header4 nav > ul > li{text-align:right;}
+.deal-features {
+    padding: 0;
+}
+.deal-features > p {
+    padding-right: 20px;
+}
+.field i, .form-field i {
+    left: 10px;
+    right: auto;
+}
+.simple-text > a{float:right;}
+.countbox i {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.border-title h2 {
+    float: right;
+    padding-left: 15px;
+    padding-right: 0;
+}
+.border-title > span {
+    text-align: right;
+}
+.contact-box.fancy > h4 {
+    text-align: right;
+}
+.contact-box.fancy > p {
+    text-align: right;
+}
+.sidebar .widget ul li {text-align: left}
+.sidebar .widget ul li a {float: right}
+.widget ul li{float:right}
+
+.blog-desc li {
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
+}
+.blog-desc > a {
+    float: right;
+}
+.blog-desc > a i {
+    float: left;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.post-info ul {
+    padding-left: 0;
+    padding-right: 10px;
+}
+.post-info li span {
+    left: auto;
+    right: -10px;
+}
+.post-info li {
+    padding: 10px 30px 10px 15px;
+}
+ul.social-contact {
+    float: left;
+}
+.share-post h5 {
+    float: right;
+}
+.comment {
+    padding: 40px 90px 40px 110px;
+}
+.avatar {
+    left: auto;
+    right: -70px;
+}
+.comments-thread li {
+    padding-left: 0;
+    padding-right: 70px;
+}
+.comment > a {
+    border-radius: 0 3px 3px 0;
+    left: 0;
+    right: auto;
+}
+.comment-info > h4 {
+    float: right;
+    margin-left: 30px;
+    margin-right: 0;
+}
+.comment-info > span {
+    float: right;
+}
+
+.salon-content {
+    padding: 40px 45px 35px 20px;
+}
+.salon-content > span {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+th {
+    text-align: right;
+}
+.member-intro > span {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
