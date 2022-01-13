@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'AvenirLTStdBlack';
-    src: url('fonts/AvenirLTStdBlack.eot');
-    src: url('fonts/AvenirLTStdBlack.eot') format('embedded-opentype'),
-         url('fonts/AvenirLTStdBlack.woff2') format('woff2'),
-         url('fonts/AvenirLTStdBlack.woff') format('woff'),
-         url('fonts/AvenirLTStdBlack.ttf') format('truetype'),
-         url('fonts/AvenirLTStdBlack.svg#AvenirLTStdBlack') format('svg');
-}

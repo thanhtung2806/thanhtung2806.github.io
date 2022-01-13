@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'JennaSue';
-    src: url('fonts/JennaSue.eot');
-    src: url('fonts/JennaSue.eot') format('embedded-opentype'),
-         url('fonts/JennaSue.woff2') format('woff2'),
-         url('fonts/JennaSue.woff') format('woff'),
-         url('fonts/JennaSue.ttf') format('truetype'),
-         url('fonts/JennaSue.svg#JennaSue') format('svg');
-}

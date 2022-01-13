@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'AvenirNextLTProDemi';
-    src: url('fonts/AvenirNextLTProDemi.eot');
-    src: url('fonts/AvenirNextLTProDemi.eot') format('embedded-opentype'),
-         url('fonts/AvenirNextLTProDemi.woff2') format('woff2'),
-         url('fonts/AvenirNextLTProDemi.woff') format('woff'),
-         url('fonts/AvenirNextLTProDemi.ttf') format('truetype'),
-         url('fonts/AvenirNextLTProDemi.svg#AvenirNextLTProDemi') format('svg');
-}
