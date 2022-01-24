@@ -1,0 +1,29 @@
+@mixin placeholder()
+  &::-webkit-input-placeholder /* Chrome/Opera/Safari */
+    @content
+  &::-moz-placeholder /* Firefox 19+ */
+    @content
+  &:-ms-input-placeholder /* IE 10+ */
+    @content
+  &:-moz-placeholder /* Firefox 18- */
+    @content
+    
+// responsive
+@mixin pc()
+  @media ( min-width: 1200px )
+    @content
+@mixin tablet()
+  @media ( max-width: 1199px )
+    @content
+@mixin sp()
+  @media ( max-width: 767px )
+    @content
+  
+// scale size
+@function vwsp($size)
+  $result: $size / 375
+  @return $result + vw
+
+@mixin _2x()
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    @content

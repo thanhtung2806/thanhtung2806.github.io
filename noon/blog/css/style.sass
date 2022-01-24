@@ -1,0 +1,344 @@
+@import  '../../css/_fonts'
+@import  '../../css/_mixin'
+
+.page-blog
+  .content-blog
+    padding: 236px 0 115px
+    @include tablet
+      padding: 211px 0 67px
+    @include sp
+      padding: 85px 0 40px
+  .cover
+    position: relative
+    color: #454545
+    margin-bottom: 83px
+    @include tablet
+      margin-bottom: 50px
+    @include sp
+      margin-bottom: 40px
+    
+  .list-news
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: -54px
+    @include tablet
+      margin-top: -44px
+    @include sp
+      margin-top: 39px
+    &__item
+      width: calc(33.333% - 36px)
+      color: #454545
+      @include tablet
+        width: calc(33.333% - 26px)
+      @include sp
+        width: 100%
+        &:not(:last-child)
+          margin-bottom: 30px
+      &:nth-child(n + 5)
+        @media ( min-width: 768px )
+          margin-top: 86px
+          @include tablet 
+            margin-top: 46px
+      .img
+        border: 20px
+        overflow: hidden
+        margin-bottom: 39px
+        @include tablet
+          margin-bottom: 28px
+        @include sp
+          margin-bottom: 19px
+        img
+          border-radius: 20px
+          @include sp
+            border-radius: 5px
+      .content
+        &__ttl
+          margin: 0 0 18px
+          font-size: 24px
+          line-height: 1.2
+          @include tablet
+            font-size: 21px
+            margin-bottom: 16px
+          @include sp
+            font-size: 25px
+            margin-bottom: 15px
+        &__desc
+          line-height: 1.5
+          color: #82898E
+          font-size: 18px
+          @include tablet
+            font-size: 12px
+          @include sp
+            font-size: 10px
+        &__txt
+          margin-top: 13px
+          font-size: 18px
+          @include tablet
+            margin-top: 16px
+            font-size: 10px
+          @include sp
+            font-size: 12px
+            display: flex
+            align-items: center
+            justify-content: space-between
+        .author
+          margin-bottom: 5px
+          @include tablet
+            margin-bottom: 7px
+          @include sp
+            margin-bottom: 0
+        .time
+          color: #82898E
+      &--cover
+        display: flex
+        flex-direction: row-reverse
+        width: 100%
+        padding-bottom: 45px
+        @include sp
+          display: block
+          padding-bottom: 0
+        .img
+          width: 66.5%
+          @include tablet
+            width: 65.6887755%
+          @include sp
+            width: 100%
+        .content
+          width: 33.5%
+          padding-top: 138px
+          padding-right: 45px
+          @include tablet
+            padding-top: 76px
+            width: 34.3112245%
+            margin-bottom: -2px
+          @include sp
+            width: 100%
+            padding: 0
+            margin: 0
+          &__ttl
+            @include tablet
+              margin-bottom: 22px 
+            @include sp
+              margin-bottom: 15px
+          &__txt
+            margin-top: 41px
+            @include tablet
+              margin-top: 31px
+            @include sp
+              margin-top: 16px
+  .pagination
+    margin-top: 105px
+    display: flex
+    color: #82898E
+    font-size: 18px
+    @include tablet
+      font-size: 12px
+    @include sp
+      margin-top: 31px
+    a
+      text-decoration: none
+      color: #82898E
+    &__arrow
+      position: relative
+      &:before
+        content: ""
+        width: 31px
+        height: 9px
+        background: url(../img/i_arrow.svg) no-repeat center / contain
+        position: absolute
+        top: 7px
+        @include sp
+          top: 4px
+      &--prev
+        padding-left: 43px
+        @include sp
+          padding-left: 46px
+        &:before
+          left: 0
+      &--next
+        padding-right: 43px
+        &:before
+          right: 0
+          transform: rotateZ(180deg)
+    &__navi
+      padding: 0 5px
+      margin: 0
+      list-style-type: none
+      display: flex
+      @include sp
+        padding: 0 8px
+      li
+        padding: 0 7px
+        @include sp
+          padding: 0 6px
+  
+
+.page-blog-detail
+  .label-detail
+    @media screen and ( min-width: 768px )
+      display: none
+    @include sp
+      max-width: 320px
+      margin: 0 auto 29px
+  .content-detail
+    padding: 210px 0 51px
+    @include tablet
+      padding-bottom: 74px
+    @include sp
+      padding: 87px 0 13px
+    &__heading
+      margin-bottom: 74px
+      max-width: 798px
+      @include tablet
+        max-width: 100%
+        margin-bottom: 50px
+      @include sp
+        margin-bottom: 29px
+    .ttl
+      font-size: 50px
+      line-height: 1.2
+      color: #454545
+      margin: 0 0 20px
+      @include tablet
+        font-size: 30px
+        margin-bottom: 23px
+      @include sp
+        font-size: 25px
+        margin-bottom: 17px
+    .info
+      font-size: 18px
+      @include tablet
+        font-size: 10px
+      @include sp
+        display: flex
+        justify-content: space-between
+      &__name
+        color: #454545
+      &__time
+        margin-top: 4px
+        color: #82898E
+        @include tablet
+          margin-top: 7px
+        @include sp
+          margin: 0
+    &__inner
+      max-width: 798px
+      @include tablet
+        max-width: 100%
+      p
+        margin: 0 0 1.7rem
+        font-size: 18px
+        line-height: 1.5
+        @include tablet
+          font-size: 12px
+          margin-bottom: 1rem
+        @include sp
+          margin-bottom: 1rem
+          font-size: 14px
+      img
+        border-radius: 20px
+        margin: 0 0 3.5rem
+        @include tablet
+          margin-bottom: 3.2rem
+        @include sp
+          border-radius: 0
+          margin: 0 -33px 2rem
+          width: 375px
+          max-width: initial
+        &.img-half
+          @include tablet
+            display: block
+            width: 100%
+            max-width: 65.5612245%
+            margin: 0 auto 3.2rem
+          @include sp
+            margin: 0 -33px 2rem
+            width: 375px
+            max-width: initial
+  .news-related
+    background-color: #82898E
+    padding: 64px 0 90px
+    @include tablet
+      padding: 50px 0 46px
+    @include sp
+      padding: 30px 0 46px
+      .container
+        max-width: 320px
+    &__ttl
+      color: #ffffff
+      font-size: 30px
+      margin: 0 0 35px
+      font-weight: 500
+      @include sp
+        font-size: 20px
+        margin-bottom: 28px
+    &__list
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      @include sp
+        display: block
+    .item
+      color: #fff
+      width: calc(33.333% - 36px)
+      @include tablet
+        width: calc(33.333% - 27px)
+      @include sp
+        width: 100%
+        &:not(:last-child)
+          margin-bottom: 29px
+      &__img
+        margin-bottom: 40px
+        overflow: hidden
+        border-radius: 20px
+        @include tablet
+          margin-bottom: 16px
+        @include sp
+          border-radius: 5px
+        img
+          border-radius: 20px
+          @include sp
+            border-radius: 5px
+      &__ttl
+        font-size: 24px
+        line-height: 1.2
+        margin:  0 0 18px
+        font-weight: 500
+        @include tablet
+          font-size: 21px
+          margin-bottom: 14px
+        @include sp
+          font-size: 25px
+          margin-bottom: 21px
+      &__txt
+        font-size: 18px
+        line-height: 1.5
+        @include tablet
+          font-size: 12px
+        @include sp
+          font-size: 10px
+      &__info
+        margin-top: 12px
+        font-size: 18px
+        line-height: 1.5
+        @include tablet
+          font-size: 10px
+          margin-top: 4px
+        @include sp
+          font-size: 12px
+          display: flex
+          justify-content: space-between
+          margin-top: 16px
+      .name
+        @include tablet
+          color: #454545
+        @include sp
+          color: #ffffff  
+      .time
+        margin-top: 3px
+        @include tablet
+          margin-top: 6px
+        @include sp
+          margin-top: 0
+

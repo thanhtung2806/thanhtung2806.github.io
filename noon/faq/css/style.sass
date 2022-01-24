@@ -1,0 +1,137 @@
+@import  '../../css/_fonts'
+@import  '../../css/_mixin'
+
+.page-faq
+  @include sp
+    background-color: #ffffff
+  &__content
+    padding: 210px 0 120px
+    @include tablet
+      padding-bottom: 69px
+    @include sp
+      padding: 103px 0 14px
+  .heading-primary
+    margin-bottom: 114px
+    @include tablet
+      margin-bottom: 51px
+    @include sp
+      margin-bottom: 0
+    &__img
+      .container
+        @include sp
+          max-width: 100%
+  .content-list
+    color: #454545
+    @include sp
+      padding-top: 40px
+      background-color: #EBEBEB
+    &__item
+      &:not(:last-child)
+        margin-bottom: 50px
+    .container
+      @include sp
+        max-width: 320px
+  .ttl-list
+    font-size: 40px
+    line-height: 1.5
+    margin: 0 0 13px
+    @include tablet
+      font-size: 21px
+      margin-bottom: 15px
+    @include sp
+      font-size: 25px
+      margin-bottom: -4px
+  .list-faq
+    &__item
+      border-bottom: 1px solid #454545
+      max-width: 899px
+      @include tablet
+        max-width: 582px
+    .accordion
+      padding: 32px 65px 32px 0
+      position: relative
+      font-size: 24px
+      cursor: pointer
+      @include tablet
+        font-size: 15px
+        padding: 14px 32px 14px 0
+      @include sp
+        font-size: 14px
+        padding: 29px 38px 29px 0
+      &__icon
+        position: absolute
+        width: 55px
+        height: 55px
+        border-radius: 100%
+        border: 1px solid #000
+        top: 50%
+        right: 5px
+        transform: translateY(-50%)
+        @include tablet
+          width: 30px
+          height: 30px
+          right: 0
+        @include sp
+          right: 6px
+        &:before, &:after
+          content: ""
+          position: absolute
+          background-color: #000
+          transition: all .2s linear
+        &:before
+          width: 1px
+          height: 35px
+          top: 9px
+          left: 26px
+          @include tablet
+            height: 20px
+            top: 4px
+            left: 14px
+        &:after
+          height: 1px
+          width: 35px
+          top: 26px
+          left: 9px
+          @include tablet
+            width: 20px
+            top: 14px
+            left: 4px
+      &.is-open
+        .accordion__icon
+          &:before
+            opacity: 0
+    .accordion-box
+      display: none
+      &__wrap
+        position: relative
+        font-size: 18px
+        line-height: 1.2
+        padding: 37px 235px 42px 0
+        @include tablet
+          font-size: 12px
+          padding: 40px 60px 44px 0
+        @include sp
+          font-size: 14px
+          padding: 21px 15px 44px 0
+          line-height: 1.5
+        &:before
+          content: ""
+          width: 50px
+          height: 1px
+          background-color: #454545
+          position: absolute
+          top: 0
+          left: 0
+          @include tablet
+            width: 43px
+            top: 10px
+          @include sp
+            top: 0
+            width: 50px
+        p
+          margin: 0
+          &:not(:last-child)
+            margin-bottom: 24px
+            @include tablet
+              margin-bottom: 13px
+
