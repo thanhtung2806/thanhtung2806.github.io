@@ -1,0 +1,325 @@
+@import  '../../css/_fonts'
+@import  '../../css/_mixin'
+
+
+.page-safety
+  &__content
+    padding-top: 111px
+    overflow: hidden
+    @include sp
+      padding-top: 4px
+    .hero
+      padding: 111px 0 184px
+      color: #454545
+      position: relative
+      @include tablet
+        padding: 99px 0 132px
+      @include sp
+        padding: 99px 0 30px
+      .label-primary
+        padding-left: 26px
+        padding-right: 26px
+        @include tablet
+          padding-left: 39px
+          padding-right: 39px
+        @include sp
+          padding-left: 17px
+          padding-right: 17px
+      &__img
+        width: 785px
+        position: absolute
+        top: 74px
+        right: -165px
+        @include tablet
+          width: 594px
+          top: 55px
+          right: -115px
+        @include sp
+          position: relative
+          width: 483px
+          top: 0
+          right: -29px
+      &__line
+        width: 50px
+        height: 1px
+        background-color: #454545
+        margin-top: 230px
+        margin-bottom: 32px
+        @include tablet
+          width: 43px
+          margin-top: 27px
+          margin-bottom: 25px
+        @include sp
+          width: 30px
+          margin-top: 18px
+          margin-bottom: 18px
+          margin-left: 4px
+      &__text
+        font-style: normal
+        font-weight: normal
+        font-size: 21px
+        line-height: 150%
+        max-width: 45%
+        @include tablet
+          font-size: 14px
+          max-width: 43%
+        @include sp
+          padding-left: 4px
+          max-width: none
+          margin-bottom: 42px
+      &__title
+        font-style: normal
+        font-weight: 500
+        font-size: 30px
+        line-height: 120%
+        display: none
+        @include tablet
+          display: block
+          margin-top: 98px
+        @include sp
+          font-size: 25px
+          margin-top: 62px
+          padding-left: 4px
+    .tech
+      color: #454545
+      @include sp
+        padding: 55px 0 0
+      .title
+        font-style: normal
+        font-weight: 500
+        font-size: 50px
+        line-height: 120%
+        @include tablet
+          font-size: 30px
+        @include sp
+          font-size: 25px
+          margin-bottom: 23px
+      .img
+        border-radius: 20px
+        overflow: hidden
+        margin-top: 47px
+        @include tablet
+          margin-top: 52px
+        @include sp
+          margin: 0 -33px
+          border-radius: 0
+        img
+          border-radius: 20px
+          @include sp
+            border-radius: 0
+      .list
+        list-style: none
+        display: flex
+        justify-content: space-between
+        padding: 0
+        margin-top: 40px
+        @include sp
+          margin-top: 34px
+          display: block
+        li
+          width: calc((100% - 108px) / 3)
+          max-width: 364px
+          @include tablet
+            width: calc((100% - 87px) / 3)
+            max-width: 234px
+          @include sp
+            width: 100%
+            max-width: none
+            display: flex
+            &+li
+              margin-top: 22px
+          .thumb
+            border-radius: 20px
+            overflow: hidden
+            @include sp
+              width: 47.6%
+              border-radius: 5px
+            img
+              border-radius: 20px
+              @include sp
+                border-radius: 5px          
+        &__detail
+          padding-top: 46px
+          @include tablet
+            padding-top: 24px
+          @include sp
+            width: 52.4%
+            padding-top: 0
+            padding-left: 21px
+          .ttl
+            font-style: normal
+            font-weight: 500
+            font-size: 40px
+            line-height: 120%
+            @include tablet
+              font-size: 21px
+            @include sp
+              font-size: 18px
+            &.lts1
+              letter-spacing: -1.4px
+              @include tablet
+                letter-spacing: -0.3px
+          p
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 150%
+            margin-top: 22px
+            padding-right: 5px
+            @include tablet
+              font-size: 12px
+              margin-top: 14px
+              padding-right: 0px
+            @include sp
+              font-size: 14px
+              margin-top: 11px
+    .safe
+      padding: 58px 0 158px
+      @include tablet
+        padding: 19px 0 99px
+      @include sp
+        padding: 0
+        position: relative
+      .imgText
+        display: flex
+        @include sp
+          flex-wrap: wrap-reverse
+        &__img
+          width: 66%
+          @include sp
+            width: 100%
+          .line
+            width: 50px
+            height: 1px
+            background-color: #454545
+            margin-bottom: 79px
+            @include tablet
+              width: 43px
+              margin-bottom: 40px
+            @include sp
+              margin-bottom: 35px
+          .ttl
+            font-style: normal
+            font-weight: 500
+            font-size: 50px
+            line-height: 120%
+            @include tablet
+              font-size: 30px
+            @include sp
+              font-size: 25px
+              display: flex
+              span
+                font-style: normal
+                font-weight: normal
+                font-size: 14px
+                line-height: 150%
+                width: 77%
+                margin-left: 0
+          .video
+            margin-top: 33px
+            border-radius: 20px
+            overflow: hidden
+            @include tablet
+              margin-top: 42px
+            @include sp
+              margin: 40px -33px 0
+              border-radius: 0
+            img
+              border-radius: 20px
+              width: 100%
+              @include sp
+                border-radius: 0
+                
+        &__txt
+          width: 34%
+          @include sp
+            width: 100%
+            display: none
+          p
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 150%
+            margin-top: 43%
+            padding-right: 24%
+            @include tablet
+              font-size: 12px
+              margin-top: 45%
+    .information
+      height: 71.1111111vw
+      background: url(../img/img-bg.png) no-repeat top
+      background-size: cover
+      padding: 65px 0 0
+      @include tablet
+        padding: 50px 0 0
+        height: 780px
+        background-position: left 65% top
+      @include sp
+        padding: 24px 0 0
+        height: 330px
+        background: url(../img/img-bg-sp.png) no-repeat top
+        background-size: cover
+        background-position: 0 0
+      .slider
+        position: relative
+        max-width: 754px
+        @include tablet
+          max-width: 509px
+        &_item
+          display: flex
+          justify-content: space-between
+          @include tablet
+            width: 509px
+          @include sp
+            width: 100%
+            justify-content: flex-start
+          dl,dd,dt
+            margin: 0
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 1.5
+            color: #fff
+            padding: 10px 0px 12px 0
+            @include tablet
+              font-size: 12px
+              padding: 10px 0px 7px 0
+            @include sp
+              padding: 2px 0px 4px 1px
+          dl
+            border-top: 1px solid #fff
+            display: flex
+            width: 323px
+            justify-content: space-between
+            @include tablet
+              width: 234px
+            @include sp
+              width: 100%
+            &:last-child
+              border-bottom: 1px solid #fff
+          dd
+            width: 63px
+            @include tablet
+              width: 56px
+            @include sp
+              width: 38px
+              text-align: right
+          .col
+            @include sp
+              width: 45%
+              &+.col
+                margin-left: 16px
+        .slick-dots
+          text-align: left
+          position: relative
+          bottom: -19px
+          li
+            margin-left: 0
+            button
+              padding-left: 0
+              &:before
+                font-size: 12px
+                color: #82898E
+            &.slick-active 
+              button:before
+                color: #fff
