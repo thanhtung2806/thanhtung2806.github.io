@@ -395,13 +395,13 @@
 }
 
 .page-vision__content .founder__list li {
-  width: calc((100% - 48px) / 3);
+  width: calc((100% - 48px) / 2);
   margin-right: 24px;
 }
 
 @media (max-width: 1199px) {
   .page-vision__content .founder__list li {
-    width: calc((100% - 74px) / 3);
+    width: calc((100% - 74px) / 2);
     margin-right: 37px;
   }
 }

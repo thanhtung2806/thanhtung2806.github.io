@@ -137,7 +137,7 @@
             img
               border-radius: 20px
               @include sp
-                border-radius: 5px          
+                border-radius: 5px
         &__detail
           padding-top: 46px
           @include tablet
@@ -229,7 +229,7 @@
               width: 100%
               @include sp
                 border-radius: 0
-                
+
         &__txt
           width: 34%
           @include sp
@@ -250,6 +250,8 @@
       background: url(../img/img-bg.png) no-repeat top
       background-size: cover
       padding: 65px 0 0
+      background-color: grey
+      background-blend-mode: multiply
       @include tablet
         padding: 50px 0 0
         height: 780px
@@ -260,6 +262,8 @@
         background: url(../img/img-bg-sp.png) no-repeat top
         background-size: cover
         background-position: 0 0
+        background-color: grey
+        background-blend-mode: multiply
       .slider
         position: relative
         max-width: 754px
@@ -320,6 +324,6 @@
               &:before
                 font-size: 12px
                 color: #82898E
-            &.slick-active 
+            &.slick-active
               button:before
                 color: #fff

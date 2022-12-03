@@ -497,6 +497,8 @@
   background: url(../img/img-bg.png) no-repeat top;
   background-size: cover;
   padding: 65px 0 0;
+  background-color: grey;
+background-blend-mode: multiply;
 }
 
 @media (max-width: 1199px) {
@@ -514,6 +516,8 @@
     background: url(../img/img-bg-sp.png) no-repeat top;
     background-size: cover;
     background-position: 0 0;
+    background-color: grey;
+    background-blend-mode: multiply;
   }
 }
 
