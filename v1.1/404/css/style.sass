@@ -1,0 +1,63 @@
+@import  '../../css/_fonts'
+@import  '../../css/_mixin'
+
+img
+  max-width: 100%
+  height: auto
+
+.page-404
+  @include sp
+    background-color: #fff
+  &__content
+    padding-top: 211px
+    @include sp
+      padding-top: 122px
+  .text
+    text-align: center
+    position: relative
+    line-height: 1.2
+    color: #454545
+    &__01
+      font-size: 50px
+      position: relative
+      z-index: 1
+      margin: 0 0 20px
+      @include tablet
+        font-size: 30px
+      @include sp
+        font-size: 25px
+        margin-bottom: 7px
+    &__02
+      position: relative
+      z-index: 1
+      margin: 0
+      font-size: 21px
+      line-height: 1.5
+      @include tablet
+        font-size: 12px
+      @include sp
+        font-size: 14px
+    &__03
+      position: absolute
+      top: 60%
+      left: 50%
+      transform: translate(-50%, -50%)
+      font-size: 400px
+      color: #DCDEE0
+      margin: 0
+      @include tablet
+        font-size: 300px
+      @include sp
+        font-size: 150px
+        top: 40%
+        color: #EDF1F3
+  .img
+    margin-top: 120px
+    text-align: center
+    @include tablet
+      max-width: 471px
+      margin: 80px auto 0
+    @include sp
+      margin-top: 45px
+      max-width: 266px
+

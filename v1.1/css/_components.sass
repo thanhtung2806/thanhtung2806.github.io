@@ -1,0 +1,208 @@
+// icon
+.icon
+  &-right-circle
+    display: inline-block
+    width: 113px
+    height: 113px
+    border-radius: 50%
+    background: url('../img/common/icon-right-circle.svg') no-repeat center
+    background-size: contain
+    @include tablet
+      width: 70px
+      height: 70px
+    @include sp
+      width: 54px
+      height: 54px
+  &-down-circle
+    display: inline-block
+    width: 83px
+    height: 83px
+    border-radius: 50%
+    background: url('../img/common/icon-down-circle.svg') no-repeat center
+    background-size: contain
+    @include tablet
+      width: 70px
+      height: 70px
+    @include sp
+      width: 54px
+      height: 54px
+
+// button
+.btn
+  display: inline-block
+  &:not(:disabled)
+    cursor: pointer
+  height: 56px
+  min-width: 133px
+  text-align: center
+  padding: 0 36px
+  box-sizing: border-box
+  border-radius: 28px
+  font-style: normal
+  font-weight: normal
+  font-size: 21px
+  line-height: 56px
+  text-decoration: none
+  transition: all ease .5s
+  @include tablet
+    height: 40px
+    font-size: 14px
+    line-height: 40px
+  @include sp
+    width: 100%
+  &--white
+    background: #EBEBEB
+    color: #2F3B42
+    border: 0.5px solid #FFFFFF
+    &:not(:disabled)
+      &:hover
+        background: #454545
+        color: #fff
+  &--black
+    background: #454545
+    color: #fff
+    border: 0.5px solid #FFFFFF
+    &:not(:disabled)
+      &:hover
+        background: #EBEBEB
+        color: #2F3B42
+
+// form input
+.form-control
+  margin-bottom: 20px
+  @include tablet
+    margin-bottom: 15px
+.input
+  &-text
+    width: 100%
+    height: 56px
+    border: 0.5px solid #FFFFFF
+    box-sizing: border-box
+    border-radius: 28px
+    background: none
+    color: #fff
+    font-style: normal
+    font-weight: normal
+    font-size: 21px
+    line-height: 56px
+    padding: 0 36px
+    outline: none
+    @include placeholder
+      color: #fff
+    @include tablet
+      height: 40px
+      font-size: 14px
+      line-height: 21px
+      padding: 0 20px
+    &--error
+      border-color: #F4512D
+      background: url('../img/common/icon-error.svg') no-repeat right 15px center
+      background-size: 19px auto
+    &--loading
+      background: url('../img/common/icon-loading.svg') no-repeat right 17px center
+      background-size: 15px auto
+
+// message
+.error-message
+  font-family: Inter
+  font-style: normal
+  font-weight: normal
+  font-size: 12px
+  line-height: 18px
+  color: #F4512D
+  margin-top: 6px
+  display: none
+
+// heading
+.heading-primary
+  &__info
+    .container
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      @include sp
+        display: block
+        max-width: 329px
+  &__img
+    margin-top: 73px
+    @include tablet
+      margin-top: 60px
+    @include sp
+      margin-top: 77px
+  .label
+    padding-top: 13px
+    @include tablet
+      padding-top: 0
+    &__icon
+      display: inline-block
+      color: #82898E
+      border: 1px solid #82898E
+      border-radius: 999px
+      padding: 11px 58px
+      font-size: 21px
+      @include tablet
+        font-size: 14px
+        padding-left: 37px
+        padding-right: 37px
+      @include sp
+        padding: 5px 37px
+  .intro
+    padding-right: 20px
+    color: #454545
+    max-width: 589px
+    @include tablet
+      max-width: 380px
+      padding-right: 60px
+    @include sp
+      max-width: 100%
+      padding-right: 40px
+      margin-top: 45px
+    &__ttl
+      line-height: 1.2
+      margin: 0 0 20px
+      font-size: 50px
+      font-weight: 500
+      @include tablet
+        font-size: 30px
+        margin-bottom: 22px
+      @include sp
+        position: relative
+        font-size: 25px
+        padding-bottom: 21px
+        margin-bottom: 20px
+      &:after
+        @include sp
+          content: ""
+          width: 30px
+          height: 1px
+          background-color: #454545
+          position: absolute
+          bottom: 0
+          left: 0
+    &__desc
+      line-height: 1.5
+      font-size: 21px
+      @include tablet
+        font-size: 12px
+      @include sp
+        font-size: 14px
+        
+.label-primary
+  border: 1px solid #82898E
+  font-size: 21px
+  padding: 11px 57px
+  border-radius: 999px
+  color: #82898E
+  display: inline-block
+  @include tablet
+    font-size: 14px
+    padding: 11px 37px
+  @include sp
+    padding: 5px 37px
+
+.img
+  &-effect
+    overflow: hidden
+    border-radius: 20px
+.scroll-fade-in
+  opacity: 0
