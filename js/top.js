@@ -20,8 +20,8 @@
     slidesToScroll: 1,
     arrows: false,
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     centerMode: true,
     responsive: [
       {
