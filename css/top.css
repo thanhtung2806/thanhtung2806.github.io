@@ -293,12 +293,24 @@
 }
 
 .introducing__img {
-  width: 470px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 30%;
+  display: block; float : left;
+  margin-left: 1%;
+  margin-right: 1%;
   background: no-repeat center;
   background-size: contain;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+}
+.introducing__img.slick-center {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
 }
 
 .introducing__img::before {

@@ -14,6 +14,26 @@
       },
     ]
   });
+  $('.introducing__slider-container').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    infinite: true,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    centerMode: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
+  });
+
 
   setTimeout(function() {
     $('.introducing').css({'opacity': 1, 'visibility':'visible'})
