@@ -34,6 +34,14 @@
     ]
   });
 
+  $('.core-value .container').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  });
+
 
   setTimeout(function() {
     $('.introducing').css({'opacity': 1, 'visibility':'visible'})
