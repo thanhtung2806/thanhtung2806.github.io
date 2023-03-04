@@ -82,7 +82,7 @@
   width: 50px;
   height: 1px;
   background-color: #454545;
-  margin-top: 230px;
+  margin-top: 35px;
   margin-bottom: 32px;
 }
 
@@ -131,13 +131,13 @@
   font-weight: 500;
   font-size: 30px;
   line-height: 120%;
-  display: none;
+  margin-top: 98px;
 }
 
 @media (max-width: 1199px) {
   .page-safety__content .hero__title {
     display: block;
-    margin-top: 98px;
+   
   }
 }
 
