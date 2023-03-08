@@ -551,6 +551,31 @@
     padding-right: 0;
   }
 }
+.about-me_paper-list {
+    display: flex;
+    flex-wrap:wrap;
+    padding-top: 46px;
+}
+.about-me_paper-item {
+    display: inline-block;
+    flex-grow: 1;
+    height: 50px;
+    width: calc(100% * (1/4) );
+    text-align: center;
+}
+@media (max-width: 1199px) {
+  .about-me_paper-item {
+      height:70px;
+      width: calc(100% * (1/2) );
+  }
+}
+@media (max-width: 767px) {
+  .about-me_paper-item {
+
+      width: calc(100% * (1/1) );
+  }
+}
+.about-me_paper-item img { display: inline-block;  }
 
 .o-mask-container {
   width: 110vw;
