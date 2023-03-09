@@ -137,7 +137,7 @@
 @media (max-width: 1199px) {
   .page-safety__content .hero__title {
     display: block;
-   
+
   }
 }
 
@@ -267,7 +267,11 @@
 .page-safety__content .tech .list li .thumb img {
   border-radius: 20px;
 }
-
+.page-safety__content .tech .img iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border: none;
+}
 @media (max-width: 767px) {
   .page-safety__content .tech .list li .thumb img {
     border-radius: 5px;
@@ -654,4 +658,5 @@ background-blend-mode: multiply;
 .page-safety__content .information .slider .slick-dots li.slick-active button:before {
   color: #fff;
 }
+
 /*# sourceMappingURL=style.css.map */
