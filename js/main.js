@@ -125,7 +125,7 @@
     }
   }
 
-  emailjs.init("service_olhmp4d");
+  emailjs.init("service_apv79p7");
   window.onload = function() {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
@@ -133,7 +133,7 @@
         // generate a five digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
-        emailjs.sendForm('service_olhmp4d', 'template_lk84a6e', this, 'user_v7eglAybV0XbQ1XmQOOIZ')
+        emailjs.sendForm('service_apv79p7', 'template_0ppz9pw', this, 'vVjlewLV7RaoVmGXx')
           .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
           }, function(error) {
