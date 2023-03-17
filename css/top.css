@@ -507,8 +507,7 @@
   margin-top: 65px;
   margin-left: auto;
   margin-right: auto;
-  height: 0;
-  /* background: #C1C4C6; */
+  height: 0px;
   background: none;
 }
 
@@ -556,7 +555,6 @@
     display: flex;
     flex-wrap:wrap;
     padding-top: 46px;
-
 }
 .about-me_paper-item {
     display: inline-block;
@@ -572,11 +570,12 @@
   }
 }
 @media (max-width: 767px) {
-  .about-me_paper-item {ß
+  .about-me_paper-item {
+
       width: calc(100% * (1/1) );
   }
 }
-.about-me_paper-item img { display: inline-block;ß }
+.about-me_paper-item img { display: inline-block; }
 
 .o-mask-container {
   width: 110vw;
