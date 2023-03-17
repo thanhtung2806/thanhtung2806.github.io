@@ -46,7 +46,7 @@
 
 
   setTimeout(function() {
-    $('.introducing').css({'opacity': 1, 'visibility':'visible'})
+    // $('.introducing').css({'opacity': 1, 'visibility':'visible'});
   }, 1000)
   var controller = new ScrollMagic.Controller();
   // create a scene
